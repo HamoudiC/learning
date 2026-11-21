@@ -1,0 +1,60 @@
+numpy · linear algebra and files
+import numpy as np
+from pathlib import Path
+
+
+── matrices ──
+
+A @ B
+np.array([[1, 2], [3, 4]]) @ np.array([1, 1]) → array([3, 7])      # matrix multiplication, row times column
+
+np.dot(a, b)
+np.dot(np.array([1, 2]), np.array([3, 4])) → 11      # two 1D arrays multiplied and added up
+
+np.linalg.det(A)
+np.round(np.linalg.det(np.array([[2, 0], [0, 3]])), 6) → 6.0      # the determinant, a decimal
+
+np.linalg.inv(A)
+np.linalg.inv(np.array([[2.0, 0.0], [0.0, 4.0]])) → array([[0.5, 0.], [0., 0.25]])      # the inverse
+
+np.linalg.solve(A, b)
+np.linalg.solve(np.array([[2, 0], [0, 4]]), np.array([6, 8])) → array([3., 2.])      # solves the equations A·x = b
+
+np.linalg.norm(v)
+np.linalg.norm(np.array([3, 4])) → 5.0      # the length of a vector
+
+np.linalg.lstsq(M, y, rcond=None)[0]
+np.linalg.lstsq(np.array([[1, 1], [2, 1]]), np.array([3, 5]), rcond=None)[0] → array([2., 1.])      # the best-fit answer when there's no exact one
+
+
+── comparing decimals ──
+
+np.allclose(a, b)
+np.allclose(np.array([0.1 + 0.2]), np.array([0.3])) → True      # equal, allowing tiny decimal errors
+
+np.isclose(a, b)
+np.isclose(np.array([0.3, 1.0]), np.array([0.3, 2.0])) → array([True, False])      # the same, for each position
+
+
+── files ──
+
+Path(__file__).parent.parent / "data"
+DATA = Path(__file__).parent.parent / "data"      # the data folder, found from where this .py file is
+
+folder.mkdir(exist_ok=True)
+OUT.mkdir(exist_ok=True) → the out folder exists      # makes a folder if it isn't there
+
+np.savetxt(path, arr, delimiter=",", fmt="%d")
+np.savetxt(OUT / "a.csv", arr, delimiter=",", fmt="%d")      # saves an array as a CSV of whole numbers
+
+np.loadtxt(path, delimiter=",", skiprows=1, dtype=int)
+np.loadtxt(DATA / "scores.csv", delimiter=",", skiprows=1)      # reads a CSV of numbers, skipping 1 header line
+
+np.genfromtxt(path, delimiter=",", skip_header=1)
+np.genfromtxt(DATA / "station.csv", delimiter=",", skip_header=1)      # reads a CSV, empty cells become nan
+
+np.save(path, arr)   np.load(path)
+np.save(OUT / "a.npy", arr)      # numpy's own fast file format, .npy
+
+path.read_text(encoding="utf-8")
+(DATA / "scores.csv").read_text(encoding="utf-8") → the file's text      # a whole text file as one str

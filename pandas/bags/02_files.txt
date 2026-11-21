@@ -1,0 +1,51 @@
+pandas · files (CSV, Excel, JSON)
+import pandas as pd
+from pathlib import Path
+
+
+── finding files ──
+
+Path(__file__).parent.parent / "data"
+DATA = Path(__file__).parent.parent / "data"      # the data folder, found from where this .py file is
+
+folder / "name.csv"
+DATA / "sales.csv"      # the path of one file in a folder
+
+folder.mkdir(exist_ok=True)
+OUT.mkdir(exist_ok=True)      # makes a folder if it isn't there
+
+
+── reading ──
+
+pd.read_csv(path)
+pd.read_csv(DATA / "sales.csv")      # reads a CSV file into a table; empty cells become NaN
+
+pd.read_csv(path, usecols=[...])
+pd.read_csv(DATA / "sales.csv", usecols=["region", "units"])      # only some columns
+
+pd.read_csv(path, nrows=n)
+pd.read_csv(DATA / "sales.csv", nrows=5)      # only the first n rows
+
+pd.read_csv(path, index_col="col")
+pd.read_csv(DATA / "sales.csv", index_col="order_id")      # uses a column as the row labels
+
+pd.read_csv(path, parse_dates=["col"])
+pd.read_csv(DATA / "sales.csv", parse_dates=["date"])      # reads a column as real dates
+
+pd.read_excel(path)
+pd.read_excel(OUT / "t.xlsx")      # reads an Excel file
+
+pd.read_json(path)
+pd.read_json(OUT / "t.json")      # reads a JSON file
+
+
+── saving ──
+
+df.to_csv(path, index=False)
+df.to_csv(OUT / "report.csv", index=False)      # saves as CSV, without the row labels
+
+df.to_excel(path, index=False)
+df.to_excel(OUT / "report.xlsx", index=False)      # saves as Excel, without the row labels
+
+df.to_json(orient="records")
+pd.DataFrame({"a": [1]}).to_json(orient="records") → '[{"a":1}]'      # the table as JSON text, one object per row

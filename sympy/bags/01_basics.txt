@@ -1,0 +1,65 @@
+sympy · basics
+from sympy import *
+
+
+── symbols and expressions ──
+
+x = symbols("x")
+x = symbols("x")      # a letter SymPy can do maths with
+
+x, y = symbols("x y")
+x, y = symbols("x y")      # several letters at once
+
+symbols("p", positive=True)
+sqrt(symbols("p", positive=True)**2) → symbols("p", positive=True)      # a letter that can only be positive
+
+expr + expr   expr * expr   expr ** n
+x + x → 2*x      # builds an expression; simple things are tidied straight away
+
+type(expr)
+type(x + 1) → Add      # what kind of expression it is: Symbol, Add, Mul, Pow...
+
+expr.args
+(x + 1).args → (1, x)      # the parts the expression is built from
+
+expr.free_symbols
+(x**2 + y).free_symbols → {x, y}      # the letters used in it
+
+
+── exact numbers ──
+
+Rational(top, bottom)
+Rational(1, 3) + Rational(1, 6) → Rational(1, 2)      # an exact fraction (1/3 in Python is a decimal)
+
+S(number)
+S(1)/3 → Rational(1, 3)      # a number as a SymPy number, so dividing stays exact
+
+sqrt(number)
+sqrt(8) → 2*sqrt(2)      # an exact square root
+
+pi   E   I   oo
+sqrt(-4) → 2*I      # π, e, i (√-1) and infinity
+
+
+── values and decimals ──
+
+expr.subs(x, value)
+(x**2 + 1).subs(x, 3) → 10      # puts a value (or another expression) in place of x
+
+expr.subs({x: a, y: b})
+(x*y).subs({x: 2, y: 5}) → 10      # several at once
+
+N(expr, digits)
+N(sqrt(2), 4) → 1.414      # a decimal with that many significant digits
+
+expr.evalf()
+pi.evalf(3) → 3.14      # a decimal
+
+
+── comparing ──
+
+a == b
+(x + 1)**2 == x**2 + 2*x + 1 → False      # is it the same TREE (written the same way)?
+
+a.equals(b)
+((x + 1)**2).equals(x**2 + 2*x + 1) → True      # is it equal as maths?

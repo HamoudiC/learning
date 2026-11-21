@@ -1,0 +1,59 @@
+sympy · matrices
+from sympy import *
+
+
+── making and reading ──
+
+Matrix([[a, b], [c, d]])
+Matrix([[1, 2], [3, 4]]).shape → (2, 2)      # a matrix from a list of rows
+
+Matrix([a, b])
+Matrix([5, 6]).shape → (2, 1)      # a column
+
+A[row, col]
+Matrix([[1, 2], [3, 4]])[0, 1] → 2      # one value, counting from 0
+
+A.row(i)   A.col(j)
+Matrix([[1, 2], [3, 4]]).row(1) → Matrix([[3, 4]])      # one row / one column
+
+A.T
+Matrix([[1, 2], [3, 4]]).T → Matrix([[1, 3], [2, 4]])      # rows become columns
+
+A.tolist()
+Matrix([[1, 2], [3, 4]]).tolist() → [[1, 2], [3, 4]]      # back to plain lists
+
+eye(n)   zeros(r, c)
+eye(2) → Matrix([[1, 0], [0, 1]])      # the identity / all zeros
+
+
+── maths ──
+
+A + B   n*A
+2*Matrix([[1, 2]]) → Matrix([[2, 4]])      # position by position
+
+A*B
+Matrix([[1, 2], [3, 4]])*Matrix([[0, 1], [1, 0]]) → Matrix([[2, 1], [4, 3]])      # matrix multiplication
+
+A**k
+Matrix([[1, 1], [1, 0]])**2 → Matrix([[2, 1], [1, 1]])      # A multiplied by itself k times
+
+A.det()   A.inv()
+Matrix([[1, 2], [3, 4]]).det() → -2      # the determinant / the inverse
+
+A.rank()   A.trace()
+Matrix([[1, 2], [2, 4]]).rank() → 1      # how many independent rows / the diagonal added up
+
+A.rref()
+Matrix([[1, 2], [3, 4]]).rref()[1] → (0, 1)      # (row-reduced matrix, pivot columns)
+
+
+── solving and eigenvalues ──
+
+A.solve(b)
+Matrix([[1, 2], [3, 4]]).solve(Matrix([5, 6])) → Matrix([[-4], [Rational(9, 2)]])      # solves A·x = b
+
+A.eigenvals()
+Matrix([[2, 1], [1, 2]]).eigenvals() → {3: 1, 1: 1}      # {eigenvalue: how many times}
+
+A.eigenvects()
+Matrix([[2, 0], [0, 3]]).eigenvects()[0][0] → 2      # (eigenvalue, times, [vectors]) for each one

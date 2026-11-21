@@ -1,0 +1,53 @@
+sympy · solving
+from sympy import *
+
+
+── equations ──
+
+Eq(left, right)
+Eq(x**2, 4)      # the equation left = right (a plain expression means "= 0")
+
+solve(equation, x)
+solve(Eq(x**2, 4), x) → [-2, 2]      # the answers, as a list
+
+solve(equation, x, dict=True)
+solve(x**2 - 4, x, dict=True) → [{x: -2}, {x: 2}]      # each answer as a dict
+
+solve([eq1, eq2], [x, y])
+solve([x + y - 5, x - y - 1], [x, y]) → {x: 3, y: 2}      # two equations: one dict
+
+linsolve([eq1, eq2], x, y)
+linsolve([x + y - 5, x - y - 1], x, y) → FiniteSet((3, 2))      # straight-line equations: a set of tuples
+
+nsolve(expr, x, guess)
+N(nsolve(cos(x) - x, x, 1), 4) → 0.7391      # a decimal answer, searching near the guess
+
+
+── sets of answers ──
+
+solveset(equation, x)
+solveset(x**2 - 9, x) → FiniteSet(-3, 3)      # every answer, as a set
+
+solveset(equation, x, S.Reals)
+solveset(x**2 + 4, x, S.Reals) → EmptySet      # only real answers
+
+solveset(equation, x, Interval(a, b))
+solveset(sin(x), x, Interval(0, 2*pi)) → FiniteSet(0, pi, 2*pi)      # only answers between a and b
+
+sorted(a_set)
+sorted(solveset(x**3 - x, x)) → [-1, 0, 1]      # the answers as a sorted list
+
+value in a_set
+3 in solveset(x**2 - 9, x) → True      # is it one of the answers?
+
+
+── inequalities and intervals ──
+
+solveset(inequality, x, S.Reals)
+solveset(x**2 < 4, x, S.Reals) → Interval.open(-2, 2)      # where it's true, as an interval
+
+Interval(a, b)   Interval.open(a, b)
+1 in Interval(0, 1) → True      # [a, b] with the ends / (a, b) without them
+
+Union(set1, set2)
+Union(Interval(-oo, -2), Interval(2, oo)) → solveset(x**2 >= 4, x, S.Reals)      # both together

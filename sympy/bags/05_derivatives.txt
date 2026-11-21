@@ -1,0 +1,44 @@
+sympy · derivatives
+from sympy import *
+
+
+── differentiating ──
+
+diff(expr, x)
+diff(x**3, x) → 3*x**2      # the derivative
+
+diff(expr, x, n)
+diff(x**3, x, 2) → 6*x      # the n-th derivative
+
+diff(expr, y)
+diff(x**2*y, y) → x**2      # a partial derivative: the other letters stay constant
+
+diff(expr, x).subs(x, a)
+diff(x**3, x).subs(x, 2) → 12      # the slope at x = a (differentiate first)
+
+Derivative(expr, x).doit()
+Derivative(x**2, x).doit() → 2*x      # writes the derivative down, then .doit() works it out
+
+
+── unknown functions ──
+
+u = Function("u")
+diff(Function("f")(x)*x, x) → x*Derivative(Function("f")(x), x) + Function("f")(x)      # a function name with no formula
+
+
+── implicit ──
+
+idiff(equation, y, x)
+idiff(x**2 + y**2 - 25, y, x) → -x/y      # dy/dx when the equation (written = 0) mixes x and y
+
+idiff(...).subs({x: a, y: b})
+idiff(x**2 + y**2 - 25, y, x).subs({x: 3, y: 4}) → Rational(-3, 4)      # dy/dx at a point
+
+
+── formulas ──
+
+tangent line at a
+f(a) + f'(a)·(x - a)      # the line touching y = f at x = a
+
+limit definition
+the limit as h → 0 of (f(x + h) - f(x)) / h      # the derivative from first principles

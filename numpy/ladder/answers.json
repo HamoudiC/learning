@@ -1,0 +1,707 @@
+{
+ "level_01_arrays": {
+  "tasks": {
+   "1a": "bnAuYXJyYXkoWzE5LCAyMiwgMjAsIDIxXSk=",
+   "1b": "bnAuYXJyYXkoWzMsIDRdKQ==",
+   "1c": "bnAuYXJyYXkoW1sxLCAyLCAzXSwgWzQsIDUsIDZdXSk=",
+   "1d": "W1sxLCAyLCAzXSwgWzQsIDUsIDZdXQ==",
+   "2a": "MQ==",
+   "2b": "Mg==",
+   "2c": "MA==",
+   "2d": "bnAuYXJyYXkoW1tbMzAsIDMyLCAyOSwgMzEsIDMzLCAzNSwgMzRdXV0p",
+   "3a": "KDMsIDQp",
+   "3b": "MTI=",
+   "3c": "Mw==",
+   "3d": "NA==",
+   "4a": "bnAuYXJyYXkoWzIwLCA0MCwgNjBdKQ==",
+   "4b": "bnAuYXJyYXkoWzE1LCAyNSwgMzVdKQ==",
+   "4c": "bnAuYXJyYXkoWzksIDE4LCAyN10p",
+   "4d": "WzEsIDIsIDEsIDJd"
+  },
+  "tests": {
+   "describe": [
+    [
+     "describe(np.array([[1, 2, 3], [4, 5, 6]]))",
+     "JzJEIGFycmF5LCBzaGFwZSAoMiwgMyksIDYgdmFsdWVzJw=="
+    ],
+    [
+     "describe(np.array([5, 6, 7]))",
+     "JzFEIGFycmF5LCBzaGFwZSAoMywpLCAzIHZhbHVlcyc="
+    ],
+    [
+     "describe(np.array(30))",
+     "JzBEIGFycmF5LCBzaGFwZSAoKSwgMSB2YWx1ZXMn"
+    ]
+   ],
+   "doubled": [
+    [
+     "doubled([1, 2, 3])",
+     "bnAuYXJyYXkoWzIsIDQsIDZdKQ=="
+    ],
+    [
+     "doubled([10])",
+     "bnAuYXJyYXkoWzIwXSk="
+    ]
+   ],
+   "add_bonus": [
+    [
+     "add_bonus([50, 60], 5)",
+     "bnAuYXJyYXkoWzU1LCA2NV0p"
+    ],
+    [
+     "add_bonus([90], 10)",
+     "bnAuYXJyYXkoWzEwMF0p"
+    ]
+   ]
+  }
+ },
+ "level_02_indexing_and_slicing": {
+  "tasks": {
+   "1a": "NQ==",
+   "1b": "MjA=",
+   "1c": "NTA=",
+   "1d": "NDA=",
+   "2a": "bnAuYXJyYXkoWzUsIDEwLCAxNV0p",
+   "2b": "bnAuYXJyYXkoWzQwLCA0NSwgNTBdKQ==",
+   "2c": "bnAuYXJyYXkoWzUsIDE1LCAyNSwgMzUsIDQ1XSk=",
+   "2d": "bnAuYXJyYXkoWzUwLCA0NSwgNDAsIDM1LCAzMCwgMjUsIDIwLCAxNSwgMTAsIDVdKQ==",
+   "3a": "OQ==",
+   "3b": "bnAuYXJyYXkoWzYsIDcsIDgsIDksIDEwXSk=",
+   "3c": "bnAuYXJyYXkoWzMsIDhdKQ==",
+   "3d": "bnAuYXJyYXkoW1sxLCAyXSwgWzYsIDddXSk=",
+   "4a": "OQ==",
+   "4b": "bnAuYXJyYXkoWzQsIDUsIDZdKQ==",
+   "4c": "bnAuYXJyYXkoW1s3LCA4LCA5XSwgWzEwLCAxMSwgMTJdXSk="
+  },
+  "tests": {
+   "first_and_last": [
+    [
+     "first_and_last(np.array([1, 2, 3, 4, 5]), 2)",
+     "KG5wLmFycmF5KFsxLCAyXSksIG5wLmFycmF5KFs0LCA1XSkp"
+    ],
+    [
+     "first_and_last(np.array([7, 8, 9]), 1)",
+     "KG5wLmFycmF5KFs3XSksIG5wLmFycmF5KFs5XSkp"
+    ]
+   ],
+   "column": [
+    [
+     "column(np.array([[1, 2], [3, 4], [5, 6]]), 0)",
+     "bnAuYXJyYXkoWzEsIDMsIDVdKQ=="
+    ],
+    [
+     "column(np.array([[1, 2], [3, 4], [5, 6]]), 1)",
+     "bnAuYXJyYXkoWzIsIDQsIDZdKQ=="
+    ],
+    [
+     "column(np.array([[9, 8, 7]]), -1)",
+     "bnAuYXJyYXkoWzddKQ=="
+    ]
+   ],
+   "corners": [
+    [
+     "corners(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))",
+     "bnAuYXJyYXkoWzEsIDMsIDcsIDldKQ=="
+    ],
+    [
+     "corners(np.array([[1, 2], [3, 4]]))",
+     "bnAuYXJyYXkoWzEsIDIsIDMsIDRdKQ=="
+    ]
+   ],
+   "inner_block": [
+    [
+     "inner_block(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))",
+     "bnAuYXJyYXkoW1s1XV0p"
+    ],
+    [
+     "inner_block(np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]))",
+     "bnAuYXJyYXkoW1s2LCA3XV0p"
+    ]
+   ],
+   "second_row": [
+    [
+     "second_row(np.array([[1, 2], [3, 4], [5, 6]]))",
+     "bnAuYXJyYXkoWzMsIDRdKQ=="
+    ],
+    [
+     "second_row(np.array([[0, 0, 0], [7, 8, 9]]))",
+     "bnAuYXJyYXkoWzcsIDgsIDldKQ=="
+    ]
+   ]
+  }
+ },
+ "level_03_dtypes": {
+  "tasks": {
+   "1a": "bnAuZHR5cGUoJ2ludDY0Jyk=",
+   "1b": "bnAuZHR5cGUoJzxVNCcp",
+   "1c": "J2Yn",
+   "1d": "J2In",
+   "2a": "bnAuYXJyYXkoWzEsIDIsIC0xXSk=",
+   "2b": "bnAuYXJyYXkoWzEsIDMsIC0yXSk=",
+   "2c": "bnAuYXJyYXkoWzEwLCAyMCwgMzBdKQ==",
+   "2d": "bnAuYXJyYXkoW0ZhbHNlLCBUcnVlLCBGYWxzZV0p",
+   "3a": "bnAuYXJyYXkoWzEuMCwgMi4wLCAzLjBdKQ==",
+   "3b": "bnAuYXJyYXkoW2InMScsIGInMicsIGInMyddLCBkdHlwZT0nfFMxJyk="
+  },
+  "tests": {
+   "to_whole": [
+    [
+     "to_whole(np.array([1.2, 2.7]))",
+     "bnAuYXJyYXkoWzEsIDNdKQ=="
+    ],
+    [
+     "to_whole(np.array([-1.8, 4.0]))",
+     "bnAuYXJyYXkoWy0yLCA0XSk="
+    ],
+    [
+     "to_whole(np.array([9.9]))",
+     "bnAuYXJyYXkoWzEwXSk="
+    ]
+   ],
+   "is_text": [
+    [
+     "is_text(np.array(['a', 'b']))",
+     "VHJ1ZQ=="
+    ],
+    [
+     "is_text(np.array([1, 2]))",
+     "RmFsc2U="
+    ],
+    [
+     "is_text(np.array([1, 'a']))",
+     "VHJ1ZQ=="
+    ],
+    [
+     "is_text(np.array([1.5]))",
+     "RmFsc2U="
+    ]
+   ],
+   "parse_numbers": [
+    [
+     "parse_numbers(\"3,10,7\")",
+     "bnAuYXJyYXkoWzMsIDEwLCA3XSk="
+    ],
+    [
+     "parse_numbers(\"42\")",
+     "bnAuYXJyYXkoWzQyXSk="
+    ]
+   ],
+   "average_price": [
+    [
+     "average_price([1, 2])",
+     "MS41"
+    ],
+    [
+     "average_price([2.5, 3.5, 6])",
+     "NC4w"
+    ]
+   ]
+  }
+ },
+ "level_04_copy_and_view": {
+  "tasks": {
+   "1a": "RmFsc2U=",
+   "1b": "VHJ1ZQ==",
+   "1c": "VHJ1ZQ==",
+   "1d": "RmFsc2U=",
+   "2a": "bnAuYXJyYXkoWzk5LCAtMSwgMjIsIDIzXSk=",
+   "2b": "bnAuYXJyYXkoWzEsIDIsIDNdKQ==",
+   "2c": "bnAuYXJyYXkoWzk5LCAtMSwgMjIsIDIzXSk="
+  },
+  "tests": {
+   "with_first_zeroed": [
+    [
+     "with_first_zeroed(DATA)",
+     "bnAuYXJyYXkoWzAsIDYsIDddKQ=="
+    ],
+    [
+     "with_first_zeroed(np.array([1.5, 2.5]))",
+     "bnAuYXJyYXkoWzAuMCwgMi41XSk="
+    ]
+   ],
+   "capped": [
+    [
+     "capped(MARKS, 5)",
+     "bnAuYXJyYXkoWzEsIDUsIDNdKQ=="
+    ],
+    [
+     "capped(np.array([4, 1, 2, 8]), 2)",
+     "bnAuYXJyYXkoWzIsIDEsIDIsIDJdKQ=="
+    ]
+   ],
+   "normalised": [
+    [
+     "normalised(PRICES)",
+     "bnAuYXJyYXkoWzAuNSwgMS4wLCAwLjI1XSk="
+    ],
+    [
+     "normalised(np.array([5.0, 10.0]))",
+     "bnAuYXJyYXkoWzAuNSwgMS4wXSk="
+    ]
+   ]
+  }
+ },
+ "level_05_shape_and_reshape": {
+  "tasks": {
+   "1a": "bnAuYXJyYXkoW1sxLCAyLCAzLCA0XSwgWzUsIDYsIDcsIDhdLCBbOSwgMTAsIDExLCAxMl1dKQ==",
+   "1b": "bnAuYXJyYXkoW1tbMSwgMl0sIFszLCA0XSwgWzUsIDZdXSwgW1s3LCA4XSwgWzksIDEwXSwgWzExLCAxMl1dXSk=",
+   "1c": "bnAuYXJyYXkoW1sxLCAyXSwgWzMsIDRdLCBbNSwgNl0sIFs3LCA4XSwgWzksIDEwXSwgWzExLCAxMl1dKQ==",
+   "1d": "KDMsIDQp",
+   "2a": "bnAuYXJyYXkoW1sxLCA0XSwgWzIsIDVdLCBbMywgNl1dKQ==",
+   "2b": "bnAuYXJyYXkoWzEsIDIsIDMsIDQsIDUsIDZdKQ==",
+   "2c": "bnAuYXJyYXkoW1sxLCAyXSwgWzMsIDRdLCBbNSwgNl1dKQ=="
+  },
+  "tests": {
+   "as_rows": [
+    [
+     "as_rows(np.array([1, 2, 3, 4, 5, 6]), 2)",
+     "bnAuYXJyYXkoW1sxLCAyXSwgWzMsIDRdLCBbNSwgNl1dKQ=="
+    ],
+    [
+     "as_rows(np.array([1, 2, 3, 4, 5, 6]), 3)",
+     "bnAuYXJyYXkoW1sxLCAyLCAzXSwgWzQsIDUsIDZdXSk="
+    ],
+    [
+     "as_rows(np.array([7, 8]), 1)",
+     "bnAuYXJyYXkoW1s3XSwgWzhdXSk="
+    ]
+   ],
+   "fits": [
+    [
+     "fits(np.array([1, 2, 3, 4, 5, 6]), (2, 3))",
+     "VHJ1ZQ=="
+    ],
+    [
+     "fits(np.array([1, 2, 3, 4, 5, 6]), (4, 2))",
+     "RmFsc2U="
+    ],
+    [
+     "fits(np.array([[1, 2], [3, 4]]), (4,))",
+     "VHJ1ZQ=="
+    ],
+    [
+     "fits(np.array([1, 2, 3]), (1, 3, 1))",
+     "VHJ1ZQ=="
+    ]
+   ],
+   "swap_rows_and_columns": [
+    [
+     "swap_rows_and_columns(np.array([[1, 2, 3], [4, 5, 6]]))",
+     "bnAuYXJyYXkoW1sxLCA0XSwgWzIsIDVdLCBbMywgNl1dKQ=="
+    ],
+    [
+     "swap_rows_and_columns(np.array([[1, 2]]))",
+     "bnAuYXJyYXkoW1sxXSwgWzJdXSk="
+    ]
+   ],
+   "weekly": [
+    [
+     "weekly(np.arange(1, 15))",
+     "bnAuYXJyYXkoW1sxLCAyLCAzLCA0LCA1LCA2LCA3XSwgWzgsIDksIDEwLCAxMSwgMTIsIDEzLCAxNF1dKQ=="
+    ],
+    [
+     "weekly(np.array([0, 0, 0, 0, 0, 0, 1]))",
+     "bnAuYXJyYXkoW1swLCAwLCAwLCAwLCAwLCAwLCAxXV0p"
+    ]
+   ]
+  }
+ },
+ "level_06_making_arrays": {
+  "tasks": {
+   "1a": "bnAuYXJyYXkoWzAsIDEsIDIsIDMsIDQsIDUsIDYsIDcsIDgsIDldKQ==",
+   "1b": "bnAuYXJyYXkoWzEsIDMsIDUsIDcsIDksIDExLCAxMywgMTUsIDE3LCAxOV0p",
+   "1c": "bnAuYXJyYXkoWzAuMCwgMC4yNSwgMC41LCAwLjc1LCAxLjBdKQ==",
+   "1d": "bnAuYXJyYXkoWzEwLCA3LCA0LCAxXSk=",
+   "2a": "bnAuYXJyYXkoWzAuMCwgMC4wLCAwLjAsIDAuMCwgMC4wXSk=",
+   "2b": "bnAuYXJyYXkoW1sxLCAxLCAxXSwgWzEsIDEsIDFdXSk=",
+   "2c": "bnAuYXJyYXkoW1s3LCA3LCA3XSwgWzcsIDcsIDddLCBbNywgNywgN11dKQ==",
+   "2d": "bnAuYXJyYXkoW1sxLjAsIDAuMCwgMC4wLCAwLjBdLCBbMC4wLCAxLjAsIDAuMCwgMC4wXSwgWzAuMCwgMC4wLCAxLjAsIDAuMF0sIFswLjAsIDAuMCwgMC4wLCAxLjBdXSk=",
+   "3a": "KDEsIDYp",
+   "3b": "VHJ1ZQ=="
+  },
+  "tests": {
+   "times_table": [
+    [
+     "times_table(3)",
+     "bnAuYXJyYXkoWzMsIDYsIDksIDEyLCAxNSwgMTgsIDIxLCAyNCwgMjcsIDMwXSk="
+    ],
+    [
+     "times_table(1)",
+     "bnAuYXJyYXkoWzEsIDIsIDMsIDQsIDUsIDYsIDcsIDgsIDksIDEwXSk="
+    ]
+   ],
+   "board": [
+    [
+     "board(2, 3)",
+     "bnAuYXJyYXkoW1sxLCAwLCAwXSwgWzAsIDAsIDBdXSk="
+    ],
+    [
+     "board(1, 1)",
+     "bnAuYXJyYXkoW1sxXV0p"
+    ]
+   ],
+   "dice_rolls": [
+    [
+     "len(dice_rolls(500, 1))",
+     "NTAw"
+    ],
+    [
+     "sorted(set(dice_rolls(500, 1).tolist()))",
+     "WzEsIDIsIDMsIDQsIDUsIDZd"
+    ],
+    [
+     "dice_rolls(20, 5).tolist() == dice_rolls(20, 5).tolist()",
+     "VHJ1ZQ=="
+    ]
+   ],
+   "percentages": [
+    [
+     "percentages()",
+     "bnAuYXJyYXkoWzAsIDEwLCAyMCwgMzAsIDQwLCA1MCwgNjAsIDcwLCA4MCwgOTAsIDEwMF0p"
+    ]
+   ]
+  }
+ },
+ "level_07_maths_and_broadcasting": {
+  "tasks": {
+   "1a": "bnAuYXJyYXkoWzAsIDEsIDJdKQ==",
+   "1b": "bnAuYXJyYXkoWzQ5LCA2NCwgODFdKQ==",
+   "1c": "bnAuYXJyYXkoWzMuNSwgNC4wLCA0LjVdKQ==",
+   "1d": "bnAuYXJyYXkoWzMsIDQsIDRdKQ==",
+   "1e": "bnAuYXJyYXkoW0ZhbHNlLCBUcnVlLCBUcnVlXSk=",
+   "2a": "bnAuYXJyYXkoWzEuMCwgNC4wLCA1LjBdKQ==",
+   "2b": "bnAuYXJyYXkoWzMsIDAsIDNdKQ==",
+   "2c": "bnAuYXJyYXkoWzAsIDUsIDEwXSk=",
+   "3a": "bnAuYXJyYXkoW1sxMSwgMjIsIDMzXSwgWzE0LCAyNSwgMzZdXSk=",
+   "3b": "bnAuYXJyYXkoW1sxMDEsIDEwMiwgMTAzXSwgWzIwNCwgMjA1LCAyMDZdXSk=",
+   "3c": "bnAuYXJyYXkoW1sxLCAyLCAzXSwgWzIsIDQsIDZdLCBbMywgNiwgOV1dKQ=="
+  },
+  "tests": {
+   "celsius_to_fahrenheit": [
+    [
+     "celsius_to_fahrenheit(np.array([0, 100]))",
+     "bnAuYXJyYXkoWzMyLjAsIDIxMi4wXSk="
+    ],
+    [
+     "celsius_to_fahrenheit(np.array([[-40, 37]]))",
+     "bnAuYXJyYXkoW1stNDAuMCwgOTguNl1dKQ=="
+    ]
+   ],
+   "distances_from": [
+    [
+     "distances_from(np.array([[3, 4], [0, 0]]), np.array([0, 0]))",
+     "bnAuYXJyYXkoWzUuMCwgMC4wXSk="
+    ],
+    [
+     "distances_from(np.array([[1, 1], [4, 5]]), np.array([1, 1]))",
+     "bnAuYXJyYXkoWzAuMCwgNS4wXSk="
+    ]
+   ],
+   "multiplication_grid": [
+    [
+     "multiplication_grid(3)",
+     "bnAuYXJyYXkoW1sxLCAyLCAzXSwgWzIsIDQsIDZdLCBbMywgNiwgOV1dKQ=="
+    ],
+    [
+     "multiplication_grid(1)",
+     "bnAuYXJyYXkoW1sxXV0p"
+    ]
+   ],
+   "scale_to_unit": [
+    [
+     "scale_to_unit(np.array([10, 15, 20]))",
+     "bnAuYXJyYXkoWzAuMCwgMC41LCAxLjBdKQ=="
+    ],
+    [
+     "scale_to_unit(np.array([3, 1, 2]))",
+     "bnAuYXJyYXkoWzEuMCwgMC4wLCAwLjVdKQ=="
+    ]
+   ],
+   "square_roots": [
+    [
+     "square_roots(np.array([4, 9, 16]))",
+     "bnAuYXJyYXkoWzIuMCwgMy4wLCA0LjBdKQ=="
+    ],
+    [
+     "square_roots(np.array([[1, 4]]))",
+     "bnAuYXJyYXkoW1sxLjAsIDIuMF1dKQ=="
+    ]
+   ]
+  }
+ },
+ "level_08_aggregations": {
+  "tasks": {
+   "1a": "MTA4",
+   "1b": "MTguMA==",
+   "1c": "Mzg=",
+   "1d": "NQ==",
+   "2a": "bnAuYXJyYXkoWzEwMCwgNzAsIDEyMCwgMTAwXSk=",
+   "2b": "bnAuYXJyYXkoWzIsIC0xLCA3XSk=",
+   "3a": "bnAuYXJyYXkoWzIxNSwgMjMwLCAyNzVdKQ==",
+   "3b": "bnAuYXJyYXkoWzgwLjAsIDc1LjAsIDg1LjBdKQ==",
+   "3c": "bnAuYXJyYXkoWzkwLCAxMDAsIDg1XSk=",
+   "3d": "Mg=="
+  },
+  "tests": {
+   "student_averages": [
+    [
+     "student_averages(np.array([[70, 80, 90], [60, 65, 100]]))",
+     "bnAuYXJyYXkoWzgwLjAsIDc1LjBdKQ=="
+    ],
+    [
+     "student_averages(np.array([[50, 50]]))",
+     "bnAuYXJyYXkoWzUwLjBdKQ=="
+    ]
+   ],
+   "hardest_test": [
+    [
+     "hardest_test(np.array([[70, 80, 90], [60, 65, 100], [85, 85, 85]]))",
+     "MA=="
+    ],
+    [
+     "hardest_test(np.array([[90, 40], [80, 50]]))",
+     "MQ=="
+    ]
+   ],
+   "balance_history": [
+    [
+     "balance_history(100, np.array([50, -30, -20]))",
+     "bnAuYXJyYXkoWzE1MCwgMTIwLCAxMDBdKQ=="
+    ],
+    [
+     "balance_history(0, np.array([5]))",
+     "bnAuYXJyYXkoWzVdKQ=="
+    ]
+   ],
+   "biggest_jump": [
+    [
+     "biggest_jump(np.array([10, 12, 11, 18, 17]))",
+     "KDMsIDcp"
+    ],
+    [
+     "biggest_jump(np.array([5, 9]))",
+     "KDEsIDQp"
+    ],
+    [
+     "biggest_jump(np.array([3, 1, 2]))",
+     "KDIsIDEp"
+    ]
+   ],
+   "total_per_row": [
+    [
+     "total_per_row(np.array([[1, 2, 3], [4, 5, 6]]))",
+     "bnAuYXJyYXkoWzYsIDE1XSk="
+    ],
+    [
+     "total_per_row(np.array([[10], [20], [30]]))",
+     "bnAuYXJyYXkoWzEwLCAyMCwgMzBdKQ=="
+    ]
+   ]
+  }
+ },
+ "level_09_masks_and_where": {
+  "tasks": {
+   "1a": "bnAuYXJyYXkoWzIsIDQsIDYsIDhdKQ==",
+   "1b": "bnAuYXJyYXkoWzYsIDcsIDhdKQ==",
+   "1c": "bnAuYXJyYXkoWzMsIDQsIDUsIDZdKQ==",
+   "1d": "NA==",
+   "2a": "bnAuYXJyYXkoWydmYWlsJywgJ3Bhc3MnLCAncGFzcycsICdwYXNzJywgJ2ZhaWwnXSk=",
+   "2b": "bnAuYXJyYXkoWzUwLCA4MCwgNjIsIDkxLCA1MF0p",
+   "2c": "bnAuYXJyYXkoWzEsIDIsIDNdKQ==",
+   "3a": "bnAuYXJyYXkoWydCb2InLCAnSm9lJywgJ1dpbGwnXSk=",
+   "3b": "bnAuYXJyYXkoWzIsIDMsIDJdKQ==",
+   "3c": "bnAuYXJyYXkoW1RydWUsIEZhbHNlLCBUcnVlLCBUcnVlLCBUcnVlLCBGYWxzZSwgRmFsc2VdKQ==",
+   "4a": "Mg==",
+   "4b": "MjEuMjU=",
+   "4c": "bnAuYXJyYXkoWzE4LjUsIDIyLjAsIDI1LjUsIDE5LjBdKQ=="
+  },
+  "tests": {
+   "passing": [
+    [
+     "passing(np.array([40, 75, 50, 90]), 50)",
+     "bnAuYXJyYXkoWzc1LCA1MCwgOTBdKQ=="
+    ],
+    [
+     "passing(np.array([10, 20]), 50)",
+     "bnAuYXJyYXkoW10sIGR0eXBlPSdpbnQ2NCcp"
+    ]
+   ],
+   "letter_grades": [
+    [
+     "letter_grades(np.array([85, 60, 59, 100]))",
+     "bnAuYXJyYXkoWydBJywgJ0InLCAnRicsICdBJ10p"
+    ],
+    [
+     "letter_grades(np.array([0]))",
+     "bnAuYXJyYXkoWydGJ10p"
+    ]
+   ],
+   "fill_missing": [
+    [
+     "fill_missing(np.array([1.0, np.nan, 3.0]))",
+     "bnAuYXJyYXkoWzEuMCwgMi4wLCAzLjBdKQ=="
+    ],
+    [
+     "fill_missing(np.array([np.nan, 10.0, np.nan]))",
+     "bnAuYXJyYXkoWzEwLjAsIDEwLjAsIDEwLjBdKQ=="
+    ],
+    [
+     "fill_missing(np.array([4.0]))",
+     "bnAuYXJyYXkoWzQuMF0p"
+    ]
+   ],
+   "most_common": [
+    [
+     "most_common(np.array([\"Bob\", \"Joe\", \"Will\", \"Bob\", \"Will\", \"Joe\", \"Joe\"]))",
+     "J0pvZSc="
+    ],
+    [
+     "most_common(np.array([3, 1, 3, 2, 1]))",
+     "MQ=="
+    ],
+    [
+     "most_common(np.array([7]))",
+     "Nw=="
+    ]
+   ],
+   "in_range": [
+    [
+     "in_range(np.array([1, 5, 10, 15]), 5, 10)",
+     "bnAuYXJyYXkoWzUsIDEwXSk="
+    ],
+    [
+     "in_range(np.array([2, 3]), 0, 100)",
+     "bnAuYXJyYXkoWzIsIDNdKQ=="
+    ]
+   ]
+  }
+ },
+ "level_10_join_split_sort": {
+  "tasks": {
+   "1a": "bnAuYXJyYXkoWzEsIDIsIDMsIDRdKQ==",
+   "1b": "bnAuYXJyYXkoW1sxLCAyXSwgWzMsIDRdXSk=",
+   "1c": "bnAuYXJyYXkoW1sxLCAzXSwgWzIsIDRdXSk=",
+   "2a": "W25wLmFycmF5KFswLCAxLCAyLCAzLCA0LCA1LCA2XSksIG5wLmFycmF5KFs3LCA4LCA5LCAxMCwgMTEsIDEyLCAxM10pXQ==",
+   "2b": "W25wLmFycmF5KFswLCAxLCAyXSksIG5wLmFycmF5KFszLCA0LCA1LCA2LCA3LCA4LCA5XSksIG5wLmFycmF5KFsxMCwgMTEsIDEyLCAxM10pXQ==",
+   "3a": "bnAuYXJyYXkoWzYwLCA3MiwgODgsIDk1XSk=",
+   "3b": "bnAuYXJyYXkoWzk1LCA4OCwgNzIsIDYwXSk=",
+   "3c": "bnAuYXJyYXkoWydPbWFyJywgJ0FsaScsICdMaW5hJywgJ1NhcmEnXSk=",
+   "3d": "J1NhcmEn"
+  },
+  "tests": {
+   "join_classes": [
+    [
+     "join_classes(np.array([[1, 2]]), np.array([[3, 4], [5, 6]]))",
+     "bnAuYXJyYXkoW1sxLCAyXSwgWzMsIDRdLCBbNSwgNl1dKQ=="
+    ],
+    [
+     "join_classes(np.array([[9]]), np.array([[8]]))",
+     "bnAuYXJyYXkoW1s5XSwgWzhdXSk="
+    ]
+   ],
+   "ranking": [
+    [
+     "ranking(np.array([\"Ali\", \"Sara\", \"Omar\"]), np.array([72, 95, 60]))",
+     "bnAuYXJyYXkoWydTYXJhJywgJ0FsaScsICdPbWFyJ10p"
+    ],
+    [
+     "ranking(np.array([\"x\"]), np.array([1]))",
+     "bnAuYXJyYXkoWyd4J10p"
+    ]
+   ],
+   "top_n": [
+    [
+     "top_n(VALUES, 2)",
+     "bnAuYXJyYXkoWzksIDddKQ=="
+    ],
+    [
+     "top_n(VALUES, 5)",
+     "bnAuYXJyYXkoWzksIDcsIDUsIDMsIDFdKQ=="
+    ],
+    [
+     "top_n(np.array([4, 4, 2]), 1)",
+     "bnAuYXJyYXkoWzRdKQ=="
+    ]
+   ],
+   "into_weeks": [
+    [
+     "into_weeks(np.arange(14))",
+     "W25wLmFycmF5KFswLCAxLCAyLCAzLCA0LCA1LCA2XSksIG5wLmFycmF5KFs3LCA4LCA5LCAxMCwgMTEsIDEyLCAxM10pXQ=="
+    ],
+    [
+     "into_weeks(np.arange(7))",
+     "W25wLmFycmF5KFswLCAxLCAyLCAzLCA0LCA1LCA2XSld"
+    ]
+   ],
+   "sorted_copy": [
+    [
+     "sorted_copy(AGES)",
+     "bnAuYXJyYXkoWzE4LCAyNSwgNDBdKQ=="
+    ],
+    [
+     "sorted_copy(np.array([3, 1, 2]))",
+     "bnAuYXJyYXkoWzEsIDIsIDNdKQ=="
+    ]
+   ]
+  }
+ },
+ "level_11_linear_algebra_and_files": {
+  "tasks": {
+   "1a": "bnAuYXJyYXkoW1swLCAyXSwgWzMsIDBdXSk=",
+   "1b": "bnAuYXJyYXkoW1syLCAxXSwgWzQsIDNdXSk=",
+   "1c": "bnAuYXJyYXkoWzMsIDddKQ==",
+   "1d": "MzI=",
+   "2a": "OC4w",
+   "2b": "bnAuYXJyYXkoW1swLjUsIDAuMF0sIFswLjAsIDAuMjVdXSk=",
+   "2c": "bnAuYXJyYXkoWzMuMCwgMi4wXSk=",
+   "2d": "MTAuMA==",
+   "3a": "RmFsc2U=",
+   "3b": "VHJ1ZQ==",
+   "4a": "bnAuYXJyYXkoW1s3MCwgODAsIDkwXSwgWzYwLCA2NSwgMTAwXSwgWzg1LCA4NSwgODVdLCBbOTIsIDU4LCA3N11dKQ==",
+   "4b": "J21hdGgsc2NpZW5jZSxlbmdsaXNoJw==",
+   "4c": "bnAuYXJyYXkoWzc2Ljc1LCA3Mi4wLCA4OC4wXSk="
+  },
+  "tests": {
+   "solve_two": [
+    [
+     "solve_two(1, 1, 5, 1, -1, 1)",
+     "bnAuYXJyYXkoWzMuMCwgMi4wXSk="
+    ],
+    [
+     "solve_two(2, 0, 6, 0, 4, 2)",
+     "bnAuYXJyYXkoWzMuMCwgMC41XSk="
+    ]
+   ],
+   "rotate_points": [
+    [
+     "rotate_points(np.array([[1, 0]]), 90)",
+     "bnAuYXJyYXkoW1swLjAsIDEuMF1dKQ=="
+    ],
+    [
+     "rotate_points(np.array([[1, 0], [0, 2]]), 180)",
+     "bnAuYXJyYXkoW1stMS4wLCAwLjBdLCBbLTAuMCwgLTIuMF1dKQ=="
+    ]
+   ],
+   "save_and_reload": [
+    [
+     "save_and_reload(np.array([[1, 2], [3, 4]]), \"small.csv\")",
+     "bnAuYXJyYXkoW1sxLCAyXSwgWzMsIDRdXSk="
+    ],
+    [
+     "(OUT / \"small.csv\").read_text(encoding=\"utf-8\").splitlines()[0]",
+     "JzEsMic="
+    ]
+   ],
+   "same_floats": [
+    [
+     "same_floats(np.array([0.1 + 0.2]), np.array([0.3]))",
+     "VHJ1ZQ=="
+    ],
+    [
+     "same_floats(np.array([1.0, 2.0]), np.array([1.0, 2.5]))",
+     "RmFsc2U="
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,95 @@
+numpy · indexing, copies and dtypes
+import numpy as np
+
+
+── one value, and slices ──
+
+arr[i]
+np.array([5, 10, 15])[1] → 10      # the value at position i, counting from 0
+
+arr[-1]
+np.array([5, 10, 15])[-1] → 15      # the last value
+
+arr[start:stop]
+np.array([5, 10, 15, 20])[1:3] → array([10, 15])      # a slice, the stop is not included
+
+arr[::step]
+np.array([5, 10, 15, 20])[::2] → array([5, 15])      # every step-th value
+
+arr[::-1]
+np.array([1, 2, 3])[::-1] → array([3, 2, 1])      # backwards
+
+
+── 2D and 3D ──
+
+t[row, col]
+np.array([[1, 2], [3, 4]])[1, 0] → 3      # one value in a 2D array
+
+t[row]
+np.array([[1, 2], [3, 4]])[0] → array([1, 2])      # a whole row
+
+t[:, col]
+np.array([[1, 2], [3, 4]])[:, 1] → array([2, 4])      # a whole column
+
+t[r1:r2, c1:c2]
+np.array([[1, 2, 3], [4, 5, 6]])[0:2, 1:3] → array([[2, 3], [5, 6]])      # a block of rows and columns
+
+cube[block, row, col]
+np.array([[[1, 2]], [[3, 4]]])[1, 0, 1] → 4      # one value in a 3D array
+
+
+── picking and changing ──
+
+arr[[i, j]]
+np.array([5, 10, 15])[[0, 2]] → array([5, 15])      # the values at a list of positions
+
+np.delete(arr, i)
+np.delete(np.array([5, 10, 15]), 1) → array([5, 15])      # everything except position i
+
+arr[i] = value
+arr[0] = 100 → the first value is now 100      # changes one value in place
+
+t[r1:r2, c1:c2] = small
+t[0:1, 0:2] = np.array([[7, 8]]) → those two values change      # puts a smaller array into a block
+
+
+── same, view or copy ──
+
+x = arr
+x[0] = 1 → arr[0] is 1 too      # a second name for the SAME array
+
+arr.view()
+x = arr.view() → changing x changes arr      # a new array that shares arr's values
+
+arr.copy()
+x = arr.copy() → changing x leaves arr alone      # a separate copy
+
+np.shares_memory(a, b)
+np.shares_memory(np.arange(3), np.arange(3)) → False      # whether two arrays share values
+
+part.base is arr
+after part = arr[1:3], part.base is arr is True      # whether part is a view of arr
+
+
+── dtypes ──
+
+arr.dtype
+np.array([1, 2]).dtype → dtype('int64')      # the type of every value
+
+arr.dtype.kind
+np.array([1.5]).dtype.kind → 'f'      # the type as a letter: i int, f float, b bool, U text, S bytes
+
+np.array(values, dtype=float)
+np.array([1, 2], dtype=float) → array([1., 2.])      # makes an array of a chosen type
+
+arr.astype(int)
+np.array([1.9, 2.1]).astype(int) → array([1, 2])      # a new array of another type, decimals cut off
+
+arr.astype(bool)
+np.array([0, 2]).astype(bool) → array([False, True])      # 0 becomes False, anything else True
+
+np.round(arr, decimals)
+np.round(np.array([0.5, 1.5, 1.234]), 1) → array([0.5, 1.5, 1.2])      # rounds every value, .5 goes to the even number
+
+text.split(",")
+"3,10,7".split(",") → ['3', '10', '7']      # cuts a str into a list of str

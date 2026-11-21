@@ -1,0 +1,122 @@
+numpy · masks, sorting and joining
+import numpy as np
+
+
+── keeping the values that match (masks) ──
+
+arr[arr > n]
+np.array([1, 5, 8])[np.array([1, 5, 8]) > 4] → array([5, 8])      # only the values where the condition is True
+
+arr[mask]
+np.array([1, 2])[np.array([True, False])] → array([1])      # only the values where a True/False array is True
+
+(a > 1) & (a < 5)
+(np.array([0, 2, 9]) > 1) & (np.array([0, 2, 9]) < 5) → array([False, True, False])      # and, for masks
+
+(a < 1) | (a > 5)
+(np.array([0, 2, 9]) < 1) | (np.array([0, 2, 9]) > 5) → array([True, False, True])      # or, for masks
+
+~mask
+~np.array([True, False]) → array([False, True])      # not, for masks
+
+arr[arr > n] = value
+arr[arr > 100] = 100 → nothing above 100 is left      # changes only the values that match, in place
+
+
+── counting and checking ──
+
+mask.sum()
+(np.array([1, 5, 8]) > 4).sum() → 2      # how many are True
+
+np.count_nonzero(mask)
+np.count_nonzero(np.array([True, True, False])) → 2      # how many are True
+
+mask.any()   mask.all()
+(np.array([1, 5]) > 4).any() → True      # is any True / are all True
+
+mask.any(axis=1)
+np.array([[True, False], [False, False]]).any(axis=1) → array([True, False])      # is any True in each row
+
+
+── choosing per value ──
+
+np.where(mask, if_true, if_false)
+np.where(np.array([1, 5]) > 2, "big", "small") → array(['small', 'big'])      # picks a value for every position
+
+np.where(mask)
+np.where(np.array([1, 5, 8]) > 4) → (array([1, 2]),)      # the positions where it's True, in a tuple
+
+
+── unique values ──
+
+np.unique(arr)
+np.unique(np.array([3, 1, 3])) → array([1, 3])      # each value once, sorted
+
+np.unique(arr, return_counts=True)
+np.unique(np.array([3, 1, 3]), return_counts=True)[1] → array([1, 2])      # each value once, and how many times it appears
+
+np.isin(arr, a_list)
+np.isin(np.array([1, 2, 3]), [2, 3]) → array([False, True, True])      # whether each value is one of the list
+
+
+── missing values ──
+
+np.nan
+np.array([1.0, np.nan]).mean() → np.nan      # "not a number": a missing value
+
+np.isnan(arr)
+np.isnan(np.array([1.0, np.nan])) → array([False, True])      # where the missing values are
+
+np.nanmean(arr)
+np.nanmean(np.array([1.0, np.nan, 3.0])) → 2.0      # the average, skipping missing values
+
+np.nansum(arr)   np.nanmax(arr)   np.nanmin(arr)
+np.nanmax(np.array([1.0, np.nan])) → 1.0      # the same idea for sum, max, min
+
+
+── joining and splitting ──
+
+np.concatenate([a, b])
+np.concatenate([np.array([1]), np.array([2, 3])]) → array([1, 2, 3])      # end to end
+
+np.concatenate([t1, t2], axis=1)
+np.concatenate([np.array([[1]]), np.array([[2]])], axis=1) → array([[1, 2]])      # side by side, for 2D arrays
+
+np.vstack([a, b])
+np.vstack([np.array([1, 2]), np.array([3, 4])]) → array([[1, 2], [3, 4]])      # on top of each other
+
+np.hstack([a, b])
+np.hstack([np.array([1, 2]), np.array([3])]) → array([1, 2, 3])      # side by side
+
+np.column_stack([a, b])
+np.column_stack([np.array([1, 2]), np.array([3, 4])]) → array([[1, 3], [2, 4]])      # each one becomes a column
+
+np.split(arr, n)
+len(np.split(np.arange(6), 3)) → 3      # a list of n equal parts
+
+np.split(arr, [i, j])
+np.split(np.arange(5), [1, 3])[1] → array([1, 2])      # cuts before positions i and j
+
+np.pad(arr, 1)
+np.pad(np.array([5]), 1) → array([0, 5, 0])      # adds a border of 0s all round
+
+
+── sorting ──
+
+np.sort(arr)
+np.sort(np.array([3, 1, 2])) → array([1, 2, 3])      # a sorted copy
+
+arr.sort()
+arr.sort() → arr is now sorted      # sorts arr itself and gives back None
+
+np.argsort(arr)
+np.argsort(np.array([30, 10, 20])) → array([1, 2, 0])      # the positions in sorted order
+
+np.argsort(arr, kind="stable")
+np.argsort(np.array([2, 1, 2]), kind="stable") → array([1, 0, 2])      # the same, keeping ties in their old order
+
+np.flip(arr)
+np.flip(np.array([1, 2, 3])) → array([3, 2, 1])      # reversed
+
+np.searchsorted(sorted_arr, value)
+np.searchsorted(np.array([10, 20, 30]), 25) → 2      # where value would go to keep it sorted

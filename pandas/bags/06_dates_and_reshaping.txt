@@ -1,0 +1,62 @@
+pandas · dates and reshaping
+import pandas as pd
+
+
+── real dates ──
+
+pd.to_datetime(s)
+pd.to_datetime(pd.Series(["2026-01-03"])).dt.year.tolist() → [2026]      # text into real dates
+
+s.dt.year   s.dt.month   s.dt.day   s.dt.hour
+pd.to_datetime(pd.Series(["2026-02-09 14:30"])).dt.hour.tolist() → [14]      # one part of every date
+
+s.dt.day_name()
+pd.to_datetime(pd.Series(["2026-01-03"])).dt.day_name().tolist() → ['Saturday']      # the weekday of every date
+
+s.dt.strftime("%Y-%m")
+pd.to_datetime(pd.Series(["2026-01-03"])).dt.strftime("%Y-%m").tolist() → ['2026-01']      # every date as text in your format
+
+(later - earlier).days
+(pd.Timestamp("2026-01-10") - pd.Timestamp("2026-01-03")).days → 7      # the number of days between two dates
+
+
+── dates as the row labels ──
+
+df.set_index("date")
+df.set_index("date")      # uses the date column as the row labels
+
+df.loc["2026-02"]
+df.loc["2026-02"]      # the rows in that month (with dates as the row labels)
+
+s.resample("ME").sum()
+pd.Series([1, 2, 3], index=pd.to_datetime(["2026-01-01", "2026-01-15", "2026-02-01"])).resample("ME").sum().tolist() → [3, 3]      # one total per month ("W" = per week)
+
+s.resample("W").last()
+s.resample("W").last()      # the last value of each week
+
+
+── over time ──
+
+s.shift(1)
+pd.Series([1, 2, 3]).shift(1).tolist() → [nan, 1.0, 2.0]      # each value moved one row down (yesterday's value)
+
+s.diff()
+pd.Series([1, 4, 9]).diff().tolist() → [nan, 3.0, 5.0]      # the change from the row before
+
+s.pct_change()
+pd.Series([100.0, 150.0]).pct_change().tolist() → [nan, 0.5]      # the change from the row before, as a fraction
+
+s.rolling(n).mean()
+pd.Series([1, 2, 3, 4]).rolling(2).mean().tolist() → [nan, 1.5, 2.5, 3.5]      # the average of each n rows in a row
+
+
+── reshaping ──
+
+df.melt(id_vars="col", var_name="name", value_name="value")
+pd.DataFrame({"n": ["A"], "math": [9], "art": [6]}).melt(id_vars="n").shape → (2, 3)      # wide → long: one row per value
+
+df.pivot(index="a", columns="b", values="c")
+pd.DataFrame({"n": ["A", "A"], "s": ["x", "y"], "v": [1, 2]}).pivot(index="n", columns="s", values="v").loc["A", "y"] → 2      # long → wide
+
+df.pivot_table(index="a", columns="b", values="c", aggfunc="sum", fill_value=0)
+pd.DataFrame({"a": ["x", "x"], "b": ["p", "p"], "c": [1, 2]}).pivot_table(index="a", columns="b", values="c", aggfunc="sum").loc["x", "p"] → 3      # like pivot, adding up repeats and filling gaps

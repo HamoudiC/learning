@@ -1,0 +1,32 @@
+sympy · integrals
+from sympy import *
+
+
+── integrating ──
+
+integrate(expr, x)
+integrate(x**2, x) → x**3/3      # an antiderivative (no + C)
+
+integrate(expr, (x, a, b))
+integrate(x**2, (x, 0, 3)) → 9      # the definite integral from a to b
+
+integrate(expr, (x, a, oo))
+integrate(1/x**2, (x, 1, oo)) → 1      # an improper integral
+
+Integral(expr, (x, a, b)).doit()
+Integral(x**2, (x, 0, 3)).doit() → 9      # writes the integral down, then .doit() works it out
+
+N(Integral(expr, (x, a, b)), digits)
+N(Integral(exp(-x**2), (x, 0, 1)), 4) → 0.7468      # a decimal when there's no formula
+
+
+── adding up strips ──
+
+Rational(b - a, n)
+Rational(2 - 0, 4) → Rational(1, 2)      # the width of each strip, exact
+
+sum(f.subs(x, point) * dx for point in points)
+sum((x**2).subs(x, p) * Rational(1, 2) for p in [0, Rational(1, 2), 1, Rational(3, 2)]) → Rational(7, 4)      # a Riemann sum
+
+summation(expr, (k, 1, n))
+summation(k, (k, 1, 4)) → 10      # adds expr for k = 1 to n (see bag 08)

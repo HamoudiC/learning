@@ -1,0 +1,83 @@
+python · the basics the projects use
+(nothing to import)
+
+
+── text ──
+
+text[i]
+"B3"[0] → 'B'      # one character, counting from 0
+
+text[start:]
+"B12"[1:] → '12'      # everything from position start on
+
+int(text)
+int("12") → 12      # text that looks like a whole number, as a number
+
+str(number)
+str(5) → '5'      # a number as text
+
+ord(letter)   chr(number)
+ord("B") - ord("A") → 1      # a letter's code number / the letter for a code number
+
+f"{a}{b}"
+f"{'A'}{1}" → 'A1'      # puts values into text
+
+separator.join(list_of_text)
+"-".join(["a", "b"]) → 'a-b'      # glues text together with a separator between
+
+text.split(separator)
+"a,b".split(",") → ['a', 'b']      # cuts text into a list
+
+
+── lists, tuples, dicts ──
+
+a_list.append(value)
+a_list.append(3) → 3 is now on the end      # adds one value to the end of a list
+
+len(thing)
+len([1, 2, 3]) → 3      # how many items
+
+(a, b)
+(1, 2)[0] → 1      # a tuple: a few values together
+
+first, second = pair
+first, second = (1, 2)      # takes a tuple apart: first is 1, second is 2
+
+a_dict[key] = value
+a_dict["Ali"] = "B" → the dict now has Ali: B      # adds or changes one entry
+
+dict(zip(keys, values))
+dict(zip(["a", "b"], [1, 2])) → {'a': 1, 'b': 2}      # a dict from two lists
+
+sorted(a_list)
+sorted([3, 1, 2]) → [1, 2, 3]      # a sorted copy
+
+
+── loops ──
+
+for item in items:
+for x in [1, 2]: print(x) → prints 1 then 2      # does the block once for each item
+
+for i in range(n):
+list(range(3)) → [0, 1, 2]      # counts 0 to n-1
+
+for place, item in enumerate(items, start=1):
+list(enumerate(["a", "b"], start=1)) → [(1, 'a'), (2, 'b')]      # each item with its number
+
+for a, b in zip(list_a, list_b):
+list(zip([1, 2], ["x", "y"])) → [(1, 'x'), (2, 'y')]      # walks two lists side by side
+
+count = count + 1
+count += 1 → count goes up by 1      # adds to a running count
+
+
+── numbers ──
+
+round(number, decimals)
+round(3.14159, 2) → 3.14      # rounds a number
+
+int(np_number)   float(np_number)
+int(np.int64(5)) → 5      # a numpy number as a plain Python number
+
+max(a, b)   min(a, b)
+max(3, 7) → 7      # the bigger / smaller of two numbers

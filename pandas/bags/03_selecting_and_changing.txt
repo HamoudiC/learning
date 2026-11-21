@@ -1,0 +1,96 @@
+pandas · choosing rows and changing data
+import pandas as pd
+import numpy as np
+
+
+── by position or by label ──
+
+df.iloc[start:stop]
+len(pd.DataFrame({"a": [1, 2, 3]}).iloc[:2]) → 2      # rows by position (the stop is not included)
+
+df.loc[first:last, "col"]
+pd.DataFrame({"a": [5, 6, 7]}).loc[0:1, "a"].tolist() → [5, 6]      # rows by label (the last label IS included), one column
+
+
+── keeping the rows that match ──
+
+df[df["col"] > n]
+len(pd.DataFrame({"a": [1, 5, 8]})[pd.DataFrame({"a": [1, 5, 8]})["a"] > 4]) → 2      # only the rows where it's True
+
+df[(cond1) & (cond2)]
+(pd.Series([1, 5]) > 0) & (pd.Series([1, 5]) < 3)      # and: both true (| is or, ~ is not); brackets needed
+
+df["col"].isin([a, b])
+pd.Series(["x", "y", "z"]).isin(["x", "z"]).tolist() → [True, False, True]      # is the value one of these?
+
+df["col"].between(low, high)
+pd.Series([1, 2, 3]).between(2, 3).tolist() → [False, True, True]      # from low to high, both included
+
+df.loc[mask, "col"]
+pd.DataFrame({"a": [1, 5], "b": ["x", "y"]}).loc[pd.Series([False, True]), "b"].tolist() → ['y']      # the matching rows, one column
+
+df.query("text")
+len(pd.DataFrame({"a": [1, 5, 8]}).query("a > 4")) → 2      # a filter written as text
+
+mask.sum()
+(pd.Series([1, 5, 8]) > 4).sum() → 2      # how many rows match
+
+df.reset_index(drop=True)
+pd.DataFrame({"a": [1, 5, 8]}).iloc[1:].reset_index(drop=True).index.tolist() → [0, 1]      # numbers the rows 0, 1, 2 again
+
+
+── new and changed columns ──
+
+df["new"] = df["a"] * df["b"]
+df["revenue"] = df["units"] * df["price"]      # adds a column to df itself
+
+df.assign(new=...)
+pd.DataFrame({"a": [1]}).assign(b=5).columns.tolist() → ['a', 'b']      # a NEW table with a new column; df stays the same
+
+s.map(a_dict)
+pd.Series(["Mouse", "Pen"]).map({"Mouse": "S"}).tolist() → ['S', np.nan]      # looks each value up in a dict (not found → NaN)
+
+s.apply(function)
+pd.Series([1, 2]).apply(lambda v: v * 10).tolist() → [10, 20]      # calls the function on every value
+
+np.where(mask, if_true, if_false)
+np.where(pd.Series([1, 5]) > 2, "big", "small").tolist() → ['small', 'big']      # chooses a value for every row
+
+df.loc[row, "col"] = value
+df.loc[0, "units"] = 0      # changes one cell in ONE step (df["col"][0] = value changes nothing)
+
+df.copy()
+df.copy()      # a separate copy you can change safely
+
+
+── sorting ──
+
+df.sort_values("col")
+pd.DataFrame({"a": [3, 1, 2]}).sort_values("a")["a"].tolist() → [1, 2, 3]      # sorted, smallest first
+
+df.sort_values("col", ascending=False)
+pd.DataFrame({"a": [3, 1, 2]}).sort_values("a", ascending=False)["a"].tolist() → [3, 2, 1]      # biggest first
+
+df.sort_values(["a", "b"], ascending=[True, False])
+df.sort_values(["region", "units"], ascending=[True, False])      # by a, then by b biggest first
+
+df.nlargest(n, "col")
+pd.DataFrame({"a": [3, 1, 2]}).nlargest(2, "a")["a"].tolist() → [3, 2]      # the n rows with the biggest values
+
+
+── renaming, dropping, types ──
+
+df.rename(columns={"old": "new"})
+pd.DataFrame({"a": [1]}).rename(columns={"a": "b"}).columns.tolist() → ['b']      # new column names
+
+df.drop(columns=["col"])
+pd.DataFrame({"a": [1], "b": [2]}).drop(columns=["a"]).columns.tolist() → ['b']      # without those columns
+
+s.astype(int)   s.astype(str)
+pd.Series([1.0, 2.0]).astype(int).tolist() → [1, 2]      # another type (int fails if there's a NaN)
+
+s.fillna(value)
+pd.Series([1.0, np.nan]).fillna(0).tolist() → [1.0, 0.0]      # fills the missing values
+
+text.strip().lower().replace(" ", "_")
+" Unit Price ".strip().lower().replace(" ", "_") → 'unit_price'      # tidies one piece of text

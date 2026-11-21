@@ -1,0 +1,29 @@
+sympy · sums and series
+from sympy import *
+
+
+── sums ──
+
+summation(expr, (k, start, end))
+summation(k, (k, 1, 10)) → 55      # adds expr for k = start up to end (end included)
+
+summation(expr, (k, 1, n))
+factor(summation(k, (k, 1, n))) → n*(n + 1)/2      # with a letter as the end: a formula
+
+summation(expr, (k, 0, oo))
+summation(Rational(1, 2)**k, (k, 0, oo)) → 2      # forever (oo or a total)
+
+Sum(expr, (k, a, b)).doit()
+Sum(k, (k, 1, 10)).doit() → 55      # writes the sum down, then .doit() works it out
+
+factorial(n)   binomial(n, r)
+binomial(5, 2) → 10      # n! / "n choose r"
+
+
+── series ──
+
+series(f, x, a, n)
+series(exp(x), x, 0, 3) → 1 + x + x**2/2 + O(x**3)      # powers of (x - a), up to but NOT including (x - a)**n
+
+expansion.removeO()
+series(exp(x), x, 0, 3).removeO() → x**2/2 + x + 1      # drops the O(...) part

@@ -1,0 +1,114 @@
+numpy · maths and aggregations
+import numpy as np
+
+
+── maths on every value ──
+
+arr + n   arr - n   arr * n   arr / n # does the maths on every value (eg: np.array([1, 2]) * 3 → array([3, 6]))
+arr // n
+np.array([7, 8]) // 2 → array([3, 4])      # divides and drops the decimals
+
+arr % n
+np.array([7, 8]) % 3 → array([1, 2])      # the remainder after dividing
+
+arr ** n
+np.array([2, 3]) ** 2 → array([4, 9])      # to the power n
+
+a + b
+np.array([1, 2]) + np.array([10, 20]) → array([11, 22])      # two arrays, position by position
+
+arr > n
+np.array([1, 5]) > 2 → array([False, True])      # compares every value
+
+
+── maths functions ──
+
+np.sqrt(arr)
+np.sqrt(np.array([4, 9])) → array([2., 3.])      # the square root of every value
+
+np.abs(arr)
+np.abs(np.array([-1, 2])) → array([1, 2])      # every value without its minus sign
+
+np.exp(arr)   np.log(arr)
+np.log(np.array([1])) → array([0.])      # e to the power / the natural log, of every value
+
+np.sin(arr)   np.cos(arr)
+np.cos(np.array([0])) → array([1.])      # sine / cosine, in radians
+
+np.radians(degrees)
+np.radians(180) → np.pi      # degrees into radians
+
+np.clip(arr, low, high)
+np.clip(np.array([-5, 5, 15]), 0, 10) → array([0, 5, 10])      # squashes every value into low..high
+
+np.maximum(a, b)
+np.maximum(np.array([1, 5]), np.array([4, 2])) → array([4, 5])      # the bigger of each pair
+
+
+── shapes that fit together (broadcasting) ──
+
+t + row
+np.array([[1, 2], [3, 4]]) + np.array([10, 20]) → array([[11, 22], [13, 24]])      # a 1D row is added to every row of t
+
+t + col
+np.array([[1, 2], [3, 4]]) + np.array([[10], [20]]) → array([[11, 12], [23, 24]])      # a (n, 1) column is added to every column
+
+arr.reshape(-1, 1)
+np.array([1, 2]).reshape(-1, 1) → array([[1], [2]])      # turns a row into a column
+
+
+── one number from many ──
+
+arr.sum()
+np.array([1, 2, 3]).sum() → 6      # all the values added up
+
+arr.mean()
+np.array([2, 4]).mean() → 3.0      # the average, always a decimal
+
+arr.min()   arr.max()
+np.array([4, 9, 1]).max() → 9      # the smallest / biggest value
+
+arr.std()
+np.array([2, 4]).std() → 1.0      # how spread out the values are
+
+arr.prod()
+np.array([2, 3, 4]).prod() → 24      # all the values multiplied
+
+np.median(arr)
+np.median(np.array([5, 1, 3])) → 3.0      # the middle value
+
+np.percentile(arr, p)
+np.percentile(np.array([1, 2, 3, 4]), 50) → 2.5      # the value p% of the data is below
+
+arr.argmax()   arr.argmin()
+np.array([30, 10, 50]).argmax() → 2      # the POSITION of the biggest / smallest
+
+
+── running totals ──
+
+arr.cumsum()
+np.array([1, 2, 3]).cumsum() → array([1, 3, 6])      # running totals
+
+arr.cumprod()
+np.array([2, 3, 4]).cumprod() → array([2, 6, 24])      # running products
+
+np.diff(arr)
+np.diff(np.array([1, 4, 9])) → array([3, 5])      # each value minus the one before, one shorter
+
+np.insert(arr, 0, value)
+np.insert(np.array([5, 6]), 0, 0) → array([0, 5, 6])      # puts a value at the front
+
+
+── per row or per column (axis) ──
+
+t.sum(axis=0)
+np.array([[1, 2], [3, 4]]).sum(axis=0) → array([4, 6])      # one answer per COLUMN
+
+t.sum(axis=1)
+np.array([[1, 2], [3, 4]]).sum(axis=1) → array([3, 7])      # one answer per ROW
+
+t.mean(axis=1)
+np.array([[1, 3], [5, 7]]).mean(axis=1) → array([2., 6.])      # the average of each row
+
+t.argmax(axis=0)
+np.array([[1, 9], [5, 2]]).argmax(axis=0) → array([1, 0])      # the row of the biggest value in each column

@@ -1,0 +1,32 @@
+sympy · differential equations
+from sympy import *
+
+
+── writing one ──
+
+y = Function("y")
+y = Function("y")      # an unknown function's name; y(x) is the function itself
+
+y(x).diff(x)   y(x).diff(x, 2)
+Function("y")(x).diff(x) → Derivative(Function("y")(x), x)      # y' and y''
+
+Eq(left, right)
+Eq(y(x).diff(x), 2*y(x))      # the equation y' = 2y
+
+
+── solving ──
+
+dsolve(equation, y(x))
+dsolve(Eq(Function("y")(x).diff(x), 2*Function("y")(x)), Function("y")(x)).rhs → symbols("C1")*exp(2*x)      # the solution, as y(x) = ...
+
+dsolve(equation, y(x), ics={y(0): value})
+dsolve(Eq(Function("y")(x).diff(x), 2*Function("y")(x)), Function("y")(x), ics={Function("y")(0): 3}).rhs → 3*exp(2*x)      # with a starting value
+
+solution.rhs   solution.lhs
+Eq(x, 2).rhs → 2      # the right side / the left side of an equation
+
+C1, C2 = symbols("C1 C2")
+C1, C2 = symbols("C1 C2")      # the same constants dsolve uses
+
+checkodesol(equation, solution)
+checkodesol(Eq(Function("y")(x).diff(x), 2*Function("y")(x)), Eq(Function("y")(x), exp(2*x))) → (True, 0)      # (True, 0) means it really solves it

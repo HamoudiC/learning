@@ -1,0 +1,101 @@
+numpy · arrays and shape
+import numpy as np
+
+
+── making arrays ──
+
+np.array(a_list)
+np.array([1, 2, 3]) → array([1, 2, 3])      # makes an array from a list or tuple
+
+np.array(a_list, ndmin=n)
+np.array([1, 2], ndmin=2) → array([[1, 2]])      # makes an array with at least n dimensions
+
+arr.tolist()
+np.array([1, 2]).tolist() → [1, 2]      # turns an array back into a plain list
+
+type(thing)
+type(np.array([1])) → np.ndarray      # what kind of thing it is
+
+
+── size and shape ──
+
+arr.ndim
+np.array([[1, 2], [3, 4]]).ndim → 2      # how many dimensions it has
+
+arr.shape
+np.array([[1, 2, 3], [4, 5, 6]]).shape → (2, 3)      # the size of each dimension
+
+arr.size
+np.array([[1, 2, 3], [4, 5, 6]]).size → 6      # how many values in total
+
+len(arr)
+len(np.array([[1, 2, 3], [4, 5, 6]])) → 2      # how many rows
+
+a_tuple[i]
+(2, 3)[1] → 3      # one number from a shape
+
+
+── changing the shape ──
+
+arr.reshape(rows, cols)
+np.array([1, 2, 3, 4]).reshape(2, 2) → array([[1, 2], [3, 4]])      # the same values put into a new shape
+
+arr.reshape(-1, cols)
+np.arange(6).reshape(-1, 2).shape → (3, 2)      # -1 works that size out for you
+
+arr.reshape(-1)
+np.array([[1, 2], [3, 4]]).reshape(-1) → array([1, 2, 3, 4])      # back to one row
+
+arr.flatten()
+np.array([[1, 2], [3, 4]]).flatten() → array([1, 2, 3, 4])      # a one-row copy
+
+arr.ravel()
+np.array([[1, 2], [3, 4]]).ravel() → array([1, 2, 3, 4])      # one row that shares its values with arr
+
+arr.T
+np.array([[1, 2], [3, 4]]).T → array([[1, 3], [2, 4]])      # rows become columns
+
+
+── ready-made arrays ──
+
+np.arange(start, stop, step)
+np.arange(2, 10, 3) → array([2, 5, 8])      # counts up, the stop is not included
+
+np.linspace(start, stop, how_many)
+np.linspace(0, 1, 3) → array([0., 0.5, 1.])      # evenly spaced values, the stop is included
+
+np.zeros(shape)
+np.zeros(3) → array([0., 0., 0.])      # an array of 0s
+
+np.ones(shape, dtype=int)
+np.ones((2, 2), dtype=int) → array([[1, 1], [1, 1]])      # an array of 1s
+
+np.full(shape, value)
+np.full(3, 7) → array([7, 7, 7])      # an array of one value
+
+np.eye(n)
+np.eye(2) → array([[1., 0.], [0., 1.]])      # 1s on the diagonal, 0s everywhere else
+
+np.zeros_like(arr)
+np.zeros_like(np.array([5, 6])) → array([0, 0])      # 0s with arr's shape and type
+
+
+── random numbers ──
+
+rng = np.random.default_rng(seed)
+rng = np.random.default_rng(1)      # a random number maker: the same seed gives the same numbers
+
+rng.integers(low, high, size=n)
+rng.integers(1, 7, size=3) → three dice rolls      # n random whole numbers, high not included
+
+rng.random(n)
+rng.random(2) → two decimals      # n random decimals from 0 to 1
+
+rng.normal(mean, spread, size=n)
+rng.normal(0, 1, size=100) → a hundred values      # n random values on a bell curve
+
+rng.choice(options, size=n)
+rng.choice(["a", "b"], size=3) → three picks      # n random picks from a list
+
+rng.shuffle(arr)
+rng.shuffle(cards) → cards in a new order      # mixes arr up in place

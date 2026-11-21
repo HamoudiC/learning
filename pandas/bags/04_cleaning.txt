@@ -1,0 +1,69 @@
+pandas · cleaning (missing values, text, duplicates)
+import pandas as pd
+import numpy as np
+
+
+── missing values ──
+
+df.isna()   s.isna()
+pd.Series([1.0, np.nan]).isna().tolist() → [False, True]      # True where a value is missing
+
+df.isna().sum()
+pd.DataFrame({"a": [1.0, np.nan], "b": [1, 2]}).isna().sum().to_dict() → {'a': 1, 'b': 0}      # how many missing in each column
+
+s.notna()
+pd.Series([1.0, np.nan]).notna().tolist() → [True, False]      # True where a value is NOT missing
+
+df.dropna()
+len(pd.DataFrame({"a": [1.0, np.nan]}).dropna()) → 1      # drops every row with a missing value
+
+df.dropna(subset=["col"])
+len(pd.DataFrame({"a": [1.0, np.nan], "b": [np.nan, 2.0]}).dropna(subset=["a"])) → 1      # drops rows missing that column
+
+s.fillna(value)
+pd.Series(["Dubai", np.nan]).fillna("unknown").tolist() → ['Dubai', 'unknown']      # fills the gaps (gives back a NEW Series)
+
+df.fillna({"col": value})
+pd.DataFrame({"a": [np.nan]}).fillna({"a": 0}).loc[0, "a"] → 0.0      # a different fill for each column
+
+
+── text in a column (.str) ──
+
+s.str.strip()
+pd.Series(["  sara "]).str.strip().tolist() → ['sara']      # removes spaces from both ends
+
+s.str.lower()   s.str.upper()   s.str.title()
+pd.Series(["sara khan"]).str.title().tolist() → ['Sara Khan']      # changes the capitals
+
+s.str.contains("text")
+pd.Series(["a@b", "ab"]).str.contains("@").tolist() → [True, False]      # True where the text is inside
+
+s.str.startswith("text")
+pd.Series(["050", "06"]).str.startswith("05").tolist() → [True, False]      # True where it starts with the text
+
+s.str.replace("old", "new")
+pd.Series(["0-5"]).str.replace("-", "").tolist() → ['05']      # replaces text
+
+s.str.replace(r"\D", "", regex=True)
+pd.Series(["(050) 1-2"]).str.replace(r"\D", "", regex=True).tolist() → ['05012']      # keeps only the digits
+
+s.str.split("sep").str[i]
+pd.Series(["omar@mail.com"]).str.split("@").str[0].tolist() → ['omar']      # one piece of each split
+
+s.str.len()
+pd.Series(["abc"]).str.len().tolist() → [3]      # how long each text is
+
+
+── duplicates ──
+
+df.duplicated(subset=["col"])
+pd.DataFrame({"a": [1, 1, 2]}).duplicated(subset=["a"]).tolist() → [False, True, False]      # True for a row that repeats an earlier one
+
+df.drop_duplicates(subset=["col"])
+len(pd.DataFrame({"a": [1, 1, 2]}).drop_duplicates(subset=["a"])) → 2      # keeps the first of each
+
+
+── text that should be numbers ──
+
+pd.to_numeric(s, errors="coerce")
+pd.to_numeric(pd.Series(["12", "x"]), errors="coerce").tolist() → [12.0, np.nan]      # numbers; text that isn't a number becomes NaN

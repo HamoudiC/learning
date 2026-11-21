@@ -1,0 +1,613 @@
+{
+ "project_01_cinema_seats": {
+  "tasks": {},
+  "tests": {
+   "make_hall": [
+    [
+     "make_hall(SEATS, 4)",
+     "bnAuYXJyYXkoW1sxMSwgMTIsIDEzLCAxNF0sIFsyMSwgMjIsIDIzLCAyNF0sIFszMSwgMzIsIDMzLCAzNF1dKQ=="
+    ],
+    [
+     "make_hall(SEATS, 6)",
+     "bnAuYXJyYXkoW1sxMSwgMTIsIDEzLCAxNCwgMjEsIDIyXSwgWzIzLCAyNCwgMzEsIDMyLCAzMywgMzRdXSk="
+    ],
+    [
+     "make_hall([5], 1)",
+     "bnAuYXJyYXkoW1s1XV0p"
+    ]
+   ],
+   "seat_at": [
+    [
+     "seat_at(HALL, \"A1\")",
+     "MTE="
+    ],
+    [
+     "seat_at(HALL, \"B3\")",
+     "MjM="
+    ],
+    [
+     "seat_at(HALL, \"C4\")",
+     "MzQ="
+    ]
+   ],
+   "book": [
+    [
+     "book(HALL, \"A2\")",
+     "bnAuYXJyYXkoW1sxMSwgMCwgMTMsIDE0XSwgWzIxLCAyMiwgMjMsIDI0XSwgWzMxLCAzMiwgMzMsIDM0XV0p"
+    ],
+    [
+     "book(HALL, \"C4\")",
+     "bnAuYXJyYXkoW1sxMSwgMTIsIDEzLCAxNF0sIFsyMSwgMjIsIDIzLCAyNF0sIFszMSwgMzIsIDMzLCAwXV0p"
+    ]
+   ],
+   "free_in_row": [
+    [
+     "free_in_row(np.array([[11, 0, 13, 0], [21, 22, 23, 24]]), \"A\")",
+     "Mg=="
+    ],
+    [
+     "free_in_row(np.array([[11, 0, 13, 0], [21, 22, 23, 24]]), \"B\")",
+     "NA=="
+    ],
+    [
+     "free_in_row(np.array([[0, 0]]), \"A\")",
+     "MA=="
+    ]
+   ],
+   "aisle_seats": [
+    [
+     "aisle_seats(HALL)",
+     "KG5wLmFycmF5KFsxMSwgMjEsIDMxXSksIG5wLmFycmF5KFsxNCwgMjQsIDM0XSkp"
+    ],
+    [
+     "aisle_seats(np.array([[1, 2]]))",
+     "KG5wLmFycmF5KFsxXSksIG5wLmFycmF5KFsyXSkp"
+    ]
+   ],
+   "seat_labels": [
+    [
+     "seat_labels(2, 3)",
+     "bnAuYXJyYXkoW1snQTEnLCAnQTInLCAnQTMnXSwgWydCMScsICdCMicsICdCMyddXSk="
+    ],
+    [
+     "seat_labels(1, 1)",
+     "bnAuYXJyYXkoW1snQTEnXV0p"
+    ]
+   ]
+  }
+ },
+ "project_02_pixel_art": {
+  "tasks": {},
+  "tests": {
+   "load": [
+    [
+     "load([[1, 2, 3]])",
+     "KG5wLmFycmF5KFtbMSwgMiwgM11dKSwgMSwgMyk="
+    ],
+    [
+     "load(ARROW)",
+     "KG5wLmFycmF5KFtbMCwgMCwgOSwgMCwgMCwgMF0sIFswLCA5LCA5LCA5LCAwLCAwXSwgWzksIDAsIDksIDAsIDksIDBdLCBbMCwgMCwgOSwgMCwgMCwgMF1dKSwgNCwgNik="
+    ]
+   ],
+   "crop": [
+    [
+     "crop(np.array(ARROW), 0, 1, 2, 3)",
+     "bnAuYXJyYXkoW1swLCA5LCAwXSwgWzksIDksIDldXSk="
+    ],
+    [
+     "crop(np.array(ARROW), 3, 0, 1, 6)",
+     "bnAuYXJyYXkoW1swLCAwLCA5LCAwLCAwLCAwXV0p"
+    ]
+   ],
+   "mirror": [
+    [
+     "mirror(np.array([[1, 2, 3], [4, 5, 6]]))",
+     "bnAuYXJyYXkoW1szLCAyLCAxXSwgWzYsIDUsIDRdXSk="
+    ],
+    [
+     "mirror(np.array(ARROW))",
+     "bnAuYXJyYXkoW1swLCAwLCAwLCA5LCAwLCAwXSwgWzAsIDAsIDksIDksIDksIDBdLCBbMCwgOSwgMCwgOSwgMCwgOV0sIFswLCAwLCAwLCA5LCAwLCAwXV0p"
+    ]
+   ],
+   "flip": [
+    [
+     "flip(np.array([[1, 2, 3], [4, 5, 6]]))",
+     "bnAuYXJyYXkoW1s0LCA1LCA2XSwgWzEsIDIsIDNdXSk="
+    ],
+    [
+     "flip(np.array(ARROW))",
+     "bnAuYXJyYXkoW1swLCAwLCA5LCAwLCAwLCAwXSwgWzksIDAsIDksIDAsIDksIDBdLCBbMCwgOSwgOSwgOSwgMCwgMF0sIFswLCAwLCA5LCAwLCAwLCAwXV0p"
+    ]
+   ],
+   "rotate_right": [
+    [
+     "rotate_right(np.array([[1, 2], [3, 4]]))",
+     "bnAuYXJyYXkoW1szLCAxXSwgWzQsIDJdXSk="
+    ],
+    [
+     "rotate_right(np.array([[1, 2, 3]]))",
+     "bnAuYXJyYXkoW1sxXSwgWzJdLCBbM11dKQ=="
+    ]
+   ],
+   "shrink": [
+    [
+     "shrink(np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]))",
+     "bnAuYXJyYXkoW1sxLCAzXSwgWzksIDExXV0p"
+    ],
+    [
+     "shrink(np.array(ARROW))",
+     "bnAuYXJyYXkoW1swLCA5LCAwXSwgWzksIDksIDldXSk="
+    ]
+   ],
+   "as_text": [
+    [
+     "as_text(np.array([[0, 9], [9, 0]]))",
+     "Jy4jXG4jLic="
+    ],
+    [
+     "as_text(np.array(ARROW))",
+     "Jy4uIy4uLlxuLiMjIy4uXG4jLiMuIy5cbi4uIy4uLic="
+    ]
+   ]
+  }
+ },
+ "project_03_gradebook": {
+  "tasks": {},
+  "tests": {
+   "averages": [
+    [
+     "averages([[50, 70]])",
+     "KG5wLmFycmF5KFs2MC4wXSksIG5wLmFycmF5KFs1MC4wLCA3MC4wXSkp"
+    ],
+    [
+     "averages(MARKS)",
+     "KG5wLmFycmF5KFs4MC4wLCA5MS42NjY2NjY2NjY2NjY2NywgNTMuMzMzMzMzMzMzMzMzMzM2LCA2OC4zMzMzMzMzMzMzMzMzM10pLCBucC5hcnJheShbNzIuNSwgNjkuNSwgNzguMF0pKQ=="
+    ]
+   ],
+   "top_student": [
+    [
+     "top_student(NAMES, MARKS)",
+     "J1NhcmEn"
+    ],
+    [
+     "top_student([\"X\", \"Y\"], [[10, 10], [0, 30]])",
+     "J1kn"
+    ]
+   ],
+   "failed_any": [
+    [
+     "failed_any(NAMES, MARKS, 50)",
+     "WydPbWFyJywgJ0xpbmEnXQ=="
+    ],
+    [
+     "failed_any(NAMES, MARKS, 30)",
+     "W10="
+    ],
+    [
+     "failed_any(NAMES, MARKS, 90)",
+     "WydBbGknLCAnU2FyYScsICdPbWFyJywgJ0xpbmEnXQ=="
+    ]
+   ],
+   "curve": [
+    [
+     "curve([[50, 60], [70, 80]], 70)",
+     "bnAuYXJyYXkoW1s1NSwgNjVdLCBbNzUsIDg1XV0p"
+    ],
+    [
+     "curve([[90, 100]], 98)",
+     "bnAuYXJyYXkoW1s5MywgMTAwXV0p"
+    ],
+    [
+     "curve([[10, 20]], 0)",
+     "bnAuYXJyYXkoW1swLCA1XV0p"
+    ]
+   ],
+   "report_card": [
+    [
+     "report_card(NAMES, MARKS)",
+     "eydBbGknOiAnQicsICdTYXJhJzogJ0EnLCAnT21hcic6ICdDJywgJ0xpbmEnOiAnQyd9"
+    ],
+    [
+     "report_card([\"Z\"], [[49, 49]])",
+     "eydaJzogJ0YnfQ=="
+    ]
+   ],
+   "rank_table": [
+    [
+     "rank_table(NAMES, MARKS)",
+     "WygxLCAnU2FyYScsIDkxLjcpLCAoMiwgJ0FsaScsIDgwLjApLCAoMywgJ0xpbmEnLCA2OC4zKSwgKDQsICdPbWFyJywgNTMuMyld"
+    ],
+    [
+     "rank_table([\"Q\"], [[1]])",
+     "WygxLCAnUScsIDEuMCld"
+    ]
+   ]
+  }
+ },
+ "project_04_game_of_life": {
+  "tasks": {},
+  "tests": {
+   "count_neighbours": [
+    [
+     "count_neighbours(np.array(BLINKER))",
+     "bnAuYXJyYXkoW1syLCAzLCAyXSwgWzEsIDIsIDFdLCBbMiwgMywgMl1dKQ=="
+    ],
+    [
+     "count_neighbours(np.array([[1]]))",
+     "bnAuYXJyYXkoW1swXV0p"
+    ],
+    [
+     "count_neighbours(np.array([[1, 1], [1, 1]]))",
+     "bnAuYXJyYXkoW1szLCAzXSwgWzMsIDNdXSk="
+    ]
+   ],
+   "next_generation": [
+    [
+     "next_generation(np.array(BLINKER))",
+     "bnAuYXJyYXkoW1swLCAxLCAwXSwgWzAsIDEsIDBdLCBbMCwgMSwgMF1dKQ=="
+    ],
+    [
+     "next_generation(np.array([[1, 1], [1, 1]]))",
+     "bnAuYXJyYXkoW1sxLCAxXSwgWzEsIDFdXSk="
+    ],
+    [
+     "next_generation(np.array([[1, 0], [0, 0]]))",
+     "bnAuYXJyYXkoW1swLCAwXSwgWzAsIDBdXSk="
+    ]
+   ],
+   "run": [
+    [
+     "run(np.array(BLINKER), 2)",
+     "bnAuYXJyYXkoW1swLCAwLCAwXSwgWzEsIDEsIDFdLCBbMCwgMCwgMF1dKQ=="
+    ],
+    [
+     "run(np.array([[0, 1, 0, 0, 0], [0, 0, 1, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]), 4)",
+     "bnAuYXJyYXkoW1swLCAwLCAwLCAwLCAwXSwgWzAsIDAsIDEsIDAsIDBdLCBbMCwgMCwgMCwgMSwgMF0sIFswLCAxLCAxLCAxLCAwXSwgWzAsIDAsIDAsIDAsIDBdXSk="
+    ],
+    [
+     "run(np.array([[1]]), 0)",
+     "bnAuYXJyYXkoW1sxXV0p"
+    ]
+   ],
+   "history": [
+    [
+     "history(np.array(BLINKER), 3)",
+     "WzMsIDMsIDMsIDNd"
+    ],
+    [
+     "history(np.array([[1, 0], [0, 1]]), 2)",
+     "WzIsIDAsIDBd"
+    ]
+   ],
+   "show": [
+    [
+     "show(np.array([[0, 1], [1, 0]]))",
+     "J8K34paIXG7ilojCtyc="
+    ]
+   ]
+  }
+ },
+ "project_05_weather": {
+  "tasks": {},
+  "tests": {
+   "clean": [
+    [
+     "clean(np.array([20.0, np.nan, 23.0]))",
+     "bnAuYXJyYXkoWzIwLjAsIDIxLjUsIDIzLjBdKQ=="
+    ],
+    [
+     "clean(np.array([18.2, np.nan, 19.0, np.nan]))",
+     "bnAuYXJyYXkoWzE4LjIsIDE4LjYsIDE5LjAsIDE4LjZdKQ=="
+    ],
+    [
+     "clean(np.array([5.0]))",
+     "bnAuYXJyYXkoWzUuMF0p"
+    ]
+   ],
+   "moving_average": [
+    [
+     "moving_average(np.array([1, 2, 3, 4, 5]), 2)",
+     "bnAuYXJyYXkoWzEuNSwgMi41LCAzLjUsIDQuNV0p"
+    ],
+    [
+     "moving_average(np.array([2, 4, 6]), 3)",
+     "bnAuYXJyYXkoWzQuMF0p"
+    ],
+    [
+     "moving_average(np.array([7, 8]), 1)",
+     "bnAuYXJyYXkoWzcuMCwgOC4wXSk="
+    ]
+   ],
+   "hottest_week": [
+    [
+     "hottest_week(np.array([1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5]))",
+     "KDEsIDUuMCk="
+    ],
+    [
+     "hottest_week(np.array([30, 30, 30, 30, 30, 30, 37]))",
+     "KDAsIDMxLjAp"
+    ]
+   ],
+   "longest_streak": [
+    [
+     "longest_streak(np.array([30, 31, 29, 33, 34, 35, 20]), 30)",
+     "Mw=="
+    ],
+    [
+     "longest_streak(np.array([1, 2, 3]), 10)",
+     "MA=="
+    ],
+    [
+     "longest_streak(np.array([40, 40]), 30)",
+     "Mg=="
+    ]
+   ],
+   "summary": [
+    [
+     "summary(np.array([20.0, np.nan, 23.0, 26.0]))",
+     "eydkYXlzJzogNCwgJ21pc3NpbmcnOiAxLCAnbWluJzogMjAuMCwgJ21heCc6IDI2LjAsICdtZWFuJzogMjMuMH0="
+    ],
+    [
+     "summary(np.array([1.0]))",
+     "eydkYXlzJzogMSwgJ21pc3NpbmcnOiAwLCAnbWluJzogMS4wLCAnbWF4JzogMS4wLCAnbWVhbic6IDEuMH0="
+    ]
+   ],
+   "load_station": [
+    [
+     "load_station(\"station.csv\")",
+     "bnAuYXJyYXkoWzIxLjUsIDIyLjAsIG5wLm5hbiwgMjQuNSwgMjUuMCwgMjMuNSwgMjIuMCwgMjYuNSwgMjcuMCwgbnAubmFuLCAyOC41LCAyNy41LCAyNi4wLCAyNS41XSk="
+    ]
+   ]
+  }
+ },
+ "project_06_monte_carlo": {
+  "tasks": {},
+  "tests": {
+   "estimate_pi": [
+    [
+     "round(estimate_pi(200_000, 1), 1)",
+     "My4x"
+    ],
+    [
+     "round(estimate_pi(200_000, 2), 1)",
+     "My4x"
+    ],
+    [
+     "estimate_pi(10, 3) == estimate_pi(10, 3)",
+     "VHJ1ZQ=="
+    ]
+   ],
+   "two_dice_counts": [
+    [
+     "int(two_dice_counts(60_000, 3).sum())",
+     "NjAwMDA="
+    ],
+    [
+     "len(two_dice_counts(60_000, 3))",
+     "MTE="
+    ],
+    [
+     "int(two_dice_counts(60_000, 3).argmax()) + 2",
+     "Nw=="
+    ]
+   ],
+   "shared_birthday_chance": [
+    [
+     "round(shared_birthday_chance(23, 20_000, 4), 1)",
+     "MC41"
+    ],
+    [
+     "shared_birthday_chance(366, 100, 4)",
+     "MS4w"
+    ]
+   ],
+   "random_walk": [
+    [
+     "len(random_walk(10, 5))",
+     "MTE="
+    ],
+    [
+     "int(random_walk(10, 5)[0])",
+     "MA=="
+    ],
+    [
+     "sorted(set(np.abs(np.diff(random_walk(1000, 5))).tolist()))",
+     "WzFd"
+    ]
+   ]
+  }
+ },
+ "project_07_linear_regression": {
+  "tasks": {},
+  "tests": {
+   "fit_line": [
+    [
+     "fit_line(np.array([1, 2, 3, 4, 5]), np.array([3, 5, 7, 9, 11]))",
+     "KDIuMCwgMS4wKQ=="
+    ],
+    [
+     "fit_line(np.array(X), np.array(Y))",
+     "KDEuOTcwMDAwMDAwMDAwMDAwMiwgMC4wODk5OTk5OTk5OTk5OTk4Nik="
+    ],
+    [
+     "fit_line(np.array([0, 10]), np.array([5, 5]))",
+     "KDAuMCwgNS4wKQ=="
+    ]
+   ],
+   "predict": [
+    [
+     "predict(np.array([0, 1, 2]), 2.0, 1.0)",
+     "bnAuYXJyYXkoWzEuMCwgMy4wLCA1LjBdKQ=="
+    ],
+    [
+     "predict(np.array([10]), 0.5, 0.0)",
+     "bnAuYXJyYXkoWzUuMF0p"
+    ]
+   ],
+   "mean_squared_error": [
+    [
+     "mean_squared_error(np.array([1, 2, 3]), np.array([1, 2, 5]))",
+     "MS4zMzMzMzMzMzMzMzMzMzMz"
+    ],
+    [
+     "mean_squared_error(np.array([4.0]), np.array([4.0]))",
+     "MC4w"
+    ]
+   ],
+   "r_squared": [
+    [
+     "r_squared(np.array([1.0, 2.0, 3.0]), np.array([1.0, 2.0, 3.0]))",
+     "MS4w"
+    ],
+    [
+     "r_squared(np.array([1.0, 2.0, 3.0]), np.array([2.0, 2.0, 2.0]))",
+     "MC4w"
+    ]
+   ],
+   "gradient_descent": [
+    [
+     "gradient_descent(np.array([1.0, 2, 3, 4, 5]), np.array([3.0, 5, 7, 9, 11]), 0.01, 1)",
+     "KDAuNSwgMC4xNCk="
+    ],
+    [
+     "np.round(gradient_descent(np.array([1.0, 2, 3, 4, 5]), np.array([3.0, 5, 7, 9, 11]), 0.05, 2000), 4)",
+     "bnAuYXJyYXkoWzIuMCwgMS4wXSk="
+    ]
+   ]
+  }
+ },
+ "project_08_knn_classifier": {
+  "tasks": {},
+  "tests": {
+   "distances": [
+    [
+     "distances(np.array([[3, 4]]), np.array([0, 0]))",
+     "bnAuYXJyYXkoWzUuMF0p"
+    ],
+    [
+     "distances(np.array(TRAIN), np.array([1, 1]))",
+     "bnAuYXJyYXkoWzAuMCwgMS4wLCAxLjAsIDcuMDcxMDY3ODExODY1NDc1NSwgNy44MTAyNDk2NzU5MDY2NTQsIDcuODEwMjQ5Njc1OTA2NjU0XSk="
+    ]
+   ],
+   "nearest": [
+    [
+     "nearest(np.array(TRAIN), np.array([5, 5]), 3)",
+     "bnAuYXJyYXkoWzMsIDQsIDVdKQ=="
+    ],
+    [
+     "nearest(np.array(TRAIN), np.array([0, 0]), 1)",
+     "bnAuYXJyYXkoWzBdKQ=="
+    ],
+    [
+     "nearest(np.array(TRAIN), np.array([1, 1]), 3)",
+     "bnAuYXJyYXkoWzAsIDEsIDJdKQ=="
+    ]
+   ],
+   "classify": [
+    [
+     "classify(np.array(TRAIN), np.array(LABELS), np.array([2, 2]), 3)",
+     "J3JlZCc="
+    ],
+    [
+     "classify(np.array(TRAIN), np.array(LABELS), np.array([5, 5]), 3)",
+     "J2JsdWUn"
+    ],
+    [
+     "classify(np.array(TRAIN), np.array(LABELS), np.array([5, 5]), 6)",
+     "J2JsdWUn"
+    ]
+   ],
+   "accuracy": [
+    [
+     "accuracy(np.array([\"a\", \"b\", \"a\"]), np.array([\"a\", \"a\", \"a\"]))",
+     "MC42NjY2NjY2NjY2NjY2NjY2"
+    ],
+    [
+     "accuracy(np.array([1, 2]), np.array([1, 2]))",
+     "MS4w"
+    ]
+   ],
+   "leave_one_out": [
+    [
+     "leave_one_out(np.array(TRAIN), np.array(LABELS), 1)",
+     "MS4w"
+    ],
+    [
+     "leave_one_out(np.array([[0, 0], [1, 1], [9, 9]]), np.array([\"a\", \"a\", \"b\"]), 1)",
+     "MC42NjY2NjY2NjY2NjY2NjY2"
+    ]
+   ]
+  }
+ },
+ "project_09_gold_backtest": {
+  "tasks": {},
+  "tests": {
+   "daily_returns": [
+    [
+     "daily_returns(np.array([100.0, 110.0, 99.0]))",
+     "bnAuYXJyYXkoWzAuMSwgLTAuMV0p"
+    ],
+    [
+     "daily_returns(np.array([50.0, 50.0]))",
+     "bnAuYXJyYXkoWzAuMF0p"
+    ]
+   ],
+   "moving_average": [
+    [
+     "moving_average(np.array(PRICES), 2)",
+     "bnAuYXJyYXkoWzEwMS4wLCAxMDEuNSwgMTAzLjAsIDEwNi4wLCAxMDUuNSwgMTA2LjAsIDEwOS4wXSk="
+    ],
+    [
+     "moving_average(np.array(PRICES), 4)",
+     "bnAuYXJyYXkoWzEwMi4wLCAxMDMuNzUsIDEwNC4yNSwgMTA2LjAsIDEwNy4yNV0p"
+    ]
+   ],
+   "crossover_signals": [
+    [
+     "crossover_signals(np.array(PRICES), 2, 4)",
+     "bnAuYXJyYXkoWzEsIDEsIDEsIDAsIDFdKQ=="
+    ],
+    [
+     "crossover_signals(np.array([5.0, 4.0, 3.0, 2.0]), 1, 2)",
+     "bnAuYXJyYXkoWzAsIDAsIDBdKQ=="
+    ]
+   ],
+   "strategy_returns": [
+    [
+     "np.round(strategy_returns(np.array(PRICES), 2, 4), 6)",
+     "bnAuYXJyYXkoWzAuMDE5MDQ4LCAtMC4wMjgwMzcsIDAuMDM4NDYyLCAwLjBdKQ=="
+    ],
+    [
+     "strategy_returns(np.array([5.0, 4.0, 3.0, 2.0]), 1, 2)",
+     "bnAuYXJyYXkoWy0wLjAsIC0wLjBdKQ=="
+    ]
+   ],
+   "equity_curve": [
+    [
+     "equity_curve(np.array([0.1, -0.5, 0.2]), 100)",
+     "bnAuYXJyYXkoWzExMC4wMDAwMDAwMDAwMDAwMSwgNTUuMDAwMDAwMDAwMDAwMDEsIDY2LjBdKQ=="
+    ],
+    [
+     "equity_curve(np.array([0.0]), 7)",
+     "bnAuYXJyYXkoWzcuMF0p"
+    ]
+   ],
+   "max_drawdown": [
+    [
+     "max_drawdown(np.array([100, 120, 90, 130, 117]))",
+     "MC4yNQ=="
+    ],
+    [
+     "max_drawdown(np.array([1, 2, 3]))",
+     "MC4w"
+    ]
+   ],
+   "report": [
+    [
+     "report(np.array(PRICES), 2, 4, 1000)",
+     "eydzdHJhdGVneV9yZXR1cm4nOiAwLjAyODYsICdidXlfYW5kX2hvbGQnOiAwLjA0NzYsICdtYXhfZHJhd2Rvd24nOiAwLjAyOH0="
+    ]
+   ]
+  }
+ }
+}

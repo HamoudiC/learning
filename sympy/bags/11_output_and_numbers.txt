@@ -1,0 +1,35 @@
+sympy · output and numbers
+from sympy import *
+
+
+── showing results ──
+
+print(expr)
+print(x**2/2)      # one line, the way you'd type it
+
+pprint(expr)
+pprint(sqrt(x)/2)      # drawn over several lines, like on paper
+
+latex(expr)
+latex(sqrt(x)) → '\\sqrt{x}'      # the expression as LaTeX, for reports and web pages
+
+
+── text in, decimals out ──
+
+sympify(text)
+sympify("x**2 + 1") → x**2 + 1      # maths typed as text, as an expression
+
+lambdify(x, expr)
+lambdify(x, x**2)(3) → 9      # a fast Python function for numbers
+
+nsimplify(decimal)
+nsimplify(0.75) → Rational(3, 4)      # guesses the exact number behind a decimal
+
+float(expr)   int(expr)
+float(Rational(1, 4)) → 0.25      # a plain Python number
+
+
+── graphs ──
+
+plot(expr, (x, a, b))
+plot(x**2, (x, -2, 2))      # draws the graph (needs: pip install matplotlib)

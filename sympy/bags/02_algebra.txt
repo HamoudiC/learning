@@ -1,0 +1,71 @@
+sympy · algebra
+from sympy import *
+
+
+── multiplying out and factoring ──
+
+expand(expr)
+expand((x + 2)*(x - 3)) → x**2 - x - 6      # multiplies out the brackets
+
+factor(expr)
+factor(x**2 - x - 6) → (x - 3)*(x + 2)      # back into brackets
+
+factor(expr, extension=sqrt(2))
+factor(x**2 - 2, extension=sqrt(2)) → (x - sqrt(2))*(x + sqrt(2))      # factors using √2 too
+
+
+── tidying ──
+
+simplify(expr)
+simplify((x**2 - 1)/(x - 1)) → x + 1      # tries many tricks and keeps the shortest
+
+cancel(fraction)
+cancel((x**2 + 5*x + 6)/(x + 2)) → x + 3      # crosses out what's on the top and the bottom
+
+collect(expr, x)
+collect(a*x + b*x + a, x) → a + x*(a + b)      # groups the terms by x
+
+together(expr)
+together(1/x + 1/(x + 1)) → (2*x + 1)/(x*(x + 1))      # one fraction
+
+apart(fraction)
+apart(1/(x*(x + 1))) → -1/(x + 1) + 1/x      # small fractions (the reverse of together)
+
+
+── trig ──
+
+trigsimp(expr)
+trigsimp(sin(x)**2 + cos(x)**2) → 1      # uses trig identities to shorten
+
+expand_trig(expr)
+expand_trig(sin(2*x)) → 2*sin(x)*cos(x)      # opens up double angles
+
+sin(pi/6)   cos(pi)
+sin(pi/6) → Rational(1, 2)      # special angles come out exact
+
+
+── logs and powers ──
+
+expand_log(expr)
+expand_log(log(p*q)) → log(p) + log(q)      # splits logs (only for positive letters)
+
+expand_log(expr, force=True)
+expand_log(log(x*y), force=True) → log(x) + log(y)      # splits logs for any letters
+
+logcombine(expr)
+logcombine(log(p) + log(q)) → log(p*q)      # joins logs
+
+powsimp(expr)
+powsimp(exp(x)*exp(y)) → exp(x + y)      # joins powers
+
+
+── taking it apart ──
+
+degree(expr, x)
+degree(x**3 + 2*x, x) → 3      # the highest power of x
+
+expr.coeff(x, n)
+(3*x**2 + 2*x + 1).coeff(x, 2) → 3      # the number in front of x**n (multiply out first)
+
+fraction(expr)
+fraction((x + 1)/(x - 2)) → (x + 1, x - 2)      # (top, bottom) of a fraction

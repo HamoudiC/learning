@@ -1,0 +1,117 @@
+pandas · Series and DataFrames
+import pandas as pd
+import numpy as np
+
+
+── making a Series ──
+
+pd.Series(values)
+pd.Series([10, 20]).tolist() → [10, 20]      # one column of values, labelled 0, 1, 2...
+
+pd.Series(values, index=labels, name="pts")
+pd.Series([10, 20], index=["a", "b"]).index.tolist() → ['a', 'b']      # a column with your own labels and a name
+
+pd.Series(a_dict)
+pd.Series({"tea": 2, "milk": 1}).to_dict() → {'tea': 2, 'milk': 1}      # the keys become the labels
+
+s.index   s.name   s.dtype   len(s)
+len(pd.Series([10, 20, 30])) → 3      # the labels / the name / the type of values / how many
+
+
+── label or position ──
+
+s.loc[label]   s[label]
+pd.Series([10, 20], index=["a", "b"]).loc["b"] → 20      # the value with that label
+
+s.iloc[position]
+pd.Series([10, 20], index=["a", "b"]).iloc[0] → 10      # the value at that position, counting from 0
+
+s.loc[first:last]
+pd.Series([10, 20, 30], index=["a", "b", "c"]).loc["a":"b"].tolist() → [10, 20]      # a label slice: the last label IS included
+
+s.iloc[start:stop]
+pd.Series([10, 20, 30]).iloc[0:2].tolist() → [10, 20]      # a position slice: the stop is not included
+
+s[[label, label]]
+pd.Series([10, 20, 30], index=["a", "b", "c"])[["c", "a"]].tolist() → [30, 10]      # several values by their labels
+
+
+── maths and filtering ──
+
+s + n   s * n
+(pd.Series([1, 2]) * 2).tolist() → [2, 4]      # maths on every value
+
+s[s > n]
+pd.Series([10, 20, 30])[pd.Series([10, 20, 30]) > 15].tolist() → [20, 30]      # only the values where it's True
+
+s.sum()   s.mean()   s.max()   s.min()
+pd.Series([10, 20, 30]).mean() → 20.0      # one number from many
+
+s.idxmax()   s.idxmin()
+pd.Series([10, 30, 20], index=["a", "b", "c"]).idxmax() → 'b'      # the LABEL of the biggest / smallest
+
+a + b
+(pd.Series([1, 2], index=["x", "y"]) + pd.Series([10, 20], index=["y", "x"])).to_dict() → {'x': 21, 'y': 12}      # lines up by LABEL, not position
+
+a.add(b, fill_value=0)
+pd.Series([1], index=["x"]).add(pd.Series([5], index=["z"]), fill_value=0).to_dict() → {'x': 1.0, 'z': 5.0}      # adds, counting a missing label as 0
+
+s.round(n)
+pd.Series([1.234]).round(1).tolist() → [1.2]      # rounds every value
+
+
+── making a DataFrame ──
+
+pd.DataFrame({"col": values, "col2": values})
+pd.DataFrame({"name": ["Sara"], "age": [20]}).shape → (1, 2)      # a table from a dict of columns
+
+pd.DataFrame(list_of_dicts)
+pd.DataFrame([{"item": "pen", "qty": 3}]).columns.tolist() → ['item', 'qty']      # a table from a list of rows
+
+
+── looking at a table ──
+
+df.shape
+pd.DataFrame({"a": [1, 2, 3]}).shape → (3, 1)      # (rows, columns)
+
+df.columns.tolist()
+pd.DataFrame({"a": [1], "b": [2]}).columns.tolist() → ['a', 'b']      # the column names
+
+df.head(n)   df.tail(n)
+len(pd.DataFrame({"a": [1, 2, 3]}).head(2)) → 2      # the first / last n rows
+
+df.dtypes
+pd.DataFrame({"a": [1.5]}).dtypes["a"] → np.dtype('float64')      # the type of each column
+
+df.describe()
+pd.DataFrame({"a": [1, 3]}).describe().loc["mean", "a"] → 2.0      # count, mean, min, max... of the number columns
+
+
+── columns, rows and cells ──
+
+df["col"]
+pd.DataFrame({"a": [1, 2]})["a"].tolist() → [1, 2]      # one column (a Series)
+
+df[["col", "col2"]]
+pd.DataFrame({"a": [1], "b": [2], "c": [3]})[["a", "c"]].columns.tolist() → ['a', 'c']      # several columns (a table)
+
+df.iloc[position]
+pd.DataFrame({"a": [1, 2], "b": [3, 4]}).iloc[1].tolist() → [2, 4]      # one row, as a Series
+
+df.loc[label, "col"]
+pd.DataFrame({"a": [1, 2]}).loc[1, "a"] → 2      # one cell, by row label and column name
+
+df.iloc[row, col]
+pd.DataFrame({"a": [1, 2], "b": [3, 4]}).iloc[0, 1] → 3      # one cell, by positions
+
+
+── back to plain Python ──
+
+s.tolist()   s.to_dict()
+pd.Series([1, 2], index=["a", "b"]).to_dict() → {'a': 1, 'b': 2}      # a Series as a list / a dict
+
+df.to_dict("records")
+pd.DataFrame({"a": [1, 2]}).to_dict("records") → [{'a': 1}, {'a': 2}]      # a list of dicts, one per row
+
+df.to_dict("list")
+pd.DataFrame({"a": [1, 2]}).to_dict("list") → {'a': [1, 2]}      # a dict of lists, one per column

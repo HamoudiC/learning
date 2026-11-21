@@ -1,0 +1,1111 @@
+{
+ "level_01_symbols": {
+  "tasks": {
+   "1a": "Mip4",
+   "1b": "eCoqMg==",
+   "1c": "eCoqNQ==",
+   "1d": "KHggKyAxKSoqMg==",
+   "2a": "QWRk",
+   "2b": "TXVs",
+   "2c": "UG93",
+   "2d": "KDEsIHgp",
+   "3a": "MipzcXJ0KDIp",
+   "3b": "UmF0aW9uYWwoMSwgMik=",
+   "3c": "MipJ",
+   "3d": "cGk=",
+   "4a": "MTA=",
+   "4b": "UmF0aW9uYWwoNywgNCk=",
+   "4c": "eSoqMiArIDMqeQ==",
+   "4d": "Nw==",
+   "5a": "RmxvYXQoJzEuNDE0JywgNCk=",
+   "5b": "RmxvYXQoJzAuMzMzJywgMyk=",
+   "6a": "RmFsc2U=",
+   "6b": "VHJ1ZQ==",
+   "6c": "e3gsIHl9",
+   "7a": "OSpwaQ==",
+   "7b": "RmxvYXQoJzI4LjI3JywgNCk="
+  },
+  "tests": {
+   "value_at": [
+    [
+     "value_at(x**2 + 1, 3)",
+     "MTA="
+    ],
+    [
+     "value_at(2*x - 5, 0)",
+     "LTU="
+    ],
+    [
+     "value_at(x**3, Rational(1, 2))",
+     "UmF0aW9uYWwoMSwgOCk="
+    ],
+    [
+     "value_at(x + y, 1)",
+     "eSArIDE="
+    ]
+   ],
+   "half_of": [
+    [
+     "half_of(x)",
+     "eC8y"
+    ],
+    [
+     "half_of(3)",
+     "UmF0aW9uYWwoMywgMik="
+    ],
+    [
+     "half_of(x + 1)",
+     "eC8yICsgUmF0aW9uYWwoMSwgMik="
+    ]
+   ],
+   "root_of": [
+    [
+     "root_of(9)",
+     "Mw=="
+    ],
+    [
+     "root_of(8)",
+     "MipzcXJ0KDIp"
+    ],
+    [
+     "root_of(x**2 + 1)",
+     "c3FydCh4KioyICsgMSk="
+    ]
+   ]
+  }
+ },
+ "level_02_algebra": {
+  "tasks": {
+   "1a": "eCoqMiAtIHggLSA2",
+   "1b": "KHggLSAzKSooeCArIDIp",
+   "1c": "eCooeCAtIDEpKih4ICsgMSk=",
+   "1d": "KHggLSAzKSooeCArIDMp",
+   "2a": "eCArIDE=",
+   "2b": "YSArIHgqKGEgKyBiKQ==",
+   "2c": "KDIqeCArIDEpLyh4Kih4ICsgMSkp",
+   "3a": "MQ==",
+   "3b": "MipzaW4oeCkqY29zKHgp",
+   "3c": "dGFuKHgp",
+   "4a": "bG9nKHApICsgbG9nKHEp",
+   "4b": "Mypsb2cocCk=",
+   "4c": "bG9nKHgpICsgbG9nKHkp",
+   "5a": "Mg==",
+   "5b": "Mw==",
+   "5c": "MQ=="
+  },
+  "tests": {
+   "expanded_and_factored": [
+    [
+     "expanded_and_factored((x + 1)*(x - 1)) == (x**2 - 1, (x - 1)*(x + 1))",
+     "VHJ1ZQ=="
+    ],
+    [
+     "expanded_and_factored(x**2 + 5*x + 6) == (x**2 + 5*x + 6, (x + 2)*(x + 3))",
+     "VHJ1ZQ=="
+    ],
+    [
+     "expanded_and_factored(x*(x - 4)) == (x**2 - 4*x, x*(x - 4))",
+     "VHJ1ZQ=="
+    ]
+   ],
+   "quadratic_coefficients": [
+    [
+     "quadratic_coefficients(3*x**2 + 2*x + 1)",
+     "WzMsIDIsIDFd"
+    ],
+    [
+     "quadratic_coefficients((x + 1)**2)",
+     "WzEsIDIsIDFd"
+    ],
+    [
+     "quadratic_coefficients(x**2 - 4)",
+     "WzEsIDAsIC00XQ=="
+    ],
+    [
+     "quadratic_coefficients(5*x)",
+     "WzAsIDUsIDBd"
+    ]
+   ],
+   "is_identity": [
+    [
+     "is_identity(sin(x)**2, 1 - cos(x)**2)",
+     "VHJ1ZQ=="
+    ],
+    [
+     "is_identity(tan(x), sin(x)/cos(x))",
+     "VHJ1ZQ=="
+    ],
+    [
+     "is_identity((x + 1)**2, x**2 + 1)",
+     "RmFsc2U="
+    ],
+    [
+     "is_identity(sin(2*x), 2*sin(x))",
+     "RmFsc2U="
+    ]
+   ],
+   "split_log": [
+    [
+     "split_log(x*y)",
+     "bG9nKHgpICsgbG9nKHkp"
+    ],
+    [
+     "split_log(x**2*y)",
+     "Mipsb2coeCkgKyBsb2coeSk="
+    ],
+    [
+     "split_log(x/y)",
+     "bG9nKHgpIC0gbG9nKHkp"
+    ]
+   ]
+  }
+ },
+ "level_03_solving": {
+  "tasks": {
+   "1a": "WzRd",
+   "1b": "NA==",
+   "1c": "Wy0zLCAzXQ==",
+   "1d": "Wy0yKkksIDIqSV0=",
+   "1e": "Wy1zcXJ0KDIpLCBzcXJ0KDIpXQ==",
+   "2a": "e3g6IDMsIHk6IDJ9",
+   "2b": "Mw==",
+   "2c": "WzYveF0=",
+   "2d": "eygzLCAyKX0=",
+   "3a": "ey0zLCAzfQ==",
+   "3b": "RW1wdHlTZXQ=",
+   "3c": "ezAsIHBpLCAyKnBpfQ==",
+   "3d": "VHJ1ZQ==",
+   "4a": "SW50ZXJ2YWwub3BlbigtMiwgMik=",
+   "4b": "VW5pb24oSW50ZXJ2YWwoLW9vLCAtMiksIEludGVydmFsKDIsIG9vKSk=",
+   "4c": "SW50ZXJ2YWwub3BlbigzLCBvbyk=",
+   "5a": "RmxvYXQoJzAuNzM5MScsIDQp",
+   "5b": "RmxvYXQoJzIuMDk1JywgNCk="
+  },
+  "tests": {
+   "solve_linear": [
+    [
+     "solve_linear(2, 3, 7)",
+     "Mg=="
+    ],
+    [
+     "solve_linear(5, 0, 10)",
+     "Mg=="
+    ],
+    [
+     "solve_linear(3, 1, 2)",
+     "UmF0aW9uYWwoMSwgMyk="
+    ],
+    [
+     "solve_linear(4, -4, 0)",
+     "MQ=="
+    ]
+   ],
+   "real_roots_of": [
+    [
+     "real_roots_of(x**2 - 4)",
+     "Wy0yLCAyXQ=="
+    ],
+    [
+     "real_roots_of(x**2 + 1)",
+     "W10="
+    ],
+    [
+     "real_roots_of(x**3 - x)",
+     "Wy0xLCAwLCAxXQ=="
+    ],
+    [
+     "real_roots_of((x - 1)**2)",
+     "WzFd"
+    ],
+    [
+     "real_roots_of(x**2 - 2)",
+     "Wy1zcXJ0KDIpLCBzcXJ0KDIpXQ=="
+    ]
+   ],
+   "crossing_points": [
+    [
+     "crossing_points(x**2, x + 2)",
+     "WygtMSwgMSksICgyLCA0KV0="
+    ],
+    [
+     "crossing_points(x**3, x)",
+     "WygtMSwgLTEpLCAoMCwgMCksICgxLCAxKV0="
+    ],
+    [
+     "crossing_points(x, 2*x)",
+     "WygwLCAwKV0="
+    ],
+    [
+     "crossing_points(x**2 + 1, x - 5)",
+     "W10="
+    ]
+   ],
+   "where_positive": [
+    [
+     "where_positive(x - 3)",
+     "SW50ZXJ2YWwub3BlbigzLCBvbyk="
+    ],
+    [
+     "where_positive(4 - x**2)",
+     "SW50ZXJ2YWwub3BlbigtMiwgMik="
+    ],
+    [
+     "where_positive(x**2 + 1)",
+     "UmVhbHM="
+    ],
+    [
+     "where_positive(-x**2)",
+     "RW1wdHlTZXQ="
+    ]
+   ],
+   "x_of_solution": [
+    [
+     "x_of_solution(x + y - 5, x - y - 1)",
+     "Mw=="
+    ],
+    [
+     "x_of_solution(Eq(2*x + y, 7), Eq(x - y, -1))",
+     "Mg=="
+    ]
+   ]
+  }
+ },
+ "level_04_functions_and_limits": {
+  "tasks": {
+   "1a": "MTA=",
+   "1b": "KDIqeCAtIDMpKioyICsgMQ==",
+   "1c": "Mip4KioyIC0gMQ==",
+   "1d": "NCp4KioyIC0gMTIqeCArIDEw",
+   "1e": "W3kvMiArIFJhdGlvbmFsKDMsIDIpXQ==",
+   "2a": "MQ==",
+   "2b": "NA==",
+   "2c": "bmFu",
+   "2d": "Mw==",
+   "2e": "MA==",
+   "3a": "b28=",
+   "3b": "LW9v",
+   "3c": "em9v",
+   "3d": "MQ==",
+   "3e": "LTE=",
+   "3f": "MA=="
+  },
+  "tests": {
+   "compose": [
+    [
+     "compose(x**2, x + 1)",
+     "KHggKyAxKSoqMg=="
+    ],
+    [
+     "compose(x + 1, x**2)",
+     "eCoqMiArIDE="
+    ],
+    [
+     "compose(sqrt(x), x**2 + 1)",
+     "c3FydCh4KioyICsgMSk="
+    ]
+   ],
+   "inverse_of": [
+    [
+     "inverse_of(2*x - 3)",
+     "eC8yICsgUmF0aW9uYWwoMywgMik="
+    ],
+    [
+     "inverse_of(5*x)",
+     "eC81"
+    ],
+    [
+     "inverse_of(exp(x))",
+     "bG9nKHgp"
+    ],
+    [
+     "inverse_of((x - 1)/(x + 2))",
+     "KC0yKnggLSAxKS8oeCAtIDEp"
+    ]
+   ],
+   "two_sided_limit": [
+    [
+     "two_sided_limit(sin(x)/x, 0)",
+     "MQ=="
+    ],
+    [
+     "two_sided_limit((x**2 - 9)/(x - 3), 3)",
+     "Ng=="
+    ],
+    [
+     "two_sided_limit(1/x**2, 0)",
+     "b28="
+    ],
+    [
+     "two_sided_limit(abs(x)/x, 0)",
+     "Tm9uZQ=="
+    ],
+    [
+     "two_sided_limit(1/x, 0)",
+     "Tm9uZQ=="
+    ]
+   ],
+   "is_continuous_at": [
+    [
+     "is_continuous_at(x**2, 3)",
+     "VHJ1ZQ=="
+    ],
+    [
+     "is_continuous_at(abs(x), 0)",
+     "VHJ1ZQ=="
+    ],
+    [
+     "is_continuous_at((x**2 - 4)/(x - 2), 2)",
+     "RmFsc2U="
+    ],
+    [
+     "is_continuous_at(1/x, 0)",
+     "RmFsc2U="
+    ],
+    [
+     "is_continuous_at(floor(x), 1)",
+     "RmFsc2U="
+    ],
+    [
+     "is_continuous_at(floor(x), Rational(3, 2))",
+     "VHJ1ZQ=="
+    ]
+   ],
+   "value_at_3": [
+    [
+     "value_at_3(x**2 + 1)",
+     "MTA="
+    ],
+    [
+     "value_at_3(sqrt(x + 6))",
+     "Mw=="
+    ]
+   ],
+   "limit_both_sides": [
+    [
+     "limit_both_sides(1/x, 0)",
+     "em9v"
+    ],
+    [
+     "limit_both_sides(1/(x - 2), 2)",
+     "em9v"
+    ],
+    [
+     "limit_both_sides(x**2, 1)",
+     "MQ=="
+    ]
+   ]
+  }
+ },
+ "level_05_derivatives": {
+  "tasks": {
+   "1a": "Myp4Kioy",
+   "1b": "Nip4",
+   "1c": "MTAqeCAtIDM=",
+   "1d": "MipleHAoMip4KQ==",
+   "1e": "MS94",
+   "1f": "MS8oMipzcXJ0KHgpKQ==",
+   "2a": "eCpjb3MoeCkgKyBzaW4oeCk=",
+   "2b": "Mip4KmNvcyh4KioyKQ==",
+   "2c": "MS8oeCAtIDEpIC0gKHggKyAxKS8oeCAtIDEpKioy",
+   "2d": "LTIvKHggLSAxKSoqMg==",
+   "3a": "eCoqMg==",
+   "3b": "Mip4Knk=",
+   "3c": "MTI=",
+   "4a": "LXgveQ==",
+   "4b": "UmF0aW9uYWwoLTMsIDQp",
+   "4c": "LXkveA=="
+  },
+  "tests": {
+   "slope_at": [
+    [
+     "slope_at(x**2, 3)",
+     "Ng=="
+    ],
+    [
+     "slope_at(x**3 - 2*x, 1)",
+     "MQ=="
+    ],
+    [
+     "slope_at(sin(x), 0)",
+     "MQ=="
+    ],
+    [
+     "slope_at(sqrt(x), 4)",
+     "UmF0aW9uYWwoMSwgNCk="
+    ],
+    [
+     "slope_at(exp(x), 0)",
+     "MQ=="
+    ]
+   ],
+   "tangent_line": [
+    [
+     "tangent_line(x**2, 1)",
+     "Mip4IC0gMQ=="
+    ],
+    [
+     "tangent_line(x**3, 2)",
+     "MTIqeCAtIDE2"
+    ],
+    [
+     "tangent_line(sin(x), 0)",
+     "eA=="
+    ],
+    [
+     "tangent_line(1/x, 1)",
+     "MiAtIHg="
+    ]
+   ],
+   "derivative_by_definition": [
+    [
+     "derivative_by_definition(x**2)",
+     "Mip4"
+    ],
+    [
+     "derivative_by_definition(x**3)",
+     "Myp4Kioy"
+    ],
+    [
+     "derivative_by_definition(sqrt(x))",
+     "MS8oMipzcXJ0KHgpKQ=="
+    ],
+    [
+     "derivative_by_definition(1/x)",
+     "LTEveCoqMg=="
+    ]
+   ],
+   "implicit_slope": [
+    [
+     "implicit_slope(x**2 + y**2 - 25, 3, 4)",
+     "UmF0aW9uYWwoLTMsIDQp"
+    ],
+    [
+     "implicit_slope(x*y - 6, 2, 3)",
+     "UmF0aW9uYWwoLTMsIDIp"
+    ],
+    [
+     "implicit_slope(x**3 + y**3 - 6*x*y, 3, 3)",
+     "LTE="
+    ]
+   ],
+   "second_derivative": [
+    [
+     "second_derivative(x**3)",
+     "Nip4"
+    ],
+    [
+     "second_derivative(sin(x))",
+     "LXNpbih4KQ=="
+    ],
+    [
+     "second_derivative(x**2)",
+     "Mg=="
+    ]
+   ],
+   "rate_of_change": [
+    [
+     "rate_of_change(5*t**2)",
+     "MTAqdA=="
+    ],
+    [
+     "rate_of_change(x*t**2)",
+     "Mip0Kng="
+    ],
+    [
+     "rate_of_change(t*sin(x))",
+     "c2luKHgp"
+    ]
+   ]
+  }
+ },
+ "level_06_using_derivatives": {
+  "tasks": {
+   "1a": "Myp4KioyIC0gMw==",
+   "1b": "Wy0xLCAxXQ==",
+   "1c": "Nip4",
+   "1d": "Ng==",
+   "1e": "VW5pb24oSW50ZXJ2YWwub3Blbigtb28sIC0xKSwgSW50ZXJ2YWwub3BlbigxLCBvbykp",
+   "1f": "SW50ZXJ2YWwub3BlbigwLCBvbyk=",
+   "2a": "Wy0yLCAyLCAtMiwgMThd",
+   "2b": "MTg=",
+   "2c": "LTI=",
+   "3a": "WzJd"
+  },
+  "tests": {
+   "critical_points": [
+    [
+     "critical_points(x**3 - 3*x)",
+     "Wy0xLCAxXQ=="
+    ],
+    [
+     "critical_points(x**2)",
+     "WzBd"
+    ],
+    [
+     "critical_points(x**4 - 2*x**2)",
+     "Wy0xLCAwLCAxXQ=="
+    ],
+    [
+     "critical_points(x + 1)",
+     "W10="
+    ],
+    [
+     "critical_points(exp(x))",
+     "W10="
+    ]
+   ],
+   "classify": [
+    [
+     "classify(x**3 - 3*x, -1)",
+     "J21heCc="
+    ],
+    [
+     "classify(x**3 - 3*x, 1)",
+     "J21pbic="
+    ],
+    [
+     "classify(-x**2, 0)",
+     "J21heCc="
+    ],
+    [
+     "classify(x**3, 0)",
+     "J3Vua25vd24n"
+    ],
+    [
+     "classify(x**4, 0)",
+     "J3Vua25vd24n"
+    ]
+   ],
+   "absolute_extremes": [
+    [
+     "absolute_extremes(x**3 - 3*x, -2, 3)",
+     "KC0yLCAxOCk="
+    ],
+    [
+     "absolute_extremes(x**3 - 3*x, 0, 2)",
+     "KC0yLCAyKQ=="
+    ],
+    [
+     "absolute_extremes(x**2, -1, 2)",
+     "KDAsIDQp"
+    ],
+    [
+     "absolute_extremes(x**2, 1, 3)",
+     "KDEsIDkp"
+    ],
+    [
+     "absolute_extremes(sin(x), 0, pi)",
+     "KDAsIDEp"
+    ]
+   ],
+   "best_rectangle": [
+    [
+     "best_rectangle(20)",
+     "KDUsIDUsIDI1KQ=="
+    ],
+    [
+     "best_rectangle(10)",
+     "KFJhdGlvbmFsKDUsIDIpLCBSYXRpb25hbCg1LCAyKSwgUmF0aW9uYWwoMjUsIDQpKQ=="
+    ],
+    [
+     "best_rectangle(4)",
+     "KDEsIDEsIDEp"
+    ]
+   ],
+   "open_box": [
+    [
+     "open_box(12)",
+     "Mg=="
+    ],
+    [
+     "open_box(6)",
+     "MQ=="
+    ],
+    [
+     "open_box(30)",
+     "NQ=="
+    ]
+   ],
+   "increasing_on": [
+    [
+     "increasing_on(x**2)",
+     "SW50ZXJ2YWwub3BlbigwLCBvbyk="
+    ],
+    [
+     "increasing_on(x**3 - 3*x)",
+     "VW5pb24oSW50ZXJ2YWwub3Blbigtb28sIC0xKSwgSW50ZXJ2YWwub3BlbigxLCBvbykp"
+    ],
+    [
+     "increasing_on(-x)",
+     "RW1wdHlTZXQ="
+    ]
+   ]
+  }
+ },
+ "level_07_integrals": {
+  "tasks": {
+   "1a": "eCoqMy8z",
+   "1b": "OQ==",
+   "1c": "bG9nKHgp",
+   "1d": "ZXhwKDIqeCkvMg==",
+   "1e": "Mg==",
+   "2a": "MQ==",
+   "2b": "b28=",
+   "2c": "RmxvYXQoJzAuNzQ2OCcsIDQp",
+   "3a": "Y29zKHUp",
+   "3b": "c2luKHgqKjIp",
+   "4a": "UmF0aW9uYWwoMSwgMik=",
+   "4b": "UmF0aW9uYWwoNywgNCk=",
+   "4c": "UmF0aW9uYWwoMTUsIDQp",
+   "4d": "UmF0aW9uYWwoOCwgMyk="
+  },
+  "tests": {
+   "is_antiderivative": [
+    [
+     "is_antiderivative(x**3/3 + 5, x**2)",
+     "VHJ1ZQ=="
+    ],
+    [
+     "is_antiderivative(log(x), 1/x)",
+     "VHJ1ZQ=="
+    ],
+    [
+     "is_antiderivative(x*exp(x) - exp(x), x*exp(x))",
+     "VHJ1ZQ=="
+    ],
+    [
+     "is_antiderivative(sin(x), -cos(x))",
+     "RmFsc2U="
+    ]
+   ],
+   "average_value": [
+    [
+     "average_value(x**2, 0, 3)",
+     "Mw=="
+    ],
+    [
+     "average_value(x, 0, 10)",
+     "NQ=="
+    ],
+    [
+     "average_value(2*x + 1, 1, 2)",
+     "NA=="
+    ],
+    [
+     "average_value(sin(x), 0, pi)",
+     "Mi9waQ=="
+    ],
+    [
+     "average_value(x**2, 0, 2)",
+     "UmF0aW9uYWwoNCwgMyk="
+    ]
+   ],
+   "riemann_sum": [
+    [
+     "riemann_sum(x**2, 0, 2, 4, \"left\")",
+     "UmF0aW9uYWwoNywgNCk="
+    ],
+    [
+     "riemann_sum(x**2, 0, 2, 4, \"right\")",
+     "UmF0aW9uYWwoMTUsIDQp"
+    ],
+    [
+     "riemann_sum(x**2, 0, 2, 4, \"mid\")",
+     "UmF0aW9uYWwoMjEsIDgp"
+    ],
+    [
+     "riemann_sum(x, 0, 1, 2, \"left\")",
+     "UmF0aW9uYWwoMSwgNCk="
+    ],
+    [
+     "riemann_sum(x, 0, 1, 2, \"right\")",
+     "UmF0aW9uYWwoMywgNCk="
+    ]
+   ],
+   "area_between": [
+    [
+     "area_between(x + 2, x**2)",
+     "UmF0aW9uYWwoOSwgMik="
+    ],
+    [
+     "area_between(x, x**2)",
+     "UmF0aW9uYWwoMSwgNik="
+    ],
+    [
+     "area_between(x**2, x)",
+     "UmF0aW9uYWwoMSwgNik="
+    ],
+    [
+     "area_between(x**3, x)",
+     "UmF0aW9uYWwoMSwgMik="
+    ]
+   ],
+   "definite": [
+    [
+     "definite(x**2, 0, 3)",
+     "OQ=="
+    ],
+    [
+     "definite(2*x, 1, 2)",
+     "Mw=="
+    ],
+    [
+     "definite(cos(x), 0, pi/2)",
+     "MQ=="
+    ]
+   ]
+  }
+ },
+ "level_08_sums_and_series": {
+  "tasks": {
+   "1a": "NTU=",
+   "1b": "MjU=",
+   "1c": "bioobiArIDEpLzI=",
+   "1d": "Mg==",
+   "1e": "b28=",
+   "1f": "cGkqKjIvNg==",
+   "2a": "MSArIHggKyB4KioyLzIgKyB4KiozLzYgKyBPKHgqKjQp",
+   "2b": "eCoqMy82ICsgeCoqMi8yICsgeCArIDE=",
+   "2c": "eCoqNS8xMjAgLSB4KiozLzYgKyB4",
+   "2d": "MSArIHggKyB4KioyICsgeCoqMyArIE8oeCoqNCk="
+  },
+  "tests": {
+   "sum_of": [
+    [
+     "sum_of(k, 1, 100)",
+     "NTA1MA=="
+    ],
+    [
+     "sum_of(k**2, 1, n)",
+     "bioqMy8zICsgbioqMi8yICsgbi82"
+    ],
+    [
+     "sum_of(k**3, 1, n)",
+     "bioqNC80ICsgbioqMy8yICsgbioqMi80"
+    ],
+    [
+     "sum_of(1/2**k, 1, oo)",
+     "MQ=="
+    ]
+   ],
+   "partial_sums": [
+    [
+     "partial_sums(k, 4)",
+     "WzEsIDMsIDYsIDEwXQ=="
+    ],
+    [
+     "partial_sums(1/2**k, 3)",
+     "W1JhdGlvbmFsKDEsIDIpLCBSYXRpb25hbCgzLCA0KSwgUmF0aW9uYWwoNywgOCld"
+    ],
+    [
+     "partial_sums(k, 0)",
+     "W10="
+    ]
+   ],
+   "taylor_polynomial": [
+    [
+     "taylor_polynomial(exp(x), 0, 3)",
+     "eCoqMy82ICsgeCoqMi8yICsgeCArIDE="
+    ],
+    [
+     "taylor_polynomial(sin(x), 0, 5)",
+     "eCoqNS8xMjAgLSB4KiozLzYgKyB4"
+    ],
+    [
+     "taylor_polynomial(log(x), 1, 2)",
+     "eCAtICh4IC0gMSkqKjIvMiAtIDE="
+    ],
+    [
+     "taylor_polynomial(cos(x), 0, 0)",
+     "MQ=="
+    ]
+   ],
+   "approximate": [
+    [
+     "approximate(sqrt(x), 4, Rational(41, 10))",
+     "UmF0aW9uYWwoODEsIDQwKQ=="
+    ],
+    [
+     "approximate(x**3, 2, Rational(21, 10))",
+     "UmF0aW9uYWwoNDYsIDUp"
+    ],
+    [
+     "approximate(exp(x), 0, Rational(1, 10))",
+     "UmF0aW9uYWwoMTEsIDEwKQ=="
+    ]
+   ],
+   "geometric_total": [
+    [
+     "geometric_total(Rational(1, 2))",
+     "Mg=="
+    ],
+    [
+     "geometric_total(Rational(1, 3))",
+     "UmF0aW9uYWwoMywgMik="
+    ],
+    [
+     "geometric_total(Rational(9, 10))",
+     "MTA="
+    ]
+   ]
+  }
+ },
+ "level_09_matrices": {
+  "tasks": {
+   "1a": "KDIsIDIp",
+   "1b": "Mg==",
+   "1c": "TWF0cml4KFtbMywgNF1dKQ==",
+   "1d": "TWF0cml4KFtbMSwgM10sIFsyLCA0XV0p",
+   "1e": "W1sxLCAyXSwgWzMsIDRdXQ==",
+   "2a": "TWF0cml4KFtbMSwgM10sIFs0LCA0XV0p",
+   "2b": "TWF0cml4KFtbMiwgMV0sIFs0LCAzXV0p",
+   "2c": "TWF0cml4KFtbMywgNF0sIFsxLCAyXV0p",
+   "2d": "TWF0cml4KFtbMTddLCBbMzldXSk=",
+   "3a": "LTI=",
+   "3b": "TWF0cml4KFtbLTIsIDFdLCBbUmF0aW9uYWwoMywgMiksIFJhdGlvbmFsKC0xLCAyKV1dKQ==",
+   "3c": "MA==",
+   "3d": "MQ==",
+   "4a": "TWF0cml4KFtbLTRdLCBbUmF0aW9uYWwoOSwgMildXSk=",
+   "4b": "ezM6IDEsIDE6IDF9"
+  },
+  "tests": {
+   "solve_system": [
+    [
+     "solve_system([[1, 1], [1, -1]], [5, 1])",
+     "WzMsIDJd"
+    ],
+    [
+     "solve_system([[2, 0], [0, 4]], [6, 2])",
+     "WzMsIFJhdGlvbmFsKDEsIDIpXQ=="
+    ],
+    [
+     "solve_system([[1, 2], [3, 4]], [5, 6])",
+     "Wy00LCBSYXRpb25hbCg5LCAyKV0="
+    ],
+    [
+     "solve_system([[1, 2], [2, 4]], [3, 6])",
+     "Tm9uZQ=="
+    ]
+   ],
+   "rotate": [
+    [
+     "rotate((1, 0), pi/2)",
+     "KDAsIDEp"
+    ],
+    [
+     "rotate((1, 0), pi)",
+     "KC0xLCAwKQ=="
+    ],
+    [
+     "rotate((2, 3), 2*pi)",
+     "KDIsIDMp"
+    ],
+    [
+     "rotate((1, 0), pi/4)",
+     "KHNxcnQoMikvMiwgc3FydCgyKS8yKQ=="
+    ]
+   ],
+   "power_of": [
+    [
+     "power_of([[1, 1], [1, 0]], 5)",
+     "W1s4LCA1XSwgWzUsIDNdXQ=="
+    ],
+    [
+     "power_of([[2, 0], [0, 3]], 3)",
+     "W1s4LCAwXSwgWzAsIDI3XV0="
+    ],
+    [
+     "power_of([[1, 2], [3, 4]], 0)",
+     "W1sxLCAwXSwgWzAsIDFdXQ=="
+    ]
+   ],
+   "eigenvalue_list": [
+    [
+     "eigenvalue_list([[2, 1], [1, 2]])",
+     "WzEsIDNd"
+    ],
+    [
+     "eigenvalue_list([[4, 1], [2, 3]])",
+     "WzIsIDVd"
+    ],
+    [
+     "eigenvalue_list([[2, 0], [0, 2]])",
+     "WzIsIDJd"
+    ]
+   ],
+   "multiply": [
+    [
+     "multiply([[1, 2], [3, 4]], [[0, 1], [1, 0]])",
+     "W1syLCAxXSwgWzQsIDNdXQ=="
+    ],
+    [
+     "multiply([[1, 0], [0, 1]], [[5, 6], [7, 8]])",
+     "W1s1LCA2XSwgWzcsIDhdXQ=="
+    ]
+   ]
+  }
+ },
+ "level_10_differential_equations": {
+  "tasks": {
+   "1a": "RXEoeSh4KSwgQzEqZXhwKDIqeCkp",
+   "1b": "QzEqZXhwKDIqeCk=",
+   "1c": "RXEoeSh4KSwgMypleHAoMip4KSk=",
+   "1d": "RXEoeSh4KSwgQzEgKyB4KioyLzIp",
+   "1e": "RXEoeSh4KSwgQzEqc2luKHgpICsgQzIqY29zKHgpKQ==",
+   "1f": "KFRydWUsIDAp"
+  },
+  "tests": {
+   "general_solution": [
+    [
+     "general_solution(2*y(x))",
+     "QzEqZXhwKDIqeCk="
+    ],
+    [
+     "general_solution(-y(x))",
+     "QzEqZXhwKC14KQ=="
+    ],
+    [
+     "general_solution(x)",
+     "QzEgKyB4KioyLzI="
+    ],
+    [
+     "general_solution(x*y(x))",
+     "QzEqZXhwKHgqKjIvMik="
+    ]
+   ],
+   "with_start": [
+    [
+     "with_start(2*y(x), 3)",
+     "MypleHAoMip4KQ=="
+    ],
+    [
+     "with_start(1 - y(x), 0)",
+     "MSAtIGV4cCgteCk="
+    ],
+    [
+     "with_start(x, 5)",
+     "eCoqMi8yICsgNQ=="
+    ]
+   ],
+   "cooling": [
+    [
+     "cooling(90, 20, log(2), 1)",
+     "NTU="
+    ],
+    [
+     "cooling(90, 20, log(2), 2)",
+     "UmF0aW9uYWwoNzUsIDIp"
+    ],
+    [
+     "cooling(100, 0, 1, 0)",
+     "MTAw"
+    ]
+   ],
+   "solve_growth": [
+    [
+     "solve_growth(3)",
+     "QzEqZXhwKDMqeCk="
+    ],
+    [
+     "solve_growth(-1)",
+     "QzEqZXhwKC14KQ=="
+    ]
+   ]
+  }
+ },
+ "level_11_whole_tasks": {
+  "tasks": {},
+  "tests": {
+   "newton_method": [
+    [
+     "newton_method(x**2 - 2, 1, 3)",
+     "UmF0aW9uYWwoNTc3LCA0MDgp"
+    ],
+    [
+     "newton_method(x**2 - 2, 1, 1)",
+     "UmF0aW9uYWwoMywgMik="
+    ],
+    [
+     "newton_method(x**3 - 2*x - 5, 2, 1)",
+     "UmF0aW9uYWwoMjEsIDEwKQ=="
+    ],
+    [
+     "newton_method(x**2 - 4, 3, 0)",
+     "Mw=="
+    ]
+   ],
+   "check_answer": [
+    [
+     "check_answer(\"derivative\", x**2, 2*x)",
+     "VHJ1ZQ=="
+    ],
+    [
+     "check_answer(\"derivative\", x**3, 3*x)",
+     "RmFsc2U="
+    ],
+    [
+     "check_answer(\"derivative\", (x + 1)**2, 2*x + 2)",
+     "VHJ1ZQ=="
+    ],
+    [
+     "check_answer(\"integral\", 2*x, x**2 + 7)",
+     "VHJ1ZQ=="
+    ],
+    [
+     "check_answer(\"integral\", cos(x), -sin(x))",
+     "RmFsc2U="
+    ],
+    [
+     "check_answer(\"solve\", x**2 - 4, [2, -2])",
+     "VHJ1ZQ=="
+    ],
+    [
+     "check_answer(\"solve\", x**2 - 4, [2])",
+     "RmFsc2U="
+    ]
+   ],
+   "tangent_and_normal": [
+    [
+     "tangent_and_normal(x**2, 1)",
+     "eyd0YW5nZW50JzogMip4IC0gMSwgJ25vcm1hbCc6IFJhdGlvbmFsKDMsIDIpIC0geC8yfQ=="
+    ],
+    [
+     "tangent_and_normal(x**3, 1)",
+     "eyd0YW5nZW50JzogMyp4IC0gMiwgJ25vcm1hbCc6IFJhdGlvbmFsKDQsIDMpIC0geC8zfQ=="
+    ],
+    [
+     "tangent_and_normal(x**2, 0)",
+     "eyd0YW5nZW50JzogMCwgJ25vcm1hbCc6IE5vbmV9"
+    ]
+   ],
+   "function_report": [
+    [
+     "function_report(x**3 - 3*x)",
+     "eydkZXJpdmF0aXZlJzogMyp4KioyIC0gMywgJ2NyaXRpY2FsX3BvaW50cyc6IFstMSwgMV0sICdpbmNyZWFzaW5nJzogVW5pb24oSW50ZXJ2YWwub3Blbigtb28sIC0xKSwgSW50ZXJ2YWwub3BlbigxLCBvbykpLCAnZGVjcmVhc2luZyc6IEludGVydmFsLm9wZW4oLTEsIDEpLCAnY29uY2F2ZV91cCc6IEludGVydmFsLm9wZW4oMCwgb28pLCAnaW5mbGVjdGlvbl9wb2ludHMnOiBbMF19"
+    ],
+    [
+     "function_report(x**2)",
+     "eydkZXJpdmF0aXZlJzogMip4LCAnY3JpdGljYWxfcG9pbnRzJzogWzBdLCAnaW5jcmVhc2luZyc6IEludGVydmFsLm9wZW4oMCwgb28pLCAnZGVjcmVhc2luZyc6IEludGVydmFsLm9wZW4oLW9vLCAwKSwgJ2NvbmNhdmVfdXAnOiBSZWFscywgJ2luZmxlY3Rpb25fcG9pbnRzJzogW119"
+    ],
+    [
+     "function_report(x**4)",
+     "eydkZXJpdmF0aXZlJzogNCp4KiozLCAnY3JpdGljYWxfcG9pbnRzJzogWzBdLCAnaW5jcmVhc2luZyc6IEludGVydmFsLm9wZW4oMCwgb28pLCAnZGVjcmVhc2luZyc6IEludGVydmFsLm9wZW4oLW9vLCAwKSwgJ2NvbmNhdmVfdXAnOiBVbmlvbihJbnRlcnZhbC5vcGVuKC1vbywgMCksIEludGVydmFsLm9wZW4oMCwgb28pKSwgJ2luZmxlY3Rpb25fcG9pbnRzJzogW119"
+    ]
+   ],
+   "riemann_table": [
+    [
+     "riemann_table(x**2, 0, 2, [1, 2, 4])",
+     "WygxLCA4LCBSYXRpb25hbCgxNiwgMykpLCAoMiwgNSwgUmF0aW9uYWwoNywgMykpLCAoNCwgUmF0aW9uYWwoMTUsIDQpLCBSYXRpb25hbCgxMywgMTIpKV0="
+    ],
+    [
+     "riemann_table(x, 0, 1, [2])",
+     "WygyLCBSYXRpb25hbCgzLCA0KSwgUmF0aW9uYWwoMSwgNCkpXQ=="
+    ],
+    [
+     "riemann_table(x, 0, 1, [])",
+     "W10="
+    ]
+   ]
+  }
+ }
+}

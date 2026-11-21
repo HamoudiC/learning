@@ -1,0 +1,41 @@
+sympy · using derivatives
+from sympy import *
+
+
+── critical points ──
+
+solve(diff(f, x), x)
+solve(diff(x**3 - 3*x, x), x) → [-1, 1]      # where f'(x) = 0
+
+solveset(diff(f, x), x, Interval(a, b))
+solveset(diff(x**3 - 3*x, x), x, Interval(0, 5)) → FiniteSet(1)      # only the ones between a and b
+
+stationary_points(f, x, Interval(a, b))
+stationary_points(x**3 - 3*x, x, Interval(0, 5)) → FiniteSet(1)      # the same thing, SymPy's shortcut
+
+
+── shape of the graph ──
+
+solveset(diff(f, x) > 0, x, S.Reals)
+solveset(diff(x**2, x) > 0, x, S.Reals) → Interval.open(0, oo)      # where f is increasing
+
+solveset(diff(f, x, 2) > 0, x, S.Reals)
+solveset(diff(x**3, x, 2) > 0, x, S.Reals) → Interval.open(0, oo)      # where f is concave up
+
+diff(f, x, 2).subs(x, c)
+diff(x**3 - 3*x, x, 2).subs(x, 1) → 6      # > 0 is a min, < 0 a max, 0 means the test can't tell
+
+
+── biggest and smallest ──
+
+maximum(f, x, Interval(a, b))
+maximum(x**3 - 3*x, x, Interval(-2, 3)) → 18      # the biggest value on [a, b]
+
+minimum(f, x, Interval(a, b))
+minimum(x**3 - 3*x, x, Interval(-2, 3)) → -2      # the smallest value on [a, b]
+
+max(a_list)   min(a_list)
+max([3, Rational(5, 2), sqrt(2)]) → 3      # works on exact real numbers
+
+symbols("w", positive=True)
+solve(symbols("w", positive=True)**2 - 4, symbols("w", positive=True)) → [2]      # solve keeps only positive answers
