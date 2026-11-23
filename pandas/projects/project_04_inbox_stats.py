@@ -21,7 +21,7 @@ def emails_per_sender(df):
 
 
 # ─── 2 · WRITE · busiest_hour ───────────────────────────────────────────────────────────────────────
-#   Bags: 06_dates_and_reshaping.txt → real dates;  05_grouping_and_combining.txt → counting
+#   Bags: 06_dates_and_reshaping.txt → real dates;  05_grouping_and_combining.txt → counting;  01_series_and_dataframes.txt → maths and filtering
 #   Gives back the hour of the day (0-23) when the most emails arrived.
 #   df: an emails table (the "sent" column is text)
 
@@ -30,7 +30,7 @@ def busiest_hour(df):
 
 
 # ─── 3 · WRITE · search ─────────────────────────────────────────────────────────────────────────────
-#   Bags: 04_cleaning.txt → text in a column (.str);  03_selecting_and_changing.txt → keeping the rows that match
+#   Bags: 04_cleaning.txt → text in a column (.str);  03_selecting_and_changing.txt → keeping the rows that match;  00_python_basics.txt → text
 #   Gives back the subjects that contain word, upper or lower case.
 #   df: an emails table    word: the word to look for
 
@@ -48,7 +48,7 @@ def domain_counts(df):
 
 
 # ─── 5 · WRITE · biggest ────────────────────────────────────────────────────────────────────────────
-#   Bags: 03_selecting_and_changing.txt → sorting;  01_series_and_dataframes.txt → back to plain Python
+#   Bags: 03_selecting_and_changing.txt → sorting;  01_series_and_dataframes.txt → looking at a table, back to plain Python
 #   Gives back the subjects of the n biggest emails, biggest first.
 #   df: an emails table    n: how many
 
@@ -57,7 +57,7 @@ def biggest(df, n):
 
 
 # ─── 6 · WRITE · per_day ────────────────────────────────────────────────────────────────────────────
-#   Bags: 06_dates_and_reshaping.txt → real dates;  05_grouping_and_combining.txt → one answer per group
+#   Bags: 06_dates_and_reshaping.txt → real dates;  05_grouping_and_combining.txt → one answer per group;  03_selecting_and_changing.txt → new and changed columns
 #   Gives back {"YYYY-MM-DD": how many emails that day}.
 #   df: an emails table
 

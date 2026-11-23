@@ -30,7 +30,7 @@ programs = pd.read_csv(DATA / "programs.csv")
 
 
 # ─── 2 · DO · one table under another ───────────────────────────────────────────────────────────────
-#   Bags: 05_grouping_and_combining.txt → joining tables
+#   Bags: 05_grouping_and_combining.txt → joining tables;  01_series_and_dataframes.txt → looking at a table
 
 students = pd.read_csv(DATA / "students.csv")
 
@@ -48,7 +48,7 @@ def with_school(students, programs):
 
 
 # ─── 4 · WRITE · credits_left ───────────────────────────────────────────────────────────────────────
-#   Bags: 05_grouping_and_combining.txt → joining tables;  00_python_basics.txt → lists, tuples, dicts
+#   Bags: 05_grouping_and_combining.txt → joining tables;  01_series_and_dataframes.txt → maths and filtering;  00_python_basics.txt → lists, tuples, dicts
 #   Gives back a dict {name: credits still needed}, for the students whose program is in programs.
 #   students, programs: the two tables
 

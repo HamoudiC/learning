@@ -68,7 +68,7 @@ def to_whole(arr):
 
 
 # ─── 5 · WRITE · is_text ────────────────────────────────────────────────────────────────────────────
-#   Bags: 02_indexing_copies_dtypes.txt → dtypes
+#   Bags: 02_indexing_copies_dtypes.txt → dtypes;  00_python_basics.txt → checks
 #   Gives back True if the array holds text, False if not.
 #   arr: any array
 

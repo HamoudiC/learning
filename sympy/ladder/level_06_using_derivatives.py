@@ -32,7 +32,7 @@ f = x**3 - 3*x
 
 
 # ─── 2 · DO · biggest and smallest ──────────────────────────────────────────────────────────────────
-#   Bags: 06_using_derivatives.txt → biggest and smallest;  01_basics.txt → values and decimals
+#   Bags: 06_using_derivatives.txt → biggest and smallest;  01_basics.txt → values and decimals;  00_python_basics.txt → loops
 
 f = x**3 - 3*x
 
@@ -66,7 +66,7 @@ def critical_points(f):
 
 
 # ─── 5 · WRITE · classify ───────────────────────────────────────────────────────────────────────────
-#   Bags: 06_using_derivatives.txt → shape of the graph
+#   Bags: 06_using_derivatives.txt → shape of the graph;  00_python_basics.txt → checks
 #   Gives back "max", "min" or "unknown", from the second derivative test.
 #   f: an expression in x    c: a critical point of f
 
@@ -75,7 +75,7 @@ def classify(f, c):
 
 
 # ─── 6 · WRITE · absolute_extremes ──────────────────────────────────────────────────────────────────
-#   Bags: 06_using_derivatives.txt → critical points, biggest and smallest
+#   Bags: 06_using_derivatives.txt → critical points, biggest and smallest;  01_basics.txt → values and decimals;  00_python_basics.txt → loops, lists, tuples, dicts, numbers
 #   Gives back (smallest value, biggest value) of f on [a, b]: try the critical points inside AND both ends.
 #   f: an expression in x    a, b: the ends of the interval
 
@@ -84,7 +84,7 @@ def absolute_extremes(f, a, b):
 
 
 # ─── 7 · WRITE · best_rectangle ─────────────────────────────────────────────────────────────────────
-#   Bags: 06_using_derivatives.txt → critical points, biggest and smallest;  01_basics.txt → exact numbers
+#   Bags: 06_using_derivatives.txt → critical points, biggest and smallest;  01_basics.txt → exact numbers, values and decimals
 #   Gives back (width, height, area) of the rectangle with this perimeter and the BIGGEST area, exact.
 #   perimeter: a whole number
 
@@ -93,7 +93,7 @@ def best_rectangle(perimeter):
 
 
 # ─── 8 · WRITE · open_box ───────────────────────────────────────────────────────────────────────────
-#   Bags: 06_using_derivatives.txt → critical points
+#   Bags: 06_using_derivatives.txt → critical points, biggest and smallest;  01_basics.txt → exact numbers;  00_python_basics.txt → loops, checks
 #   Gives back the corner cut c that gives the biggest box: volume = c·(side - 2c)², with 0 < c < side/2.
 #   side: the side of a square sheet of card
 

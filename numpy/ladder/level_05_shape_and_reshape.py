@@ -48,7 +48,7 @@ def as_rows(values, per_row):
 
 
 # ─── 4 · WRITE · fits ───────────────────────────────────────────────────────────────────────────────
-#   Bags: 01_arrays_and_shape.txt → size and shape, changing the shape
+#   Bags: 01_arrays_and_shape.txt → size and shape, changing the shape;  00_python_basics.txt → loops, checks
 #   Gives back True if arr could be reshaped to that shape, False if not. It must not crash.
 #   arr: any array    shape: a tuple of ints, like (3, 4)
 

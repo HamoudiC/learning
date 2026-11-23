@@ -37,6 +37,9 @@ mask.any()   mask.all()
 mask.any(axis=1)
 np.array([[True, False], [False, False]]).any(axis=1) → array([True, False])      # is any True in each row
 
+mask.mean()
+(np.array([1, 5, 7, 2]) > 4).mean() → 0.5      # the fraction of values that are True
+
 
 ── choosing per value ──
 

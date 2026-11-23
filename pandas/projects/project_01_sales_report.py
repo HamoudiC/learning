@@ -30,7 +30,7 @@ def totals_by(df, column):
 
 
 # ─── 3 · WRITE · top_products ───────────────────────────────────────────────────────────────────────
-#   Bags: 05_grouping_and_combining.txt → one answer per group;  03_selecting_and_changing.txt → sorting
+#   Bags: 05_grouping_and_combining.txt → one answer per group;  03_selecting_and_changing.txt → sorting;  01_series_and_dataframes.txt → looking at a table, back to plain Python
 #   Gives back a list of the n products with the most revenue, best first.
 #   df: a sales table    n: how many
 
@@ -39,7 +39,7 @@ def top_products(df, n):
 
 
 # ─── 4 · WRITE · month_totals ───────────────────────────────────────────────────────────────────────
-#   Bags: 06_dates_and_reshaping.txt → real dates;  05_grouping_and_combining.txt → one answer per group
+#   Bags: 06_dates_and_reshaping.txt → real dates;  05_grouping_and_combining.txt → one answer per group;  03_selecting_and_changing.txt → new and changed columns
 #   Gives back {"YYYY-MM": total revenue} for each month.
 #   df: a sales table (dates as text)
 

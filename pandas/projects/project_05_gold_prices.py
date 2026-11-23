@@ -22,7 +22,7 @@ def add_returns(df):
 
 
 # ─── 2 · WRITE · best_and_worst_day ─────────────────────────────────────────────────────────────────
-#   Bags: 06_dates_and_reshaping.txt → over time, real dates;  01_series_and_dataframes.txt → maths and filtering
+#   Bags: 06_dates_and_reshaping.txt → over time, real dates;  01_series_and_dataframes.txt → maths and filtering;  00_python_basics.txt → lists, tuples, dicts
 #   Gives back ("YYYY-MM-DD" of the biggest daily rise, "YYYY-MM-DD" of the biggest daily fall).
 #   df: a gold table
 
@@ -40,7 +40,7 @@ def weekly_close(df):
 
 
 # ─── 4 · WRITE · monthly_range ──────────────────────────────────────────────────────────────────────
-#   Bags: 06_dates_and_reshaping.txt → dates as the row labels, real dates
+#   Bags: 06_dates_and_reshaping.txt → dates as the row labels, real dates;  05_grouping_and_combining.txt → one answer per group
 #   Gives back one row per month ("YYYY-MM" labels) with the month's highest High and lowest Low.
 #   df: a gold table
 
@@ -49,7 +49,7 @@ def monthly_range(df):
 
 
 # ─── 5 · WRITE · add_signals ────────────────────────────────────────────────────────────────────────
-#   Bags: 06_dates_and_reshaping.txt → over time;  03_selecting_and_changing.txt → new and changed columns
+#   Bags: 06_dates_and_reshaping.txt → over time;  03_selecting_and_changing.txt → new and changed columns, renaming, dropping, types
 #   Gives back a NEW table with fast_ma, slow_ma (rolling means of Close) and signal (1 if fast > slow, else 0).
 #   df: a gold table    fast, slow: window lengths
 
@@ -58,7 +58,7 @@ def add_signals(df, fast, slow):
 
 
 # ─── 6 · WRITE · backtest ───────────────────────────────────────────────────────────────────────────
-#   Bags: 06_dates_and_reshaping.txt → over time;  00_python_basics.txt → numbers
+#   Bags: 06_dates_and_reshaping.txt → over time;  01_series_and_dataframes.txt → label or position, maths and filtering;  00_python_basics.txt → lists, tuples, dicts, numbers
 #   Gives back {"strategy", "buy_and_hold", "days_in_market"} from day `slow` on: the strategy earns each
 #   day's return only if YESTERDAY's signal was 1 (shift(1)). Returns rounded to 4.
 #   df: a gold table    fast, slow: window lengths

@@ -22,7 +22,7 @@ def with_programs(students, programs):
 
 
 # ─── 2 · WRITE · credits_remaining ──────────────────────────────────────────────────────────────────
-#   Bags: 05_grouping_and_combining.txt → joining tables;  00_python_basics.txt → lists, tuples, dicts
+#   Bags: 05_grouping_and_combining.txt → joining tables;  01_series_and_dataframes.txt → maths and filtering;  00_python_basics.txt → lists, tuples, dicts
 #   Gives back {name: credits still needed}, for students whose program is in programs.
 #   students, programs: the two tables
 
@@ -49,7 +49,7 @@ def at_risk(students, max_gpa):
 
 
 # ─── 5 · WRITE · program_report ─────────────────────────────────────────────────────────────────────
-#   Bags: 05_grouping_and_combining.txt → one answer per group;  03_selecting_and_changing.txt → renaming, dropping, types
+#   Bags: 05_grouping_and_combining.txt → one answer per group;  01_series_and_dataframes.txt → maths and filtering
 #   Gives back one row per program: program, students (how many), avg_gpa (rounded to 2).
 #   students: the students table
 
@@ -58,7 +58,7 @@ def program_report(students):
 
 
 # ─── 6 · WRITE · progress_percent ───────────────────────────────────────────────────────────────────
-#   Bags: 05_grouping_and_combining.txt → joining tables;  01_series_and_dataframes.txt → maths and filtering
+#   Bags: 05_grouping_and_combining.txt → joining tables;  01_series_and_dataframes.txt → maths and filtering;  00_python_basics.txt → lists, tuples, dicts
 #   Gives back {name: % of the needed credits done, rounded to 1}, for students whose program is in programs.
 #   students, programs: the two tables
 

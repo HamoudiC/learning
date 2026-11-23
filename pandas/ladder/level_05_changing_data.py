@@ -70,7 +70,7 @@ def add_revenue(df):
 
 
 # ─── 5 · WRITE · top_n_by ───────────────────────────────────────────────────────────────────────────
-#   Bags: 03_selecting_and_changing.txt → sorting, keeping the rows that match (reset_index)
+#   Bags: 03_selecting_and_changing.txt → sorting, keeping the rows that match
 #   Gives back the n rows with the biggest values in that column, biggest first, numbered 0, 1, 2...
 #   df: a table    column: a number column    n: how many rows
 
@@ -79,7 +79,7 @@ def top_n_by(df, column, n):
 
 
 # ─── 6 · WRITE · size_labels ────────────────────────────────────────────────────────────────────────
-#   Bags: 03_selecting_and_changing.txt → new and changed columns
+#   Bags: 03_selecting_and_changing.txt → new and changed columns;  00_python_basics.txt → checks
 #   Gives back a NEW table with a "size" column: "bulk" when units is 3 or more, otherwise "single".
 #   df: a sales table
 

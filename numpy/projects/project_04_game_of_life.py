@@ -14,7 +14,7 @@ BLINKER = [[0, 0, 0],
 
 
 # ─── 1 · WRITE · count_neighbours ───────────────────────────────────────────────────────────────────
-#   Bags: 04_masks_sorting_joining.txt → joining and splitting (np.pad);  02_indexing_copies_dtypes.txt → 2D and 3D
+#   Bags: 04_masks_sorting_joining.txt → joining and splitting;  02_indexing_copies_dtypes.txt → 2D and 3D;  01_arrays_and_shape.txt → ready-made arrays, size and shape;  03_maths_and_aggregations.txt → maths on every value;  00_python_basics.txt → loops
 #   Gives back, for every cell, how many of its 8 neighbours are alive (same shape as grid).
 #   grid: 2D array of 0s and 1s
 
@@ -41,7 +41,7 @@ def run(grid, steps):
 
 
 # ─── 4 · WRITE · history ────────────────────────────────────────────────────────────────────────────
-#   Bags: 03_maths_and_aggregations.txt → one number from many;  00_python_basics.txt → lists, loops, numbers
+#   Bags: 03_maths_and_aggregations.txt → one number from many;  00_python_basics.txt → lists, tuples, dicts, loops, numbers
 #   Gives back a list: how many cells are alive at the start and after each step.
 #   grid: the start    steps: how many steps
 
@@ -50,7 +50,7 @@ def history(grid, steps):
 
 
 # ─── 5 · WRITE · show ───────────────────────────────────────────────────────────────────────────────
-#   Bags: 00_python_basics.txt → loops, text
+#   Bags: 00_python_basics.txt → loops, text, checks
 #   Gives back the grid as text: "█" alive, "·" dead, one line per row, joined with "\n".
 #   grid: 2D array of 0s and 1s
 

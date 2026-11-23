@@ -28,6 +28,15 @@ separator.join(list_of_text)
 text.split(separator)
 "a,b".split(",") → ['a', 'b']      # cuts text into a list
 
+text.splitlines()
+"one\ntwo".splitlines() → ['one', 'two']      # cuts text into its lines
+
+text.lower()   text.upper()   text.strip()
+"  Hi ".strip().lower() → 'hi'      # lowercase / uppercase / without the spaces at both ends
+
+text.replace(old, new)
+"a b c".replace(" ", "-") → 'a-b-c'      # swaps every old for new
+
 
 ── lists, tuples, dicts ──
 
@@ -36,6 +45,21 @@ a_list.append(3) → 3 is now on the end      # adds one value to the end of a l
 
 len(thing)
 len([1, 2, 3]) → 3      # how many items
+
+a_list[start:end]
+[5, 6, 7, 8][1:3] → [6, 7]      # a slice of a list, the same as for text
+
+a_list * n
+["a", "b"] * 3 → ['a', 'b', 'a', 'b', 'a', 'b']      # the list repeated n times
+
+a_list + other_list
+[1, 2] + [9] → [1, 2, 9]      # two lists joined into one
+
+list(thing)
+list((4, 5)) → [4, 5]      # a tuple, set, range or other group of values as a list
+
+set(thing)
+set([3, 1, 3]) == {1, 3} → True      # the different values, in no order (sets are equal when they hold the same values)
 
 (a, b)
 (1, 2)[0] → 1      # a tuple: a few values together
@@ -67,8 +91,44 @@ list(enumerate(["a", "b"], start=1)) → [(1, 'a'), (2, 'b')]      # each item w
 for a, b in zip(list_a, list_b):
 list(zip([1, 2], ["x", "y"])) → [(1, 'x'), (2, 'y')]      # walks two lists side by side
 
+for key, value in a_dict.items():
+list({"tea": 2}.items()) → [('tea', 2)]      # each key of a dict with its value
+
 count = count + 1
 count += 1 → count goes up by 1      # adds to a running count
+
+[expression for item in items]
+[n * 10 for n in [1, 2]] → [10, 20]      # a new list, one value per item, in one line
+
+[item for item in items if condition]
+[n for n in [4, 7, 9] if n > 5] → [7, 9]      # only the items that pass the check
+
+{key: value for item in items}
+{w: len(w) for w in ["hi", "hey"]} → {'hi': 2, 'hey': 3}      # a new dict in one line
+
+sum(expression for item in items)
+sum(n * 2 for n in [1, 2, 3]) → 12      # adds up one value per item
+
+
+── checks ──
+
+a == b   a != b   a < b   a <= b   a > b   a >= b
+4 >= 4 → True      # equal, not equal, smaller, smaller or equal, bigger, bigger or equal
+
+if condition:   elif other:   else:
+if 7 > 5: print("big") → prints big      # runs a block only when the check is True
+
+a if condition else b
+"even" if 6 % 2 == 0 else "odd" → 'even'      # one of two values, chosen by a check
+
+value in a_list   part in text
+"ell" in "hello" → True      # whether it's in there
+
+cond1 and cond2   cond1 or cond2   not cond
+(3 > 1) and (2 > 5) → False      # both / either / the opposite (for single True / False values, not arrays)
+
+isinstance(value, a_type)
+isinstance("hi", str) → True      # whether a value is of that type (str, int, float, list...)
 
 
 ── numbers ──
@@ -76,8 +136,14 @@ count += 1 → count goes up by 1      # adds to a running count
 round(number, decimals)
 round(3.14159, 2) → 3.14      # rounds a number
 
-int(np_number)   float(np_number)
-int(np.int64(5)) → 5      # a numpy number as a plain Python number
+int(number)   float(number)
+int(4.7) → 4      # a whole number (the decimals cut off) / a decimal; also turns numpy numbers into plain ones
 
 max(a, b)   min(a, b)
-max(3, 7) → 7      # the bigger / smaller of two numbers
+max(3, 7) → 7      # the bigger / smaller of two numbers, or of a whole list: max([3, 7, 1])
+
+abs(number)
+abs(-4.5) → 4.5      # the number without its minus sign
+
+a // b   a % b
+17 // 5 → 3      # whole-number division / what's left over (17 % 5 is 2)

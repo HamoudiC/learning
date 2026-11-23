@@ -6,7 +6,7 @@ import numpy as np
 
 
 # ─── 1 · DO · does it share? ────────────────────────────────────────────────────────────────────────
-#   Bags: 02_indexing_copies_dtypes.txt → same, view or copy;  picking and changing
+#   Bags: 02_indexing_copies_dtypes.txt → same, view or copy, picking and changing
 
 nums = np.array([10, 20, 30, 40, 50])
 
@@ -24,7 +24,7 @@ nums = np.array([10, 20, 30, 40, 50])
 
 
 # ─── 2 · DO · who changes? ──────────────────────────────────────────────────────────────────────────
-#   Bags: 02_indexing_copies_dtypes.txt → same, view or copy;  picking and changing
+#   Bags: 02_indexing_copies_dtypes.txt → same, view or copy, picking and changing
 
 temps = np.array([20, 21, 22, 23])
 backup = np.array([1, 2, 3])
@@ -40,7 +40,7 @@ backup = np.array([1, 2, 3])
 
 
 # ─── 3 · WRITE · with_first_zeroed ──────────────────────────────────────────────────────────────────
-#   Bags: 02_indexing_copies_dtypes.txt → same, view or copy;  picking and changing
+#   Bags: 02_indexing_copies_dtypes.txt → same, view or copy, picking and changing
 #   Gives back a NEW array like arr with its first value set to 0. The array you're given must not change.
 #   arr: a 1D array
 
@@ -62,7 +62,7 @@ def capped(arr, top):
 
 
 # ─── 5 · FIX · normalised ───────────────────────────────────────────────────────────────────────────
-#   Bags: 02_indexing_copies_dtypes.txt → same, view or copy
+#   Bags: 02_indexing_copies_dtypes.txt → same, view or copy;  03_maths_and_aggregations.txt → maths on every value, one number from many
 #   Should give back a NEW array: each value divided by the biggest, without changing the array it's given.
 #   It changes it: fix it.
 

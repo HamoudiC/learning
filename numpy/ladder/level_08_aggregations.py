@@ -37,7 +37,7 @@ prices = np.array([10, 12, 11, 18])
 
 
 # ─── 3 · DO · per student, per test ─────────────────────────────────────────────────────────────────
-#   Bags: 03_maths_and_aggregations.txt → per row or per column (axis)
+#   Bags: 03_maths_and_aggregations.txt → per row or per column (axis), one number from many
 
 scores = np.array([[70, 80, 90],
                    [60, 65, 100],
@@ -75,7 +75,7 @@ def hardest_test(scores):
 
 
 # ─── 6 · WRITE · balance_history ────────────────────────────────────────────────────────────────────
-#   Bags: 03_maths_and_aggregations.txt → running totals
+#   Bags: 03_maths_and_aggregations.txt → running totals, maths on every value
 #   Gives back the balance after each change.
 #   start: the money at the beginning    changes: deposits (+) and withdrawals (-), in order
 
@@ -84,7 +84,7 @@ def balance_history(start, changes):
 
 
 # ─── 7 · WRITE · biggest_jump ───────────────────────────────────────────────────────────────────────
-#   Bags: 03_maths_and_aggregations.txt → running totals, one number from many
+#   Bags: 03_maths_and_aggregations.txt → running totals, one number from many;  00_python_basics.txt → lists, tuples, dicts
 #   Gives back a tuple (day, jump): the biggest rise from one day to the next, and the day it rose TO.
 #   prices: one price per day
 

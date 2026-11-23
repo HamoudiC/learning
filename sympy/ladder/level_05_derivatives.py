@@ -106,7 +106,7 @@ def tangent_line(f, a):
 
 
 # ─── 7 · WRITE · derivative_by_definition ───────────────────────────────────────────────────────────
-#   Bags: 05_derivatives.txt → formulas;  04_functions_and_limits.txt → limits, functions
+#   Bags: 05_derivatives.txt → formulas;  04_functions_and_limits.txt → limits, functions;  01_basics.txt → symbols and expressions
 #   Gives back f'(x) worked out with the limit definition (not diff).
 #   f: an expression in x
 

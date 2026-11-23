@@ -38,7 +38,7 @@ import numpy as np
 
 
 # ─── 3 · DO · random numbers ────────────────────────────────────────────────────────────────────────
-#   Bags: 01_arrays_and_shape.txt → random numbers;  03_maths_and_aggregations.txt → one number from many
+#   Bags: 01_arrays_and_shape.txt → random numbers;  03_maths_and_aggregations.txt → one number from many;  04_masks_sorting_joining.txt → counting and checking
 
 #   3a. Roll 1000 dice (whole numbers 1 to 6) with a random generator seeded 7. Give back a tuple:
 #       (the smallest roll, the biggest roll).

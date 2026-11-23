@@ -69,7 +69,7 @@ seats.ndim
 
 
 # ─── 4 · DO · maths on a whole array ────────────────────────────────────────────────────────────────
-#   Bags: 01_arrays_and_shape.txt → making arrays
+#   Bags: 03_maths_and_aggregations.txt → maths on every value;  00_python_basics.txt → lists, tuples, dicts
 
 prices = np.array([10, 20, 30])
 discounts = np.array([1, 2, 3])
@@ -91,7 +91,7 @@ prices
 
 
 # ─── 5 · WRITE · describe ───────────────────────────────────────────────────────────────────────────
-#   Bags: 01_arrays_and_shape.txt → size and shape
+#   Bags: 01_arrays_and_shape.txt → size and shape;  00_python_basics.txt → text
 #   Gives back a sentence about an array, in this form:   <ndim>D array, shape <shape>, <size> values
 #   arr: any array
 
@@ -100,7 +100,7 @@ def describe(arr):
 
 
 # ─── 6 · WRITE · doubled ────────────────────────────────────────────────────────────────────────────
-#   Bags: 01_arrays_and_shape.txt → making arrays
+#   Bags: 01_arrays_and_shape.txt → making arrays;  03_maths_and_aggregations.txt → maths on every value
 #   Gives back an ARRAY with every number doubled (no loop).
 #   numbers: a plain list of numbers
 
@@ -109,7 +109,7 @@ def doubled(numbers):
 
 
 # ─── 7 · FIX · add_bonus ────────────────────────────────────────────────────────────────────────────
-#   Bags: 01_arrays_and_shape.txt → making arrays
+#   Bags: 01_arrays_and_shape.txt → making arrays;  03_maths_and_aggregations.txt → maths on every value
 #   Should give back an array with bonus added to every mark. It crashes: fix it.
 #   marks: a plain list of numbers    bonus: a number
 

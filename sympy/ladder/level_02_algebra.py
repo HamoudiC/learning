@@ -117,7 +117,7 @@ def quadratic_coefficients(expr):
 
 
 # ─── 8 · WRITE · is_identity ────────────────────────────────────────────────────────────────────────
-#   Bags: 02_algebra.txt → tidying
+#   Bags: 02_algebra.txt → tidying;  01_basics.txt → comparing
 #   Gives back True if left and right are equal for every x, False if not.
 #   left, right: two expressions in x
 

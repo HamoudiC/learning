@@ -9,7 +9,7 @@ Run:  python projects\project_06_monte_carlo.py
 
 
 # ─── 1 · WRITE · estimate_pi ────────────────────────────────────────────────────────────────────────
-#   Bags: 01_arrays_and_shape.txt → random numbers;  03_maths_and_aggregations.txt → maths on every value, per row or per column
+#   Bags: 01_arrays_and_shape.txt → random numbers;  03_maths_and_aggregations.txt → maths on every value, per row or per column (axis);  04_masks_sorting_joining.txt → counting and checking
 #   Gives back an estimate of pi: 4 × the fraction of random points in the 1 × 1 square with x² + y² ≤ 1.
 #   points: how many random points    seed: the random seed
 
@@ -18,8 +18,8 @@ def estimate_pi(points, seed):
 
 
 # ─── 2 · WRITE · two_dice_counts ────────────────────────────────────────────────────────────────────
-#   Bags: 01_arrays_and_shape.txt → random numbers;  03_maths_and_aggregations.txt → per row or per column (axis)
-#   Gives back 11 counts: how many times two dice added up to 2, 3, ..., 12.
+#   Bags: 01_arrays_and_shape.txt → random numbers, making arrays;  03_maths_and_aggregations.txt → per row or per column (axis);  04_masks_sorting_joining.txt → counting and checking;  00_python_basics.txt → loops
+#   Gives back an array of 11 counts: how many times two dice added up to 2, 3, ..., 12.
 #   rolls: how many times to roll both dice    seed: the random seed
 
 def two_dice_counts(rolls, seed):
@@ -27,7 +27,7 @@ def two_dice_counts(rolls, seed):
 
 
 # ─── 3 · WRITE · shared_birthday_chance ─────────────────────────────────────────────────────────────
-#   Bags: 01_arrays_and_shape.txt → random numbers;  04_masks_sorting_joining.txt → sorting, counting and checking
+#   Bags: 01_arrays_and_shape.txt → random numbers;  04_masks_sorting_joining.txt → sorting, counting and checking;  03_maths_and_aggregations.txt → running totals
 #   Gives back the fraction of rooms where at least two people share a birthday (365 days).
 #   people: people per room    trials: how many rooms    seed: the random seed
 
@@ -36,7 +36,7 @@ def shared_birthday_chance(people, trials, seed):
 
 
 # ─── 4 · WRITE · random_walk ────────────────────────────────────────────────────────────────────────
-#   Bags: 01_arrays_and_shape.txt → random numbers;  03_maths_and_aggregations.txt → running totals
+#   Bags: 01_arrays_and_shape.txt → random numbers;  03_maths_and_aggregations.txt → running totals;  04_masks_sorting_joining.txt → joining and splitting
 #   Gives back the position after each step, starting at 0. Each step is +1 or -1.
 #   steps: how many steps    seed: the random seed
 

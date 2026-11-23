@@ -63,7 +63,7 @@ amounts = pd.Series(["12", "x", "3.5"])
 
 
 # ─── 4 · WRITE · missing_report ─────────────────────────────────────────────────────────────────────
-#   Bags: 04_cleaning.txt → missing values;  01_series_and_dataframes.txt → back to plain Python
+#   Bags: 04_cleaning.txt → missing values;  01_series_and_dataframes.txt → maths and filtering, back to plain Python
 #   Gives back a dict {column: how many missing}, only for the columns with at least 1 missing.
 #   df: any table
 
@@ -90,7 +90,7 @@ def clean_phones(phones):
 
 
 # ─── 7 · WRITE · unique_people ──────────────────────────────────────────────────────────────────────
-#   Bags: 04_cleaning.txt → text in a column, duplicates, missing values;  03_selecting_and_changing.txt → keeping the rows that match
+#   Bags: 04_cleaning.txt → text in a column (.str), duplicates, missing values;  03_selecting_and_changing.txt → keeping the rows that match, new and changed columns
 #   Gives back the contacts with emails in lowercase and only the first row for each email kept
 #   (rows with no email are all kept), numbered 0, 1, 2...
 #   df: a contacts table

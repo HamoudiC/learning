@@ -10,7 +10,7 @@ DATA = Path(__file__).parent.parent / "data"
 
 
 # ─── 1 · DO · parts of dates ────────────────────────────────────────────────────────────────────────
-#   Bags: 06_dates_and_reshaping.txt → real dates
+#   Bags: 06_dates_and_reshaping.txt → real dates;  01_series_and_dataframes.txt → maths and filtering
 
 sales = pd.read_csv(DATA / "sales.csv", parse_dates=["date"])
 
@@ -53,7 +53,7 @@ gold = pd.read_csv(DATA / "gold_daily.csv", parse_dates=["Date"], index_col="Dat
 
 
 # ─── 4 · WRITE · monthly_revenue ────────────────────────────────────────────────────────────────────
-#   Bags: 06_dates_and_reshaping.txt → real dates, dates as the row labels;  05_grouping_and_combining.txt → one answer per group
+#   Bags: 06_dates_and_reshaping.txt → real dates, dates as the row labels;  05_grouping_and_combining.txt → one answer per group;  01_series_and_dataframes.txt → maths and filtering, back to plain Python
 #   Gives back a plain list of the total revenue (units × price) of each month, in order.
 #   df: a sales table with real dates
 
@@ -71,7 +71,7 @@ def orders_per_weekday(df):
 
 
 # ─── 6 · WRITE · daily_returns ──────────────────────────────────────────────────────────────────────
-#   Bags: 06_dates_and_reshaping.txt → over time;  04_cleaning.txt → missing values
+#   Bags: 06_dates_and_reshaping.txt → over time;  04_cleaning.txt → missing values;  01_series_and_dataframes.txt → maths and filtering
 #   Gives back each day's change of Close as a fraction, rounded to 4, without the first (empty) day.
 #   prices: a gold table with a Close column
 

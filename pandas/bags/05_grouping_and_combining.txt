@@ -7,6 +7,9 @@ import pandas as pd
 df.groupby("col")["other"].sum()
 pd.DataFrame({"g": ["a", "a", "b"], "v": [1, 2, 5]}).groupby("g")["v"].sum().to_dict() → {'a': 3, 'b': 5}      # a total for each group
 
+df.groupby(a_series)["other"].sum()
+pd.DataFrame({"v": [1, 2, 5]}).groupby(pd.Series(["a", "a", "b"]))["v"].sum().to_dict() → {'a': 3, 'b': 5}      # groups by values you worked out, row by row
+
 .mean()   .count()   .max()   .min()
 pd.DataFrame({"g": ["a", "a"], "v": [1, 3]}).groupby("g")["v"].mean().to_dict() → {'a': 2.0}      # other answers per group (count skips missing)
 
@@ -30,6 +33,9 @@ pd.Series(["a", "b", "a"]).value_counts().to_dict() → {'a': 2, 'b': 1}      # 
 
 s.nunique()
 pd.Series(["a", "b", "a"]).nunique() → 2      # how many different values
+
+s.unique()
+pd.Series(["b", "a", "b"]).unique().tolist() → ['b', 'a']      # each different value once, in the order they first appear
 
 pd.crosstab(df["a"], df["b"])
 pd.crosstab(pd.Series(["x", "x"]), pd.Series(["p", "q"])).loc["x"].to_dict() → {'p': 1, 'q': 1}      # a count table: rows from a, columns from b

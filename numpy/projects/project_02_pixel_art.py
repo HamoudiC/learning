@@ -68,7 +68,7 @@ def shrink(picture):
 
 
 # ─── 7 · WRITE · as_text ────────────────────────────────────────────────────────────────────────────
-#   Bags: 00_python_basics.txt → loops, text
+#   Bags: 00_python_basics.txt → loops, text, lists, tuples, dicts, checks
 #   Gives back the picture as text: "#" for 9, "." for 0, one line per row, joined with "\n".
 #   picture: 2D array of 0s and 9s
 

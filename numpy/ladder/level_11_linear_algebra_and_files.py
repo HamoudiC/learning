@@ -52,7 +52,7 @@ arrow = np.array([6, 8])
 
 
 # ─── 3 · DO · comparing decimals ────────────────────────────────────────────────────────────────────
-#   Bags: 05_linear_algebra_and_files.txt → comparing decimals
+#   Bags: 05_linear_algebra_and_files.txt → comparing decimals;  04_masks_sorting_joining.txt → counting and checking
 
 measured = np.array([0.1 + 0.2, 1.0])
 expected = np.array([0.3, 1.0])
@@ -65,7 +65,7 @@ expected = np.array([0.3, 1.0])
 
 
 # ─── 4 · DO · reading a file ────────────────────────────────────────────────────────────────────────
-#   Bags: 05_linear_algebra_and_files.txt → files;  03_maths_and_aggregations.txt → per row or per column
+#   Bags: 05_linear_algebra_and_files.txt → files;  03_maths_and_aggregations.txt → per row or per column (axis);  00_python_basics.txt → text
 #   Open data/scores.csv in VS Code and look at it first.
 
 scores_file = DATA / "scores.csv"
@@ -90,7 +90,7 @@ def solve_two(a1, b1, c1, a2, b2, c2):
 
 
 # ─── 6 · WRITE · rotate_points ──────────────────────────────────────────────────────────────────────
-#   Bags: 05_linear_algebra_and_files.txt → matrices;  03_maths_and_aggregations.txt → maths functions
+#   Bags: 05_linear_algebra_and_files.txt → matrices;  03_maths_and_aggregations.txt → maths functions;  01_arrays_and_shape.txt → changing the shape
 #   Gives back the points turned anticlockwise by degrees, rounded to 6 decimals.
 #   Each point turns as  R @ point,  where R = [[cos a, -sin a], [sin a, cos a]] and a is in radians.
 #   points: shape (n, 2), one (x, y) per row    degrees: how far to turn

@@ -6,7 +6,7 @@ import numpy as np
 
 
 # ─── 1 · DO · keeping the values that match ─────────────────────────────────────────────────────────
-#   Bags: 04_masks_sorting_joining.txt → keeping the values that match (masks), counting and checking
+#   Bags: 04_masks_sorting_joining.txt → keeping the values that match (masks), counting and checking;  03_maths_and_aggregations.txt → maths on every value
 
 nums = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 
@@ -54,7 +54,7 @@ names = np.array(["Bob", "Joe", "Will", "Bob", "Will", "Joe", "Joe"])
 
 
 # ─── 4 · DO · missing values ────────────────────────────────────────────────────────────────────────
-#   Bags: 04_masks_sorting_joining.txt → missing values, counting and checking
+#   Bags: 04_masks_sorting_joining.txt → missing values, counting and checking, keeping the values that match (masks)
 
 temps = np.array([18.5, np.nan, 22.0, 25.5, np.nan, 19.0])
 

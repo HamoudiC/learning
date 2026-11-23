@@ -8,6 +8,9 @@ import numpy as np
 df.isna()   s.isna()
 pd.Series([1.0, np.nan]).isna().tolist() → [False, True]      # True where a value is missing
 
+pd.isna(value)
+pd.isna(np.nan) → True      # whether ONE value is missing
+
 df.isna().sum()
 pd.DataFrame({"a": [1.0, np.nan], "b": [1, 2]}).isna().sum().to_dict() → {'a': 1, 'b': 0}      # how many missing in each column
 
@@ -58,6 +61,9 @@ pd.Series(["abc"]).str.len().tolist() → [3]      # how long each text is
 
 df.duplicated(subset=["col"])
 pd.DataFrame({"a": [1, 1, 2]}).duplicated(subset=["a"]).tolist() → [False, True, False]      # True for a row that repeats an earlier one
+
+s.duplicated()
+pd.Series(["a", "b", "a"]).duplicated().tolist() → [False, False, True]      # True for a value that repeats an earlier one
 
 df.drop_duplicates(subset=["col"])
 len(pd.DataFrame({"a": [1, 1, 2]}).drop_duplicates(subset=["a"])) → 2      # keeps the first of each

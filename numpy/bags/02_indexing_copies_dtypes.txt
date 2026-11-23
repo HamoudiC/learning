@@ -46,6 +46,9 @@ np.array([5, 10, 15])[[0, 2]] → array([5, 15])      # the values at a list of 
 np.delete(arr, i)
 np.delete(np.array([5, 10, 15]), 1) → array([5, 15])      # everything except position i
 
+np.delete(table, i, axis=0)
+np.delete(np.array([[1, 2], [3, 4]]), 0, axis=0) → array([[3, 4]])      # the table without row i (axis=1: without column i)
+
 arr[i] = value
 arr[0] = 100 → the first value is now 100      # changes one value in place
 

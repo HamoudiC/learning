@@ -16,6 +16,9 @@ pd.to_datetime(pd.Series(["2026-01-03"])).dt.day_name().tolist() → ['Saturday'
 s.dt.strftime("%Y-%m")
 pd.to_datetime(pd.Series(["2026-01-03"])).dt.strftime("%Y-%m").tolist() → ['2026-01']      # every date as text in your format
 
+a_date.strftime("%Y-%m-%d")
+pd.Timestamp("2026-01-03").strftime("%Y-%m-%d") → '2026-01-03'      # ONE date as text (like the label idxmax gives back)
+
 (later - earlier).days
 (pd.Timestamp("2026-01-10") - pd.Timestamp("2026-01-03")).days → 7      # the number of days between two dates
 
@@ -33,6 +36,9 @@ pd.Series([1, 2, 3], index=pd.to_datetime(["2026-01-01", "2026-01-15", "2026-02-
 
 s.resample("W").last()
 s.resample("W").last()      # the last value of each week
+
+df.index.strftime("%Y-%m")
+pd.DataFrame({"v": [1]}, index=pd.to_datetime(["2026-01-31"])).index.strftime("%Y-%m").tolist() → ['2026-01']      # the date labels as text
 
 
 ── over time ──

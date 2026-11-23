@@ -33,7 +33,7 @@ def top_student(names, marks):
 
 
 # ─── 3 · WRITE · failed_any ─────────────────────────────────────────────────────────────────────────
-#   Bags: 04_masks_sorting_joining.txt → keeping the values that match (masks), counting and checking
+#   Bags: 04_masks_sorting_joining.txt → keeping the values that match (masks), counting and checking;  01_arrays_and_shape.txt → making arrays
 #   Gives back a list of the students who scored below pass_mark on at least one test.
 #   names, marks: as above    pass_mark: the lowest pass
 
@@ -42,7 +42,7 @@ def failed_any(names, marks, pass_mark):
 
 
 # ─── 4 · WRITE · curve ──────────────────────────────────────────────────────────────────────────────
-#   Bags: 03_maths_and_aggregations.txt → one number from many, maths functions;  02_indexing_copies_dtypes.txt → dtypes
+#   Bags: 03_maths_and_aggregations.txt → maths on every value, one number from many, maths functions;  02_indexing_copies_dtypes.txt → dtypes
 #   Gives back whole-number marks all moved by the same amount so the class average is target, kept in 0-100.
 #   marks: one row per student    target: the average you want
 
@@ -51,7 +51,7 @@ def curve(marks, target):
 
 
 # ─── 5 · WRITE · report_card ────────────────────────────────────────────────────────────────────────
-#   Bags: 04_masks_sorting_joining.txt → choosing per value;  00_python_basics.txt → lists, tuples, dicts
+#   Bags: 03_maths_and_aggregations.txt → per row or per column (axis);  04_masks_sorting_joining.txt → choosing per value;  00_python_basics.txt → lists, tuples, dicts, loops
 #   Gives back {name: letter}: "A" for an average of 85+, "B" 70-84, "C" 50-69, "F" below 50.
 #   names, marks: as above
 
@@ -60,7 +60,7 @@ def report_card(names, marks):
 
 
 # ─── 6 · WRITE · rank_table ─────────────────────────────────────────────────────────────────────────
-#   Bags: 04_masks_sorting_joining.txt → sorting;  00_python_basics.txt → loops, numbers
+#   Bags: 03_maths_and_aggregations.txt → per row or per column (axis);  04_masks_sorting_joining.txt → sorting;  02_indexing_copies_dtypes.txt → one value, and slices;  00_python_basics.txt → loops, numbers
 #   Gives back a list of (place, name, average rounded to 1 decimal), best first.
 #   names, marks: as above
 

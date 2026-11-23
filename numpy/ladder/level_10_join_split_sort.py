@@ -34,7 +34,7 @@ days = np.arange(14)
 
 
 # ─── 3 · DO · sorting ───────────────────────────────────────────────────────────────────────────────
-#   Bags: 04_masks_sorting_joining.txt → sorting
+#   Bags: 04_masks_sorting_joining.txt → sorting;  02_indexing_copies_dtypes.txt → one value, and slices;  03_maths_and_aggregations.txt → one number from many
 
 scores = np.array([72, 95, 60, 88])
 people = np.array(["Ali", "Sara", "Omar", "Lina"])
@@ -62,7 +62,7 @@ def join_classes(class_a, class_b):
 
 
 # ─── 5 · WRITE · ranking ────────────────────────────────────────────────────────────────────────────
-#   Bags: 04_masks_sorting_joining.txt → sorting
+#   Bags: 04_masks_sorting_joining.txt → sorting;  02_indexing_copies_dtypes.txt → one value, and slices
 #   Gives back the names in order of score, HIGHEST first.
 #   names: a 1D text array    scores: numbers, the same length (no ties)
 
@@ -82,7 +82,7 @@ def top_n(values, n):
 
 
 # ─── 7 · WRITE · into_weeks ─────────────────────────────────────────────────────────────────────────
-#   Bags: 04_masks_sorting_joining.txt → joining and splitting
+#   Bags: 04_masks_sorting_joining.txt → joining and splitting;  00_python_basics.txt → lists, tuples, dicts, numbers
 #   Gives back a list of arrays, one per week (7 values in each).
 #   days: a 1D array, its length a multiple of 7
 

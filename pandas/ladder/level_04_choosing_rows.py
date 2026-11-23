@@ -76,7 +76,7 @@ def big_orders(df, min_units):
 
 
 # ─── 6 · WRITE · products_in ────────────────────────────────────────────────────────────────────────
-#   Bags: 03_selecting_and_changing.txt → keeping the rows that match;  05_grouping_and_combining.txt → counting
+#   Bags: 03_selecting_and_changing.txt → keeping the rows that match;  05_grouping_and_combining.txt → counting;  01_series_and_dataframes.txt → back to plain Python;  00_python_basics.txt → lists, tuples, dicts
 #   Gives back a sorted plain list of the different products sold in any of those regions.
 #   df: a sales table    regions: a list of region names
 

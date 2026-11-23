@@ -18,7 +18,13 @@ df[df["col"] > n]
 len(pd.DataFrame({"a": [1, 5, 8]})[pd.DataFrame({"a": [1, 5, 8]})["a"] > 4]) → 2      # only the rows where it's True
 
 df[(cond1) & (cond2)]
-(pd.Series([1, 5]) > 0) & (pd.Series([1, 5]) < 3)      # and: both true (| is or, ~ is not); brackets needed
+((pd.Series([1, 5]) > 0) & (pd.Series([1, 5]) < 3)).tolist() → [True, False]      # and: both true; each check needs its own brackets
+
+df[(cond1) | (cond2)]
+((pd.Series([1, 5, 9]) < 2) | (pd.Series([1, 5, 9]) > 8)).tolist() → [True, False, True]      # or: either one true; brackets needed
+
+df[~mask]
+(~(pd.Series([1, 5]) > 2)).tolist() → [True, False]      # not: flips every True and False
 
 df["col"].isin([a, b])
 pd.Series(["x", "y", "z"]).isin(["x", "z"]).tolist() → [True, False, True]      # is the value one of these?

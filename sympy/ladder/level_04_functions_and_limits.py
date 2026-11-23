@@ -8,8 +8,7 @@ x, y, z, t = symbols("x y z t")
 
 
 # ─── 1 · DO · functions ─────────────────────────────────────────────────────────────────────────────
-#   Bags: 04_functions_and_limits.txt → functions;  02_algebra.txt → multiplying out and factoring
-#   Bags: 03_solving.txt → equations
+#   Bags: 04_functions_and_limits.txt → functions;  02_algebra.txt → multiplying out and factoring;  03_solving.txt → equations
 
 f = x**2 + 1
 g = 2*x - 3
@@ -99,7 +98,7 @@ def inverse_of(f):
 
 
 # ─── 6 · WRITE · two_sided_limit ────────────────────────────────────────────────────────────────────
-#   Bags: 04_functions_and_limits.txt → limits
+#   Bags: 04_functions_and_limits.txt → limits;  00_python_basics.txt → checks
 #   Gives back the limit as x → a if the left and right limits are the same, otherwise None.
 #   expr: an expression in x    a: the number x goes to
 

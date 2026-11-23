@@ -41,7 +41,7 @@ def book(hall, label):
 
 
 # ─── 4 · WRITE · free_in_row ────────────────────────────────────────────────────────────────────────
-#   Bags: 02_indexing_copies_dtypes.txt → 2D and 3D;  00_python_basics.txt → loops
+#   Bags: 02_indexing_copies_dtypes.txt → 2D and 3D;  00_python_basics.txt → text, loops, checks
 #   Gives back how many seats in that row are not booked (not 0).
 #   hall: 2D array of seats    letter: a row letter like "A"
 
@@ -59,7 +59,7 @@ def aisle_seats(hall):
 
 
 # ─── 6 · WRITE · seat_labels ────────────────────────────────────────────────────────────────────────
-#   Bags: 00_python_basics.txt → text, lists, loops;  01_arrays_and_shape.txt → making arrays, changing the shape
+#   Bags: 01_arrays_and_shape.txt → making arrays, changing the shape;  00_python_basics.txt → text, lists, tuples, dicts, loops
 #   Gives back a 2D text array of labels: "A1", "A2", ... in row A, "B1", ... in row B.
 #   rows: how many rows    per_row: seats in each row
 

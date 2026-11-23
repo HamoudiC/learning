@@ -44,7 +44,7 @@ marks = np.array([-5, 5, 15])
 
 
 # ─── 3 · DO · different shapes together ─────────────────────────────────────────────────────────────
-#   Bags: 03_maths_and_aggregations.txt → shapes that fit together (broadcasting)
+#   Bags: 03_maths_and_aggregations.txt → shapes that fit together (broadcasting), maths on every value
 
 table = np.array([[1, 2, 3], [4, 5, 6]])
 per_column = np.array([10, 20, 30])
@@ -71,7 +71,7 @@ def celsius_to_fahrenheit(temps):
 
 
 # ─── 5 · WRITE · distances_from ─────────────────────────────────────────────────────────────────────
-#   Bags: 03_maths_and_aggregations.txt → shapes that fit together, maths functions, per row or per column
+#   Bags: 03_maths_and_aggregations.txt → maths on every value, shapes that fit together (broadcasting), maths functions, per row or per column (axis)
 #   Gives back the straight-line distance from each point to centre, without a loop.
 #   points: shape (n, 2), one (x, y) per row    centre: one point (x, y)
 
@@ -80,7 +80,7 @@ def distances_from(points, centre):
 
 
 # ─── 6 · WRITE · multiplication_grid ────────────────────────────────────────────────────────────────
-#   Bags: 03_maths_and_aggregations.txt → shapes that fit together;  01_arrays_and_shape.txt → ready-made arrays
+#   Bags: 03_maths_and_aggregations.txt → maths on every value, shapes that fit together (broadcasting);  01_arrays_and_shape.txt → ready-made arrays, changing the shape
 #   Gives back an n × n times table: row i, column j holds (i + 1) × (j + 1). No loop.
 #   n: a whole number
 

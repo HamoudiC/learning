@@ -9,7 +9,7 @@ u = symbols("u")
 
 
 # ─── 1 · DO · integrating ───────────────────────────────────────────────────────────────────────────
-#   Bags: 07_integrals.txt → integrating
+#   Bags: 07_integrals.txt → integrating;  01_basics.txt → exact numbers
 
 square = x**2
 recip = 1/x
@@ -63,7 +63,7 @@ expr = 2*x*cos(x**2)
 
 
 # ─── 4 · DO · Riemann sums ──────────────────────────────────────────────────────────────────────────
-#   Bags: 07_integrals.txt → adding up strips;  00_python_basics.txt → loops
+#   Bags: 07_integrals.txt → adding up strips, integrating;  00_python_basics.txt → loops
 
 f = x**2
 a, b, strips = 0, 2, 4
@@ -82,7 +82,7 @@ a, b, strips = 0, 2, 4
 
 
 # ─── 5 · WRITE · is_antiderivative ──────────────────────────────────────────────────────────────────
-#   Bags: 05_derivatives.txt → differentiating;  02_algebra.txt → tidying
+#   Bags: 05_derivatives.txt → differentiating;  02_algebra.txt → tidying;  01_basics.txt → comparing
 #   Gives back True if F' = f (any + C is fine), else False.
 #   F, f: two expressions in x
 
@@ -100,7 +100,7 @@ def average_value(f, a, b):
 
 
 # ─── 7 · WRITE · riemann_sum ────────────────────────────────────────────────────────────────────────
-#   Bags: 07_integrals.txt → adding up strips
+#   Bags: 07_integrals.txt → adding up strips;  00_python_basics.txt → loops, checks
 #   Gives back the Riemann sum, exact, with each strip as tall as f at its "left", "right" or "mid" point.
 #   f: an expression in x    a, b: the interval    strips: how many strips    kind: "left", "right" or "mid"
 
@@ -109,7 +109,7 @@ def riemann_sum(f, a, b, strips, kind):
 
 
 # ─── 8 · WRITE · area_between ───────────────────────────────────────────────────────────────────────
-#   Bags: 03_solving.txt → sets of answers;  07_integrals.txt → integrating;  04_functions_and_limits.txt → functions
+#   Bags: 03_solving.txt → sets of answers, equations;  07_integrals.txt → integrating;  04_functions_and_limits.txt → functions;  00_python_basics.txt → loops, lists, tuples, dicts, numbers
 #   Gives back the total area enclosed between y = f and y = g, from their first crossing to their last.
 #   f, g: two curves that cross at least twice
 

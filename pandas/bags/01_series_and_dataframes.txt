@@ -47,6 +47,9 @@ pd.Series([10, 20, 30])[pd.Series([10, 20, 30]) > 15].tolist() → [20, 30]     
 s.sum()   s.mean()   s.max()   s.min()
 pd.Series([10, 20, 30]).mean() → 20.0      # one number from many
 
+s.prod()
+pd.Series([2, 3, 4]).prod() → 24      # all the values multiplied together
+
 s.idxmax()   s.idxmin()
 pd.Series([10, 30, 20], index=["a", "b", "c"]).idxmax() → 'b'      # the LABEL of the biggest / smallest
 
@@ -109,6 +112,9 @@ pd.DataFrame({"a": [1, 2], "b": [3, 4]}).iloc[0, 1] → 3      # one cell, by po
 
 s.tolist()   s.to_dict()
 pd.Series([1, 2], index=["a", "b"]).to_dict() → {'a': 1, 'b': 2}      # a Series as a list / a dict
+
+for label, value in s.items():
+list(pd.Series([5, 7], index=["a", "b"]).items()) → [('a', 5), ('b', 7)]      # each label with its value
 
 df.to_dict("records")
 pd.DataFrame({"a": [1, 2]}).to_dict("records") → [{'a': 1}, {'a': 2}]      # a list of dicts, one per row

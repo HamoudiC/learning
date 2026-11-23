@@ -22,7 +22,7 @@ def tidy_text(df):
 
 
 # ─── 2 · WRITE · fix_phones ─────────────────────────────────────────────────────────────────────────
-#   Bags: 04_cleaning.txt → text in a column (.str), missing values
+#   Bags: 04_cleaning.txt → text in a column (.str), missing values;  03_selecting_and_changing.txt → new and changed columns
 #   Gives back a NEW table with every phone as digits only ("" if missing).
 #   df: a contacts table
 
@@ -49,7 +49,7 @@ def clean_contacts(df):
 
 
 # ─── 5 · WRITE · contact_card ───────────────────────────────────────────────────────────────────────
-#   Bags: 00_python_basics.txt → text;  04_cleaning.txt → missing values
+#   Bags: 00_python_basics.txt → text, checks;  04_cleaning.txt → missing values
 #   Gives back one line of text for a person: "Name <email> phone", or "Name (no email) phone".
 #   name, phone: strs    email: a str, or a missing value (NaN)
 
@@ -58,7 +58,7 @@ def contact_card(name, email, phone):
 
 
 # ─── 6 · WRITE · all_cards ──────────────────────────────────────────────────────────────────────────
-#   Bags: 00_python_basics.txt → loops, lists;  01_series_and_dataframes.txt → columns, rows and cells
+#   Bags: 00_python_basics.txt → loops, lists, tuples, dicts;  01_series_and_dataframes.txt → columns, rows and cells
 #   Gives back a list with one card per person in the cleaned table.
 #   df: a contacts table (messy)
 

@@ -12,8 +12,7 @@ OUT = Path(__file__).parent.parent / "out"
 
 
 # ─── 1 · DO · reading a CSV ─────────────────────────────────────────────────────────────────────────
-#   Bags: 02_files.txt → reading;  01_series_and_dataframes.txt → looking at a table
-#   Bags: 04_cleaning.txt → missing values
+#   Bags: 02_files.txt → reading;  01_series_and_dataframes.txt → looking at a table;  04_cleaning.txt → missing values
 
 sales_file = DATA / "sales.csv"
 
@@ -66,7 +65,7 @@ def save_csv(df, file_name):
 
 
 # ─── 5 · WRITE · excel_round_trip ───────────────────────────────────────────────────────────────────
-#   Bags: 02_files.txt → saving, reading
+#   Bags: 02_files.txt → finding files, saving, reading
 #   Saves df as an Excel file in OUT (no row labels), and gives back the table read back from that file.
 #   df: a table    file_name: like "test.xlsx"
 

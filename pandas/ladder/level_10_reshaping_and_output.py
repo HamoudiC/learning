@@ -54,7 +54,7 @@ def marks_long(wide_marks):
 
 
 # ─── 5 · WRITE · units_table ────────────────────────────────────────────────────────────────────────
-#   Bags: 06_dates_and_reshaping.txt → reshaping;  01_series_and_dataframes.txt → columns, rows and cells
+#   Bags: 06_dates_and_reshaping.txt → reshaping;  01_series_and_dataframes.txt → columns, rows and cells, back to plain Python
 #   Gives back a dict {product: total units} for one region, from a pivot table (missing = 0).
 #   df: a sales table    region: a region name
 
@@ -72,7 +72,7 @@ def as_records(df, columns, n):
 
 
 # ─── 7 · FIX · subjects_of ──────────────────────────────────────────────────────────────────────────
-#   Bags: 01_series_and_dataframes.txt → looking at a table;  00_python_basics.txt → lists, tuples, dicts
+#   Bags: 01_series_and_dataframes.txt → looking at a table;  00_python_basics.txt → lists, tuples, dicts, loops, checks
 #   Should give back the subject names of a wide marks table (every column except name). It gives None: fix it.
 
 def subjects_of(wide_marks):

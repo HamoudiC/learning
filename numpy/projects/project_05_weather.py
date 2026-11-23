@@ -17,7 +17,7 @@ def clean(temps):
 
 
 # ─── 2 · WRITE · moving_average ─────────────────────────────────────────────────────────────────────
-#   Bags: 03_maths_and_aggregations.txt → running totals;  02_indexing_copies_dtypes.txt → one value, and slices
+#   Bags: 03_maths_and_aggregations.txt → running totals, maths on every value;  02_indexing_copies_dtypes.txt → one value, and slices, dtypes
 #   Gives back the average of each run of `window` days in a row: days 0-1, then 1-2, ...
 #   values: a 1D array    window: how many days in each average
 
@@ -26,7 +26,7 @@ def moving_average(values, window):
 
 
 # ─── 3 · WRITE · hottest_week ───────────────────────────────────────────────────────────────────────
-#   Bags: 01_arrays_and_shape.txt → changing the shape;  03_maths_and_aggregations.txt → per row or per column (axis)
+#   Bags: 01_arrays_and_shape.txt → changing the shape;  03_maths_and_aggregations.txt → per row or per column (axis), one number from many;  00_python_basics.txt → lists, tuples, dicts
 #   Gives back (week number, that week's average) for the week with the highest average. Week 0 first.
 #   daily: a 1D array, its length a multiple of 7
 
@@ -35,7 +35,7 @@ def hottest_week(daily):
 
 
 # ─── 4 · WRITE · longest_streak ─────────────────────────────────────────────────────────────────────
-#   Bags: 00_python_basics.txt → loops, numbers
+#   Bags: 00_python_basics.txt → loops, numbers, checks
 #   Gives back the most days IN A ROW that were above threshold.
 #   values: a 1D array    threshold: a number
 
@@ -44,7 +44,7 @@ def longest_streak(values, threshold):
 
 
 # ─── 5 · WRITE · summary ────────────────────────────────────────────────────────────────────────────
-#   Bags: 04_masks_sorting_joining.txt → missing values;  00_python_basics.txt → numbers
+#   Bags: 04_masks_sorting_joining.txt → missing values, counting and checking;  01_arrays_and_shape.txt → size and shape;  00_python_basics.txt → lists, tuples, dicts, numbers
 #   Gives back {"days", "missing", "min", "max", "mean"} of the real readings (mean rounded to 2).
 #   temps: a 1D float array, maybe with nan
 

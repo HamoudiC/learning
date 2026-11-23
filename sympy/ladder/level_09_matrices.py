@@ -83,7 +83,7 @@ mirror = Matrix([[2, 1], [1, 2]])
 
 
 # ─── 5 · WRITE · solve_system ───────────────────────────────────────────────────────────────────────
-#   Bags: 09_matrices.txt → making and reading, maths, solving and eigenvalues
+#   Bags: 09_matrices.txt → making and reading, maths, solving and eigenvalues;  00_python_basics.txt → lists, tuples, dicts, checks
 #   Gives back the solution as a plain list, or None if the determinant is 0.
 #   rows: the left-hand numbers as a list of rows    right_side: a list of the right-hand numbers
 

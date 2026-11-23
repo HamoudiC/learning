@@ -119,7 +119,7 @@ def real_roots_of(expr):
 
 
 # ─── 8 · WRITE · crossing_points ────────────────────────────────────────────────────────────────────
-#   Bags: 03_solving.txt → sets of answers, equations;  01_basics.txt → values and decimals
+#   Bags: 03_solving.txt → sets of answers, equations;  01_basics.txt → values and decimals;  00_python_basics.txt → loops, lists, tuples, dicts
 #   Gives back a list of the (x, y) points where y = f and y = g cross, smallest x first.
 #   f, g: two expressions in x
 
