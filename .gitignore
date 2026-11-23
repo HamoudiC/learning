@@ -13,9 +13,6 @@ __pycache__/
 # files the courses write when you run them
 out/
 
-# this folder is its own git repo (github.com/AntNep/1019-group-project): clone it from there
-bigProject/gradeView/
-
 # system files
 .DS_Store
 Thumbs.db

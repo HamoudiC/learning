@@ -1,6 +1,0 @@
-[
-  {"question": "What does len('abc') give?", "choices": ["2", "3", "4"], "answer": "3"},
-  {"question": "Which type is 3.5?", "choices": ["int", "float", "str"], "answer": "float"},
-  {"question": "What does 7 // 2 give?", "choices": ["3", "3.5", "4"], "answer": "3"},
-  {"question": "Which brackets make a list?", "choices": ["()", "[]", "{}"], "answer": "[]"}
-]

@@ -1,6 +1,0 @@
-python
-array
-function
-variable
-loop
-string
